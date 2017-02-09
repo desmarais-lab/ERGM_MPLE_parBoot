@@ -1,0 +1,95 @@
+#PBS -l nodes=1:ppn=5
+#PBS -l walltime=24:00:00
+#PBS -m abe
+#PBS -M schmid@psu.edu
+#PBS -l mem=128GB
+#PBS -j oe
+
+
+cd /gpfs/scratch/cxs5700/Test/Coverage_large_new
+
+echo " "
+echo " "
+echo "Job started on `hostname` at `date`"
+
+module load R/3.2.0
+
+R --vanilla <<STOP > test_parallel2.out
+
+install.packages("statnet", Sys.getenv("R_LIBS_USER"), repos = "http://cran.case.edu" )
+install.packages("ergm", Sys.getenv("R_LIBS_USER"), repos = "http://cran.case.edu" )
+library(statnet)
+library(doParallel)
+library(foreach)
+
+
+registerDoParallel(cores=5)
+
+
+# get data
+load(file="supreme.RData")
+
+mple <- try(ergm(scnetwork~edges+ nodecov('salience')+ nodecov('year')+kstar(2), estimate = "MPLE" )) #
+summary(mple)
+
+#main function
+boot.single.iteration.5.core <- function( erg.obj, simulation){ #simulation must be dividable by 5
+  
+  
+  #create empty matrices for bootstrap estimates
+  coef <- matrix(0, 4, simulation/5)
+  rownames(coef) <- c("edges", "salience", "year", "kstar2")
+  Std.err <- matrix(0,4,simulation/5)
+  rownames(Std.err) <- c("edges", "salience", "year", "kstar2")
+  
+  #simulate network from true values
+  net.mple <- simulate.ergm(mple, nsim=1)#, control=control.simulate.ergm(MCMC.burnin=5000000, MCMC.interval=100) ) # simulate network
+  
+  #estimate coefficients
+  sim.mple <- ergm(net.mple~edges+ nodecov('salience')+ nodecov('year')+kstar(2), estimate= "MPLE")
+  
+  
+  # loop for numbers of simulations in each iteration
+  
+  net<- simulate.ergm(sim.mple, nsim=simulation)
+  
+  coef1<-foreach(i=(simulation/4+1):(2*(simulation/4)), .combine=cbind)%dopar%{
+    library(ergm)
+    #estimate coefficients
+    bootest <- ergm(net[[i]]~edges+ nodecov('salience')+ nodecov('year')+kstar(2), estimate= "MPLE")
+    
+    coef(bootest)
+    
+  }
+  
+  
+  # bootstrap.CI: if coef(mple) is in BootCI, save 1 otherwise 0
+  # create empty matrix
+  #bootstrap.CI <- matrix(0,4,2)
+  #colnames(bootstrap.CI)<- c("upper", "lower")
+  #rownames(bootstrap.CI)<- c("edges", "salience", "year", "kstar2")
+  
+  # calculate the bootstrap intervals
+  #bootstrap.CI[1,]<-quantile(coef[1,], probs = c(0.975, 0.025)) # edges
+  #bootstrap.CI[2,]<-quantile(coef[2,], probs = c(0.975, 0.025)) # salience
+  #bootstrap.CI[3,]<-quantile(coef[3,], probs = c(0.975, 0.025)) # year
+  #bootstrap.CI[4,]<-quantile(coef[4,], probs = c(0.975, 0.025)) # kstar2
+  
+  
+  return(coef1)
+}
+
+
+set.seed(455)
+boot <- boot.single.iteration.5.core(mple,1000)
+boot
+
+
+save(boot,file="coverage_parallel_small2.RData")
+
+
+
+STOP
+echo " "
+echo "Job Ended at `date`"
+echo " "
