@@ -1,0 +1,94 @@
+#PBS -l nodes=1:ppn=5
+#PBS -l walltime=24:00:00
+#PBS -m abe
+#PBS -M schmid@psu.edu
+#PBS -l mem=128GB
+#PBS -j oe
+
+
+cd /gpfs/scratch/cxs5700/Test
+
+echo " "
+echo " "
+echo "Job started on `hostname` at `date`"
+
+module load R/3.2.0
+
+R --vanilla <<STOP > test_parallel3.out
+
+install.packages("statnet", Sys.getenv("R_LIBS_USER"), repos = "http://cran.case.edu" )
+install.packages("ergm", Sys.getenv("R_LIBS_USER"), repos = "http://cran.case.edu" )
+library(statnet)
+library(doParallel)
+library(foreach)
+
+
+registerDoParallel(cores=5)
+
+
+# get data
+data(faux.mesa.high)
+
+mple <- try(ergm(faux.mesa.high ~ edges +nodematch("Sex")+gwesp(0,fixed=TRUE), estimate = "MPLE" )) #
+summary(mple)
+
+#main function
+boot.single.iteration.5.core <- function( erg.obj, simulation){ #simulation must be dividable by 5
+  
+  
+  #create empty matrices for bootstrap estimates
+  coef <- matrix(0, 3, simulation/4)
+  rownames(coef) <- c("edges", "sex", "gwesp")
+  Std.err <- matrix(0,3,simulation/4)
+  rownames(Std.err) <- c("edges", "sex", "gwesp")
+  
+  #simulate network from true values
+  net.mple <- simulate.ergm(mple, nsim=1)#, control=control.simulate.ergm(MCMC.burnin=5000000, MCMC.interval=100) ) # simulate network
+  
+  #estimate coefficients
+  sim.mple <- ergm(net.mple~edges+ nodematch("Sex")+gwesp(0,fixed=TRUE), estimate= "MPLE")
+  
+  
+  # loop for numbers of simulations in each iteration
+  
+  net<- simulate.ergm(sim.mple, nsim=simulation)
+  
+  coef1<-foreach(i=501:751, .combine=cbind)%dopar%{
+    library(ergm)
+    #estimate coefficients
+    bootest <- ergm(net[[i]]~edges+ nodematch("Sex")+gwesp(0,fixed=TRUE), estimate= "MPLE")
+    
+    coef(bootest)
+    
+  }
+  
+  
+  # bootstrap.CI: if coef(mple) is in BootCI, save 1 otherwise 0
+  # create empty matrix
+  #bootstrap.CI <- matrix(0,3,2)
+  #colnames(bootstrap.CI)<- c("upper", "lower")
+  #rownames(bootstrap.CI)<- c("edges", "sex", "gwesp")
+  
+  # calculate the bootstrap intervals
+  #bootstrap.CI[1,]<-quantile(coef[1,], probs = c(0.975, 0.025)) # edges
+  #bootstrap.CI[2,]<-quantile(coef[2,], probs = c(0.975, 0.025)) # Sex
+  #bootstrap.CI[3,]<-quantile(coef[3,], probs = c(0.975, 0.025)) # gwesp
+  
+  
+  return(coef1)
+}
+
+
+set.seed(455)
+boot <- boot.single.iteration.5.core(mple,1000)
+boot
+
+
+save(boot,file="coverage_parallel_small3.RData")
+
+
+
+STOP
+echo " "
+echo "Job Ended at `date`"
+echo " "
