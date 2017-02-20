@@ -1,0 +1,2019 @@
+
+R version 3.2.0 (2015-04-16) -- "Full of Ingredients"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: x86_64-unknown-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> 
+> load(file="supreme54.RData")
+> 
+> install.packages("statnet", Sys.getenv("R_LIBS_USER"), repos = "http://cran.case.edu" )
+unable to reach CRAN
+
+The downloaded source packages are in
+	'/tmp/RtmpGLiiWo/downloaded_packages'
+> library(statnet)
+> 
+> 
+> set.seed(1)
+> model20.mle<- ergm(scnetwork54~edges+ nodecov('salience')+ nodecov('year.center') + absdiff('year.center') + absdiff('year.center.square') + dsp(0) + esp(0),
++                    control=control.ergm(MCMLE.maxit = 1000,MCMC.samplesize=32768)) 
+Starting maximum likelihood estimation via MCMLE:
+Iteration 1 of at most 1000: 
+The log-likelihood did not improve.
+Iteration 2 of at most 1000: 
+The log-likelihood improved by 2.782 
+Iteration 3 of at most 1000: 
+The log-likelihood improved by 4.181 
+Iteration 4 of at most 1000: 
+The log-likelihood improved by 2.445 
+Iteration 5 of at most 1000: 
+The log-likelihood improved by 2.747 
+Iteration 6 of at most 1000: 
+The log-likelihood improved by 3.197 
+Iteration 7 of at most 1000: 
+The log-likelihood improved by 2.726 
+Iteration 8 of at most 1000: 
+The log-likelihood improved by 2.826 
+Iteration 9 of at most 1000: 
+The log-likelihood improved by 2.615 
+Iteration 10 of at most 1000: 
+The log-likelihood improved by 3.373 
+Iteration 11 of at most 1000: 
+The log-likelihood improved by 2.75 
+Iteration 12 of at most 1000: 
+The log-likelihood improved by 2.927 
+Iteration 13 of at most 1000: 
+The log-likelihood improved by 2.929 
+Iteration 14 of at most 1000: 
+The log-likelihood improved by 2.53 
+Iteration 15 of at most 1000: 
+The log-likelihood improved by 3.38 
+Iteration 16 of at most 1000: 
+The log-likelihood improved by 2.662 
+Iteration 17 of at most 1000: 
+The log-likelihood improved by 3.1 
+Iteration 18 of at most 1000: 
+The log-likelihood improved by 4.407 
+Iteration 19 of at most 1000: 
+The log-likelihood improved by 2.44 
+Iteration 20 of at most 1000: 
+The log-likelihood improved by 2.878 
+Iteration 21 of at most 1000: 
+The log-likelihood improved by 2.791 
+Iteration 22 of at most 1000: 
+The log-likelihood improved by 3.839 
+Iteration 23 of at most 1000: 
+The log-likelihood improved by 4.169 
+Iteration 24 of at most 1000: 
+The log-likelihood improved by 2.941 
+Iteration 25 of at most 1000: 
+The log-likelihood improved by 3.621 
+Iteration 26 of at most 1000: 
+The log-likelihood improved by 3.583 
+Iteration 27 of at most 1000: 
+The log-likelihood improved by 3.471 
+Iteration 28 of at most 1000: 
+The log-likelihood improved by 3.045 
+Iteration 29 of at most 1000: 
+The log-likelihood improved by 3.656 
+Iteration 30 of at most 1000: 
+The log-likelihood improved by 3.445 
+Iteration 31 of at most 1000: 
+The log-likelihood improved by 4.313 
+Iteration 32 of at most 1000: 
+The log-likelihood improved by 4.756 
+Iteration 33 of at most 1000: 
+The log-likelihood improved by 4.037 
+Iteration 34 of at most 1000: 
+The log-likelihood improved by 4.119 
+Iteration 35 of at most 1000: 
+The log-likelihood improved by 3.522 
+Iteration 36 of at most 1000: 
+The log-likelihood improved by 3.381 
+Iteration 37 of at most 1000: 
+The log-likelihood improved by 3.829 
+Iteration 38 of at most 1000: 
+The log-likelihood improved by 4.405 
+Iteration 39 of at most 1000: 
+The log-likelihood improved by 3.941 
+Iteration 40 of at most 1000: 
+The log-likelihood improved by 4.126 
+Iteration 41 of at most 1000: 
+The log-likelihood improved by 3.695 
+Iteration 42 of at most 1000: 
+The log-likelihood improved by 3.304 
+Iteration 43 of at most 1000: 
+The log-likelihood improved by 4.361 
+Iteration 44 of at most 1000: 
+The log-likelihood improved by 3.798 
+Iteration 45 of at most 1000: 
+The log-likelihood improved by 3.214 
+Iteration 46 of at most 1000: 
+The log-likelihood improved by 4.227 
+Iteration 47 of at most 1000: 
+The log-likelihood improved by 3.821 
+Iteration 48 of at most 1000: 
+The log-likelihood improved by 4.123 
+Iteration 49 of at most 1000: 
+The log-likelihood improved by 3.094 
+Iteration 50 of at most 1000: 
+The log-likelihood improved by 3.832 
+Iteration 51 of at most 1000: 
+The log-likelihood improved by 3.319 
+Iteration 52 of at most 1000: 
+The log-likelihood improved by 3.145 
+Iteration 53 of at most 1000: 
+The log-likelihood improved by 3.471 
+Iteration 54 of at most 1000: 
+The log-likelihood improved by 3.305 
+Iteration 55 of at most 1000: 
+The log-likelihood improved by 3.333 
+Iteration 56 of at most 1000: 
+The log-likelihood improved by 3.12 
+Iteration 57 of at most 1000: 
+The log-likelihood improved by 4.117 
+Iteration 58 of at most 1000: 
+The log-likelihood improved by 2.705 
+Iteration 59 of at most 1000: 
+The log-likelihood improved by 2.75 
+Iteration 60 of at most 1000: 
+The log-likelihood improved by 2.47 
+Iteration 61 of at most 1000: 
+The log-likelihood improved by 3.41 
+Iteration 62 of at most 1000: 
+The log-likelihood improved by 2.69 
+Iteration 63 of at most 1000: 
+The log-likelihood improved by 2.153 
+Iteration 64 of at most 1000: 
+The log-likelihood improved by 3.299 
+Iteration 65 of at most 1000: 
+The log-likelihood improved by 2.727 
+Iteration 66 of at most 1000: 
+The log-likelihood improved by 2.059 
+Iteration 67 of at most 1000: 
+The log-likelihood improved by 3.122 
+Iteration 68 of at most 1000: 
+The log-likelihood improved by 1.846 
+Iteration 69 of at most 1000: 
+The log-likelihood improved by 3.002 
+Iteration 70 of at most 1000: 
+The log-likelihood improved by 3.775 
+Iteration 71 of at most 1000: 
+The log-likelihood improved by 2.897 
+Iteration 72 of at most 1000: 
+The log-likelihood improved by 3.085 
+Iteration 73 of at most 1000: 
+The log-likelihood improved by 3.381 
+Iteration 74 of at most 1000: 
+The log-likelihood improved by 2.891 
+Iteration 75 of at most 1000: 
+The log-likelihood improved by 2.491 
+Iteration 76 of at most 1000: 
+The log-likelihood improved by 2.571 
+Iteration 77 of at most 1000: 
+The log-likelihood improved by 2.276 
+Iteration 78 of at most 1000: 
+The log-likelihood improved by 2.717 
+Iteration 79 of at most 1000: 
+The log-likelihood improved by 3.138 
+Iteration 80 of at most 1000: 
+The log-likelihood improved by 2.446 
+Iteration 81 of at most 1000: 
+The log-likelihood improved by 2.232 
+Iteration 82 of at most 1000: 
+The log-likelihood improved by 2.888 
+Iteration 83 of at most 1000: 
+The log-likelihood improved by 2.845 
+Iteration 84 of at most 1000: 
+The log-likelihood improved by 3.221 
+Iteration 85 of at most 1000: 
+The log-likelihood improved by 2.164 
+Iteration 86 of at most 1000: 
+The log-likelihood improved by 1.892 
+Iteration 87 of at most 1000: 
+The log-likelihood improved by 2.997 
+Iteration 88 of at most 1000: 
+The log-likelihood improved by 2.98 
+Iteration 89 of at most 1000: 
+The log-likelihood improved by 2.482 
+Iteration 90 of at most 1000: 
+The log-likelihood improved by 2.745 
+Iteration 91 of at most 1000: 
+The log-likelihood improved by 2.18 
+Iteration 92 of at most 1000: 
+The log-likelihood improved by 3.283 
+Iteration 93 of at most 1000: 
+The log-likelihood improved by 3.099 
+Iteration 94 of at most 1000: 
+The log-likelihood improved by 2.903 
+Iteration 95 of at most 1000: 
+The log-likelihood improved by 2.218 
+Iteration 96 of at most 1000: 
+The log-likelihood improved by 3.568 
+Iteration 97 of at most 1000: 
+The log-likelihood improved by 2.705 
+Iteration 98 of at most 1000: 
+The log-likelihood improved by 2.619 
+Iteration 99 of at most 1000: 
+The log-likelihood improved by 2.26 
+Iteration 100 of at most 1000: 
+The log-likelihood improved by 3.707 
+Iteration 101 of at most 1000: 
+The log-likelihood improved by 2.689 
+Iteration 102 of at most 1000: 
+The log-likelihood improved by 2.267 
+Iteration 103 of at most 1000: 
+The log-likelihood improved by 2.333 
+Iteration 104 of at most 1000: 
+The log-likelihood improved by 2.435 
+Iteration 105 of at most 1000: 
+The log-likelihood improved by 2.422 
+Iteration 106 of at most 1000: 
+The log-likelihood improved by 3.55 
+Iteration 107 of at most 1000: 
+The log-likelihood improved by 3.052 
+Iteration 108 of at most 1000: 
+The log-likelihood improved by 2.8 
+Iteration 109 of at most 1000: 
+The log-likelihood improved by 1.745 
+Iteration 110 of at most 1000: 
+The log-likelihood improved by 3.062 
+Iteration 111 of at most 1000: 
+The log-likelihood improved by 2.617 
+Iteration 112 of at most 1000: 
+The log-likelihood improved by 2.949 
+Iteration 113 of at most 1000: 
+The log-likelihood improved by 2.053 
+Iteration 114 of at most 1000: 
+The log-likelihood improved by 3.278 
+Iteration 115 of at most 1000: 
+The log-likelihood improved by 1.124 
+Iteration 116 of at most 1000: 
+The log-likelihood improved by 2.371 
+Iteration 117 of at most 1000: 
+The log-likelihood improved by 3.104 
+Iteration 118 of at most 1000: 
+The log-likelihood improved by 3.214 
+Iteration 119 of at most 1000: 
+The log-likelihood improved by 3.498 
+Iteration 120 of at most 1000: 
+The log-likelihood improved by 2.684 
+Iteration 121 of at most 1000: 
+The log-likelihood improved by 2.386 
+Iteration 122 of at most 1000: 
+The log-likelihood improved by 2.178 
+Iteration 123 of at most 1000: 
+The log-likelihood improved by 2.809 
+Iteration 124 of at most 1000: 
+The log-likelihood improved by 3.173 
+Iteration 125 of at most 1000: 
+The log-likelihood improved by 2.955 
+Iteration 126 of at most 1000: 
+The log-likelihood improved by 1.712 
+Iteration 127 of at most 1000: 
+The log-likelihood improved by 3.033 
+Iteration 128 of at most 1000: 
+The log-likelihood improved by 2.817 
+Iteration 129 of at most 1000: 
+The log-likelihood improved by 2.912 
+Iteration 130 of at most 1000: 
+The log-likelihood improved by 2.525 
+Iteration 131 of at most 1000: 
+The log-likelihood improved by 2.837 
+Iteration 132 of at most 1000: 
+The log-likelihood improved by 2.561 
+Iteration 133 of at most 1000: 
+The log-likelihood improved by 2.28 
+Iteration 134 of at most 1000: 
+The log-likelihood improved by 2.887 
+Iteration 135 of at most 1000: 
+The log-likelihood improved by 2.4 
+Iteration 136 of at most 1000: 
+The log-likelihood improved by 3.833 
+Iteration 137 of at most 1000: 
+The log-likelihood improved by 2.178 
+Iteration 138 of at most 1000: 
+The log-likelihood improved by 1.701 
+Iteration 139 of at most 1000: 
+The log-likelihood improved by 3.54 
+Iteration 140 of at most 1000: 
+The log-likelihood improved by 3.877 
+Iteration 141 of at most 1000: 
+The log-likelihood improved by 2.245 
+Iteration 142 of at most 1000: 
+The log-likelihood improved by 2.035 
+Iteration 143 of at most 1000: 
+The log-likelihood improved by 2.383 
+Iteration 144 of at most 1000: 
+The log-likelihood improved by 2.255 
+Iteration 145 of at most 1000: 
+The log-likelihood improved by 3.666 
+Iteration 146 of at most 1000: 
+The log-likelihood improved by 3.17 
+Iteration 147 of at most 1000: 
+The log-likelihood improved by 3.202 
+Iteration 148 of at most 1000: 
+The log-likelihood improved by 2.586 
+Iteration 149 of at most 1000: 
+The log-likelihood improved by 3.786 
+Iteration 150 of at most 1000: 
+The log-likelihood improved by 3.286 
+Iteration 151 of at most 1000: 
+The log-likelihood improved by 3.008 
+Iteration 152 of at most 1000: 
+The log-likelihood improved by 3.33 
+Iteration 153 of at most 1000: 
+The log-likelihood improved by 2.888 
+Iteration 154 of at most 1000: 
+The log-likelihood improved by 2.875 
+Iteration 155 of at most 1000: 
+The log-likelihood improved by 2.785 
+Iteration 156 of at most 1000: 
+The log-likelihood improved by 2.88 
+Iteration 157 of at most 1000: 
+The log-likelihood improved by 2.819 
+Iteration 158 of at most 1000: 
+The log-likelihood improved by 1.87 
+Iteration 159 of at most 1000: 
+The log-likelihood improved by 2.988 
+Iteration 160 of at most 1000: 
+The log-likelihood improved by 2.017 
+Iteration 161 of at most 1000: 
+The log-likelihood improved by 2.681 
+Iteration 162 of at most 1000: 
+The log-likelihood improved by 3.617 
+Iteration 163 of at most 1000: 
+The log-likelihood improved by 3.105 
+Iteration 164 of at most 1000: 
+The log-likelihood improved by 2.666 
+Iteration 165 of at most 1000: 
+The log-likelihood improved by 2.337 
+Iteration 166 of at most 1000: 
+The log-likelihood improved by 1.56 
+Iteration 167 of at most 1000: 
+The log-likelihood improved by 2.512 
+Iteration 168 of at most 1000: 
+The log-likelihood improved by 2.564 
+Iteration 169 of at most 1000: 
+The log-likelihood improved by 3.568 
+Iteration 170 of at most 1000: 
+The log-likelihood improved by 2.318 
+Iteration 171 of at most 1000: 
+The log-likelihood improved by 2.456 
+Iteration 172 of at most 1000: 
+The log-likelihood improved by 2.284 
+Iteration 173 of at most 1000: 
+The log-likelihood improved by 3.044 
+Iteration 174 of at most 1000: 
+The log-likelihood improved by 2.653 
+Iteration 175 of at most 1000: 
+The log-likelihood improved by 2.996 
+Iteration 176 of at most 1000: 
+The log-likelihood improved by 3.038 
+Iteration 177 of at most 1000: 
+The log-likelihood improved by 3.025 
+Iteration 178 of at most 1000: 
+The log-likelihood improved by 2.328 
+Iteration 179 of at most 1000: 
+The log-likelihood improved by 3.105 
+Iteration 180 of at most 1000: 
+The log-likelihood improved by 1.992 
+Iteration 181 of at most 1000: 
+The log-likelihood improved by 2.782 
+Iteration 182 of at most 1000: 
+The log-likelihood improved by 2.203 
+Iteration 183 of at most 1000: 
+The log-likelihood improved by 2.97 
+Iteration 184 of at most 1000: 
+The log-likelihood improved by 3.043 
+Iteration 185 of at most 1000: 
+The log-likelihood improved by 2.253 
+Iteration 186 of at most 1000: 
+The log-likelihood improved by 1.892 
+Iteration 187 of at most 1000: 
+The log-likelihood improved by 3.346 
+Iteration 188 of at most 1000: 
+The log-likelihood improved by 3.191 
+Iteration 189 of at most 1000: 
+The log-likelihood improved by 2.958 
+Iteration 190 of at most 1000: 
+The log-likelihood improved by 2.824 
+Iteration 191 of at most 1000: 
+The log-likelihood improved by 2.081 
+Iteration 192 of at most 1000: 
+The log-likelihood improved by 2.881 
+Iteration 193 of at most 1000: 
+The log-likelihood improved by 3.864 
+Iteration 194 of at most 1000: 
+The log-likelihood improved by 3.231 
+Iteration 195 of at most 1000: 
+The log-likelihood improved by 4.034 
+Iteration 196 of at most 1000: 
+The log-likelihood improved by 3.84 
+Iteration 197 of at most 1000: 
+The log-likelihood improved by 2.127 
+Iteration 198 of at most 1000: 
+The log-likelihood improved by 2.696 
+Iteration 199 of at most 1000: 
+The log-likelihood improved by 1.828 
+Iteration 200 of at most 1000: 
+The log-likelihood improved by 1.59 
+Iteration 201 of at most 1000: 
+The log-likelihood improved by 2.133 
+Iteration 202 of at most 1000: 
+The log-likelihood improved by 3.355 
+Iteration 203 of at most 1000: 
+The log-likelihood improved by 2.773 
+Iteration 204 of at most 1000: 
+The log-likelihood improved by 3.059 
+Iteration 205 of at most 1000: 
+The log-likelihood improved by 3.399 
+Iteration 206 of at most 1000: 
+The log-likelihood improved by 3.054 
+Iteration 207 of at most 1000: 
+The log-likelihood improved by 2.738 
+Iteration 208 of at most 1000: 
+The log-likelihood improved by 4.465 
+Iteration 209 of at most 1000: 
+The log-likelihood improved by 2.517 
+Iteration 210 of at most 1000: 
+The log-likelihood improved by 2.716 
+Iteration 211 of at most 1000: 
+The log-likelihood improved by 2.784 
+Iteration 212 of at most 1000: 
+The log-likelihood improved by 2.911 
+Iteration 213 of at most 1000: 
+The log-likelihood improved by 2.817 
+Iteration 214 of at most 1000: 
+The log-likelihood improved by 3.79 
+Iteration 215 of at most 1000: 
+The log-likelihood improved by 3.189 
+Iteration 216 of at most 1000: 
+The log-likelihood improved by 2.19 
+Iteration 217 of at most 1000: 
+The log-likelihood improved by 2.6 
+Iteration 218 of at most 1000: 
+The log-likelihood improved by 1.815 
+Iteration 219 of at most 1000: 
+The log-likelihood improved by 1.975 
+Iteration 220 of at most 1000: 
+The log-likelihood improved by 2.455 
+Iteration 221 of at most 1000: 
+The log-likelihood improved by 2.949 
+Iteration 222 of at most 1000: 
+The log-likelihood improved by 2.843 
+Iteration 223 of at most 1000: 
+The log-likelihood improved by 2.023 
+Iteration 224 of at most 1000: 
+The log-likelihood improved by 3.543 
+Iteration 225 of at most 1000: 
+The log-likelihood improved by 2.288 
+Iteration 226 of at most 1000: 
+The log-likelihood improved by 1.559 
+Iteration 227 of at most 1000: 
+The log-likelihood improved by 2.838 
+Iteration 228 of at most 1000: 
+The log-likelihood improved by 1.715 
+Iteration 229 of at most 1000: 
+The log-likelihood improved by 2.231 
+Iteration 230 of at most 1000: 
+The log-likelihood improved by 3.701 
+Iteration 231 of at most 1000: 
+The log-likelihood improved by 2.363 
+Iteration 232 of at most 1000: 
+The log-likelihood improved by 1.861 
+Iteration 233 of at most 1000: 
+The log-likelihood improved by 2.357 
+Iteration 234 of at most 1000: 
+The log-likelihood improved by 2.916 
+Iteration 235 of at most 1000: 
+The log-likelihood improved by 2.094 
+Iteration 236 of at most 1000: 
+The log-likelihood improved by 2.055 
+Iteration 237 of at most 1000: 
+The log-likelihood improved by 2.957 
+Iteration 238 of at most 1000: 
+The log-likelihood improved by 2.627 
+Iteration 239 of at most 1000: 
+The log-likelihood improved by 2.754 
+Iteration 240 of at most 1000: 
+The log-likelihood improved by 2.434 
+Iteration 241 of at most 1000: 
+The log-likelihood improved by 2.867 
+Iteration 242 of at most 1000: 
+The log-likelihood improved by 2.304 
+Iteration 243 of at most 1000: 
+The log-likelihood improved by 3.604 
+Iteration 244 of at most 1000: 
+The log-likelihood improved by 3.414 
+Iteration 245 of at most 1000: 
+The log-likelihood improved by 1.899 
+Iteration 246 of at most 1000: 
+The log-likelihood improved by 2.182 
+Iteration 247 of at most 1000: 
+The log-likelihood improved by 3.201 
+Iteration 248 of at most 1000: 
+The log-likelihood improved by 2.57 
+Iteration 249 of at most 1000: 
+The log-likelihood improved by 3.318 
+Iteration 250 of at most 1000: 
+The log-likelihood improved by 2.423 
+Iteration 251 of at most 1000: 
+The log-likelihood improved by 2.172 
+Iteration 252 of at most 1000: 
+The log-likelihood improved by 3.364 
+Iteration 253 of at most 1000: 
+The log-likelihood improved by 2.568 
+Iteration 254 of at most 1000: 
+The log-likelihood improved by 2.707 
+Iteration 255 of at most 1000: 
+The log-likelihood improved by 3.944 
+Iteration 256 of at most 1000: 
+The log-likelihood improved by 2.773 
+Iteration 257 of at most 1000: 
+The log-likelihood improved by 2.573 
+Iteration 258 of at most 1000: 
+The log-likelihood improved by 2.96 
+Iteration 259 of at most 1000: 
+The log-likelihood improved by 2.359 
+Iteration 260 of at most 1000: 
+The log-likelihood improved by 2.243 
+Iteration 261 of at most 1000: 
+The log-likelihood improved by 3.601 
+Iteration 262 of at most 1000: 
+The log-likelihood improved by 1.916 
+Iteration 263 of at most 1000: 
+The log-likelihood improved by 3.131 
+Iteration 264 of at most 1000: 
+The log-likelihood improved by 2.868 
+Iteration 265 of at most 1000: 
+The log-likelihood improved by 3.008 
+Iteration 266 of at most 1000: 
+The log-likelihood improved by 2.662 
+Iteration 267 of at most 1000: 
+The log-likelihood improved by 3.262 
+Iteration 268 of at most 1000: 
+The log-likelihood improved by 2.685 
+Iteration 269 of at most 1000: 
+The log-likelihood improved by 3.64 
+Iteration 270 of at most 1000: 
+The log-likelihood improved by 4.395 
+Iteration 271 of at most 1000: 
+The log-likelihood improved by 2.187 
+Iteration 272 of at most 1000: 
+The log-likelihood improved by 1.833 
+Iteration 273 of at most 1000: 
+The log-likelihood improved by 3.679 
+Iteration 274 of at most 1000: 
+The log-likelihood improved by 3.436 
+Iteration 275 of at most 1000: 
+The log-likelihood improved by 3.65 
+Iteration 276 of at most 1000: 
+The log-likelihood improved by 3.127 
+Iteration 277 of at most 1000: 
+The log-likelihood improved by 2.759 
+Iteration 278 of at most 1000: 
+The log-likelihood improved by 3.745 
+Iteration 279 of at most 1000: 
+The log-likelihood improved by 2.924 
+Iteration 280 of at most 1000: 
+The log-likelihood improved by 2.008 
+Iteration 281 of at most 1000: 
+The log-likelihood improved by 2.355 
+Iteration 282 of at most 1000: 
+The log-likelihood improved by 2.753 
+Iteration 283 of at most 1000: 
+The log-likelihood improved by 2.599 
+Iteration 284 of at most 1000: 
+The log-likelihood improved by 1.973 
+Iteration 285 of at most 1000: 
+The log-likelihood improved by 3.249 
+Iteration 286 of at most 1000: 
+The log-likelihood improved by 2.583 
+Iteration 287 of at most 1000: 
+The log-likelihood improved by 2.649 
+Iteration 288 of at most 1000: 
+The log-likelihood improved by 3.002 
+Iteration 289 of at most 1000: 
+The log-likelihood improved by 2.091 
+Iteration 290 of at most 1000: 
+The log-likelihood improved by 3.193 
+Iteration 291 of at most 1000: 
+The log-likelihood improved by 2.073 
+Iteration 292 of at most 1000: 
+The log-likelihood improved by 2.901 
+Iteration 293 of at most 1000: 
+The log-likelihood improved by 2.83 
+Iteration 294 of at most 1000: 
+The log-likelihood improved by 3.333 
+Iteration 295 of at most 1000: 
+The log-likelihood improved by 2.695 
+Iteration 296 of at most 1000: 
+The log-likelihood improved by 3.812 
+Iteration 297 of at most 1000: 
+The log-likelihood improved by 3.506 
+Iteration 298 of at most 1000: 
+The log-likelihood improved by 2.479 
+Iteration 299 of at most 1000: 
+The log-likelihood improved by 2.545 
+Iteration 300 of at most 1000: 
+The log-likelihood improved by 3.872 
+Iteration 301 of at most 1000: 
+The log-likelihood improved by 1.899 
+Iteration 302 of at most 1000: 
+The log-likelihood improved by 1.914 
+Iteration 303 of at most 1000: 
+The log-likelihood improved by 3.763 
+Iteration 304 of at most 1000: 
+The log-likelihood improved by 3.468 
+Iteration 305 of at most 1000: 
+The log-likelihood improved by 2.944 
+Iteration 306 of at most 1000: 
+The log-likelihood improved by 3.298 
+Iteration 307 of at most 1000: 
+The log-likelihood improved by 2.565 
+Iteration 308 of at most 1000: 
+The log-likelihood improved by 1.391 
+Iteration 309 of at most 1000: 
+The log-likelihood improved by 4.274 
+Iteration 310 of at most 1000: 
+The log-likelihood improved by 3.532 
+Iteration 311 of at most 1000: 
+The log-likelihood improved by 2.035 
+Iteration 312 of at most 1000: 
+The log-likelihood improved by 2.421 
+Iteration 313 of at most 1000: 
+The log-likelihood improved by 2.157 
+Iteration 314 of at most 1000: 
+The log-likelihood improved by 2.552 
+Iteration 315 of at most 1000: 
+The log-likelihood improved by 2.462 
+Iteration 316 of at most 1000: 
+The log-likelihood improved by 2.612 
+Iteration 317 of at most 1000: 
+The log-likelihood improved by 2.754 
+Iteration 318 of at most 1000: 
+The log-likelihood improved by 2.831 
+Iteration 319 of at most 1000: 
+The log-likelihood improved by 2.308 
+Iteration 320 of at most 1000: 
+The log-likelihood improved by 2.301 
+Iteration 321 of at most 1000: 
+The log-likelihood improved by 2.134 
+Iteration 322 of at most 1000: 
+The log-likelihood improved by 2.366 
+Iteration 323 of at most 1000: 
+The log-likelihood improved by 2.92 
+Iteration 324 of at most 1000: 
+The log-likelihood improved by 2.529 
+Iteration 325 of at most 1000: 
+The log-likelihood improved by 3.3 
+Iteration 326 of at most 1000: 
+The log-likelihood improved by 3 
+Iteration 327 of at most 1000: 
+The log-likelihood improved by 3.366 
+Iteration 328 of at most 1000: 
+The log-likelihood improved by 2.317 
+Iteration 329 of at most 1000: 
+The log-likelihood improved by 2.993 
+Iteration 330 of at most 1000: 
+The log-likelihood improved by 2.6 
+Iteration 331 of at most 1000: 
+The log-likelihood improved by 2.354 
+Iteration 332 of at most 1000: 
+The log-likelihood improved by 3.59 
+Iteration 333 of at most 1000: 
+The log-likelihood improved by 2.901 
+Iteration 334 of at most 1000: 
+The log-likelihood improved by 2.831 
+Iteration 335 of at most 1000: 
+The log-likelihood improved by 1.982 
+Iteration 336 of at most 1000: 
+The log-likelihood improved by 4.326 
+Iteration 337 of at most 1000: 
+The log-likelihood improved by 3.992 
+Iteration 338 of at most 1000: 
+The log-likelihood improved by 2.858 
+Iteration 339 of at most 1000: 
+The log-likelihood improved by 2.518 
+Iteration 340 of at most 1000: 
+The log-likelihood improved by 2.973 
+Iteration 341 of at most 1000: 
+The log-likelihood improved by 1.942 
+Iteration 342 of at most 1000: 
+The log-likelihood improved by 2.689 
+Iteration 343 of at most 1000: 
+The log-likelihood improved by 2.187 
+Iteration 344 of at most 1000: 
+The log-likelihood improved by 2.386 
+Iteration 345 of at most 1000: 
+The log-likelihood improved by 2.748 
+Iteration 346 of at most 1000: 
+The log-likelihood improved by 3.175 
+Iteration 347 of at most 1000: 
+The log-likelihood improved by 3.466 
+Iteration 348 of at most 1000: 
+The log-likelihood improved by 2.662 
+Iteration 349 of at most 1000: 
+The log-likelihood improved by 3.132 
+Iteration 350 of at most 1000: 
+The log-likelihood improved by 3.129 
+Iteration 351 of at most 1000: 
+The log-likelihood improved by 2.02 
+Iteration 352 of at most 1000: 
+The log-likelihood improved by 2.793 
+Iteration 353 of at most 1000: 
+The log-likelihood improved by 2.499 
+Iteration 354 of at most 1000: 
+The log-likelihood improved by 1.674 
+Iteration 355 of at most 1000: 
+The log-likelihood improved by 2.15 
+Iteration 356 of at most 1000: 
+The log-likelihood improved by 2.708 
+Iteration 357 of at most 1000: 
+The log-likelihood improved by 2.364 
+Iteration 358 of at most 1000: 
+The log-likelihood improved by 2.834 
+Iteration 359 of at most 1000: 
+The log-likelihood improved by 2.614 
+Iteration 360 of at most 1000: 
+The log-likelihood improved by 3.168 
+Iteration 361 of at most 1000: 
+The log-likelihood improved by 2.879 
+Iteration 362 of at most 1000: 
+The log-likelihood improved by 2.857 
+Iteration 363 of at most 1000: 
+The log-likelihood improved by 2.916 
+Iteration 364 of at most 1000: 
+The log-likelihood improved by 1.683 
+Iteration 365 of at most 1000: 
+The log-likelihood improved by 2.382 
+Iteration 366 of at most 1000: 
+The log-likelihood improved by 2.959 
+Iteration 367 of at most 1000: 
+The log-likelihood improved by 2.648 
+Iteration 368 of at most 1000: 
+The log-likelihood improved by 3.409 
+Iteration 369 of at most 1000: 
+The log-likelihood improved by 3.032 
+Iteration 370 of at most 1000: 
+The log-likelihood improved by 2.593 
+Iteration 371 of at most 1000: 
+The log-likelihood improved by 3.278 
+Iteration 372 of at most 1000: 
+The log-likelihood improved by 2.784 
+Iteration 373 of at most 1000: 
+The log-likelihood improved by 3.192 
+Iteration 374 of at most 1000: 
+The log-likelihood improved by 1.774 
+Iteration 375 of at most 1000: 
+The log-likelihood improved by 3.684 
+Iteration 376 of at most 1000: 
+The log-likelihood improved by 3.36 
+Iteration 377 of at most 1000: 
+The log-likelihood improved by 2.944 
+Iteration 378 of at most 1000: 
+The log-likelihood improved by 3.459 
+Iteration 379 of at most 1000: 
+The log-likelihood improved by 2.212 
+Iteration 380 of at most 1000: 
+The log-likelihood improved by 2.395 
+Iteration 381 of at most 1000: 
+The log-likelihood improved by 2.915 
+Iteration 382 of at most 1000: 
+The log-likelihood improved by 3.067 
+Iteration 383 of at most 1000: 
+The log-likelihood improved by 2.415 
+Iteration 384 of at most 1000: 
+The log-likelihood improved by 2.565 
+Iteration 385 of at most 1000: 
+The log-likelihood improved by 3.589 
+Iteration 386 of at most 1000: 
+The log-likelihood improved by 2.569 
+Iteration 387 of at most 1000: 
+The log-likelihood improved by 2.126 
+Iteration 388 of at most 1000: 
+The log-likelihood improved by 3.103 
+Iteration 389 of at most 1000: 
+The log-likelihood improved by 1.761 
+Iteration 390 of at most 1000: 
+The log-likelihood improved by 2.818 
+Iteration 391 of at most 1000: 
+The log-likelihood improved by 2.693 
+Iteration 392 of at most 1000: 
+The log-likelihood improved by 3.366 
+Iteration 393 of at most 1000: 
+The log-likelihood improved by 3.031 
+Iteration 394 of at most 1000: 
+The log-likelihood improved by 2.961 
+Iteration 395 of at most 1000: 
+The log-likelihood improved by 2.822 
+Iteration 396 of at most 1000: 
+The log-likelihood improved by 2.492 
+Iteration 397 of at most 1000: 
+The log-likelihood improved by 3.43 
+Iteration 398 of at most 1000: 
+The log-likelihood improved by 2.713 
+Iteration 399 of at most 1000: 
+The log-likelihood improved by 3.888 
+Iteration 400 of at most 1000: 
+The log-likelihood improved by 2.904 
+Iteration 401 of at most 1000: 
+The log-likelihood improved by 3.26 
+Iteration 402 of at most 1000: 
+The log-likelihood improved by 2.361 
+Iteration 403 of at most 1000: 
+The log-likelihood improved by 1.835 
+Iteration 404 of at most 1000: 
+The log-likelihood improved by 2.566 
+Iteration 405 of at most 1000: 
+The log-likelihood improved by 3.179 
+Iteration 406 of at most 1000: 
+The log-likelihood improved by 2.737 
+Iteration 407 of at most 1000: 
+The log-likelihood improved by 2.353 
+Iteration 408 of at most 1000: 
+The log-likelihood improved by 2.673 
+Iteration 409 of at most 1000: 
+The log-likelihood improved by 2.479 
+Iteration 410 of at most 1000: 
+The log-likelihood improved by 2.994 
+Iteration 411 of at most 1000: 
+The log-likelihood improved by 2.852 
+Iteration 412 of at most 1000: 
+The log-likelihood improved by 2.895 
+Iteration 413 of at most 1000: 
+The log-likelihood improved by 2.516 
+Iteration 414 of at most 1000: 
+The log-likelihood improved by 3.038 
+Iteration 415 of at most 1000: 
+The log-likelihood improved by 1.75 
+Iteration 416 of at most 1000: 
+The log-likelihood improved by 2.961 
+Iteration 417 of at most 1000: 
+The log-likelihood improved by 3 
+Iteration 418 of at most 1000: 
+The log-likelihood improved by 2.478 
+Iteration 419 of at most 1000: 
+The log-likelihood improved by 3.367 
+Iteration 420 of at most 1000: 
+The log-likelihood improved by 2.666 
+Iteration 421 of at most 1000: 
+The log-likelihood improved by 1.858 
+Iteration 422 of at most 1000: 
+The log-likelihood improved by 3.559 
+Iteration 423 of at most 1000: 
+The log-likelihood improved by 2.382 
+Iteration 424 of at most 1000: 
+The log-likelihood improved by 1.927 
+Iteration 425 of at most 1000: 
+The log-likelihood improved by 2.054 
+Iteration 426 of at most 1000: 
+The log-likelihood improved by 2.669 
+Iteration 427 of at most 1000: 
+The log-likelihood improved by 2.943 
+Iteration 428 of at most 1000: 
+The log-likelihood improved by 1.845 
+Iteration 429 of at most 1000: 
+The log-likelihood improved by 2.233 
+Iteration 430 of at most 1000: 
+The log-likelihood improved by 3.168 
+Iteration 431 of at most 1000: 
+The log-likelihood improved by 2.26 
+Iteration 432 of at most 1000: 
+The log-likelihood improved by 2.517 
+Iteration 433 of at most 1000: 
+The log-likelihood improved by 2.086 
+Iteration 434 of at most 1000: 
+The log-likelihood improved by 3.598 
+Iteration 435 of at most 1000: 
+The log-likelihood improved by 2.861 
+Iteration 436 of at most 1000: 
+The log-likelihood improved by 2.978 
+Iteration 437 of at most 1000: 
+The log-likelihood improved by 2.719 
+Iteration 438 of at most 1000: 
+The log-likelihood improved by 3.146 
+Iteration 439 of at most 1000: 
+The log-likelihood improved by 2.317 
+Iteration 440 of at most 1000: 
+The log-likelihood improved by 3.236 
+Iteration 441 of at most 1000: 
+The log-likelihood improved by 3.377 
+Iteration 442 of at most 1000: 
+The log-likelihood improved by 3.732 
+Iteration 443 of at most 1000: 
+The log-likelihood improved by 5.681 
+Iteration 444 of at most 1000: 
+The log-likelihood improved by 3.366 
+Iteration 445 of at most 1000: 
+The log-likelihood improved by 2.495 
+Iteration 446 of at most 1000: 
+The log-likelihood improved by 1.65 
+Iteration 447 of at most 1000: 
+The log-likelihood improved by 3.587 
+Iteration 448 of at most 1000: 
+The log-likelihood improved by 2.472 
+Iteration 449 of at most 1000: 
+The log-likelihood improved by 3.375 
+Iteration 450 of at most 1000: 
+The log-likelihood improved by 3.581 
+Iteration 451 of at most 1000: 
+The log-likelihood improved by 2.159 
+Iteration 452 of at most 1000: 
+The log-likelihood improved by 3.617 
+Iteration 453 of at most 1000: 
+The log-likelihood improved by 1.41 
+Iteration 454 of at most 1000: 
+The log-likelihood improved by 2.702 
+Iteration 455 of at most 1000: 
+The log-likelihood improved by 1.87 
+Iteration 456 of at most 1000: 
+The log-likelihood improved by 2.155 
+Iteration 457 of at most 1000: 
+The log-likelihood improved by 3.035 
+Iteration 458 of at most 1000: 
+The log-likelihood improved by 2.742 
+Iteration 459 of at most 1000: 
+The log-likelihood improved by 3.54 
+Iteration 460 of at most 1000: 
+The log-likelihood improved by 2.33 
+Iteration 461 of at most 1000: 
+The log-likelihood improved by 2.72 
+Iteration 462 of at most 1000: 
+The log-likelihood improved by 2.458 
+Iteration 463 of at most 1000: 
+The log-likelihood improved by 2.027 
+Iteration 464 of at most 1000: 
+The log-likelihood improved by 3.336 
+Iteration 465 of at most 1000: 
+The log-likelihood improved by 2.401 
+Iteration 466 of at most 1000: 
+The log-likelihood improved by 1.849 
+Iteration 467 of at most 1000: 
+The log-likelihood improved by 2.555 
+Iteration 468 of at most 1000: 
+The log-likelihood improved by 4.098 
+Iteration 469 of at most 1000: 
+The log-likelihood improved by 2.779 
+Iteration 470 of at most 1000: 
+The log-likelihood improved by 1.969 
+Iteration 471 of at most 1000: 
+The log-likelihood improved by 2.927 
+Iteration 472 of at most 1000: 
+The log-likelihood improved by 2.066 
+Iteration 473 of at most 1000: 
+The log-likelihood improved by 2.32 
+Iteration 474 of at most 1000: 
+The log-likelihood improved by 2.031 
+Iteration 475 of at most 1000: 
+The log-likelihood improved by 2.807 
+Iteration 476 of at most 1000: 
+The log-likelihood improved by 2.39 
+Iteration 477 of at most 1000: 
+The log-likelihood improved by 2.374 
+Iteration 478 of at most 1000: 
+The log-likelihood improved by 2.797 
+Iteration 479 of at most 1000: 
+The log-likelihood improved by 2.957 
+Iteration 480 of at most 1000: 
+The log-likelihood improved by 2.351 
+Iteration 481 of at most 1000: 
+The log-likelihood improved by 2.682 
+Iteration 482 of at most 1000: 
+The log-likelihood improved by 4.313 
+Iteration 483 of at most 1000: 
+The log-likelihood improved by 3.485 
+Iteration 484 of at most 1000: 
+The log-likelihood improved by 2.035 
+Iteration 485 of at most 1000: 
+The log-likelihood improved by 3.667 
+Iteration 486 of at most 1000: 
+The log-likelihood improved by 2.415 
+Iteration 487 of at most 1000: 
+The log-likelihood improved by 2.888 
+Iteration 488 of at most 1000: 
+The log-likelihood improved by 2.726 
+Iteration 489 of at most 1000: 
+The log-likelihood improved by 2.452 
+Iteration 490 of at most 1000: 
+The log-likelihood improved by 3.098 
+Iteration 491 of at most 1000: 
+The log-likelihood improved by 1.898 
+Iteration 492 of at most 1000: 
+The log-likelihood improved by 2.935 
+Iteration 493 of at most 1000: 
+The log-likelihood improved by 3.07 
+Iteration 494 of at most 1000: 
+The log-likelihood improved by 2.655 
+Iteration 495 of at most 1000: 
+The log-likelihood improved by 3.665 
+Iteration 496 of at most 1000: 
+The log-likelihood improved by 3.017 
+Iteration 497 of at most 1000: 
+The log-likelihood improved by 3.121 
+Iteration 498 of at most 1000: 
+The log-likelihood improved by 2.119 
+Iteration 499 of at most 1000: 
+The log-likelihood improved by 2.8 
+Iteration 500 of at most 1000: 
+The log-likelihood improved by 2.777 
+Iteration 501 of at most 1000: 
+The log-likelihood improved by 1.911 
+Iteration 502 of at most 1000: 
+The log-likelihood improved by 6.055 
+Iteration 503 of at most 1000: 
+The log-likelihood improved by 2.732 
+Iteration 504 of at most 1000: 
+The log-likelihood improved by 2.028 
+Iteration 505 of at most 1000: 
+The log-likelihood improved by 2.905 
+Iteration 506 of at most 1000: 
+The log-likelihood improved by 2.893 
+Iteration 507 of at most 1000: 
+The log-likelihood improved by 2.57 
+Iteration 508 of at most 1000: 
+The log-likelihood improved by 2.117 
+Iteration 509 of at most 1000: 
+The log-likelihood improved by 2.983 
+Iteration 510 of at most 1000: 
+The log-likelihood improved by 2.842 
+Iteration 511 of at most 1000: 
+The log-likelihood improved by 2.568 
+Step length converged once. Increasing MCMC sample size.
+Iteration 512 of at most 1000: 
+The log-likelihood improved by 3.779 
+Iteration 513 of at most 1000: 
+The log-likelihood improved by 4.303 
+Iteration 514 of at most 1000: 
+The log-likelihood improved by 3.032 
+Iteration 515 of at most 1000: 
+The log-likelihood improved by 2.111 
+Iteration 516 of at most 1000: 
+The log-likelihood improved by 2.064 
+Iteration 517 of at most 1000: 
+The log-likelihood improved by 3.343 
+Iteration 518 of at most 1000: 
+The log-likelihood improved by 1.894 
+Iteration 519 of at most 1000: 
+The log-likelihood improved by 2.797 
+Iteration 520 of at most 1000: 
+The log-likelihood improved by 1.989 
+Iteration 521 of at most 1000: 
+The log-likelihood improved by 2.638 
+Iteration 522 of at most 1000: 
+The log-likelihood improved by 3.086 
+Iteration 523 of at most 1000: 
+The log-likelihood improved by 2.857 
+Iteration 524 of at most 1000: 
+The log-likelihood improved by 3.222 
+Iteration 525 of at most 1000: 
+The log-likelihood improved by 2.646 
+Iteration 526 of at most 1000: 
+The log-likelihood improved by 2.451 
+Iteration 527 of at most 1000: 
+The log-likelihood improved by 2.97 
+Iteration 528 of at most 1000: 
+The log-likelihood improved by 2.434 
+Iteration 529 of at most 1000: 
+The log-likelihood improved by 3.055 
+Iteration 530 of at most 1000: 
+The log-likelihood improved by 2.276 
+Iteration 531 of at most 1000: 
+The log-likelihood improved by 3.515 
+Iteration 532 of at most 1000: 
+The log-likelihood improved by 2.35 
+Iteration 533 of at most 1000: 
+The log-likelihood improved by 2.659 
+Iteration 534 of at most 1000: 
+The log-likelihood improved by 2.349 
+Iteration 535 of at most 1000: 
+The log-likelihood improved by 2.569 
+Iteration 536 of at most 1000: 
+The log-likelihood improved by 2.127 
+Iteration 537 of at most 1000: 
+The log-likelihood improved by 3.107 
+Iteration 538 of at most 1000: 
+The log-likelihood improved by 3.36 
+Iteration 539 of at most 1000: 
+The log-likelihood improved by 3.17 
+Iteration 540 of at most 1000: 
+The log-likelihood improved by 3.198 
+Iteration 541 of at most 1000: 
+The log-likelihood improved by 2.774 
+Iteration 542 of at most 1000: 
+The log-likelihood improved by 2.527 
+Iteration 543 of at most 1000: 
+The log-likelihood improved by 2.586 
+Iteration 544 of at most 1000: 
+The log-likelihood improved by 2.122 
+Iteration 545 of at most 1000: 
+The log-likelihood improved by 2.5 
+Iteration 546 of at most 1000: 
+The log-likelihood improved by 2.724 
+Iteration 547 of at most 1000: 
+The log-likelihood improved by 3.127 
+Iteration 548 of at most 1000: 
+The log-likelihood improved by 3.205 
+Iteration 549 of at most 1000: 
+The log-likelihood improved by 2.635 
+Iteration 550 of at most 1000: 
+The log-likelihood improved by 2.561 
+Iteration 551 of at most 1000: 
+The log-likelihood improved by 2.626 
+Iteration 552 of at most 1000: 
+The log-likelihood improved by 2.379 
+Iteration 553 of at most 1000: 
+The log-likelihood improved by 3.568 
+Iteration 554 of at most 1000: 
+The log-likelihood improved by 2.547 
+Iteration 555 of at most 1000: 
+The log-likelihood improved by 3.339 
+Iteration 556 of at most 1000: 
+The log-likelihood improved by 2.51 
+Iteration 557 of at most 1000: 
+The log-likelihood improved by 2.928 
+Iteration 558 of at most 1000: 
+The log-likelihood improved by 2.207 
+Iteration 559 of at most 1000: 
+The log-likelihood improved by 2.65 
+Iteration 560 of at most 1000: 
+The log-likelihood improved by 2.666 
+Iteration 561 of at most 1000: 
+The log-likelihood improved by 2.523 
+Iteration 562 of at most 1000: 
+The log-likelihood improved by 3.227 
+Iteration 563 of at most 1000: 
+The log-likelihood improved by 2.281 
+Iteration 564 of at most 1000: 
+The log-likelihood improved by 2.99 
+Iteration 565 of at most 1000: 
+The log-likelihood improved by 3.278 
+Iteration 566 of at most 1000: 
+The log-likelihood improved by 3.076 
+Iteration 567 of at most 1000: 
+The log-likelihood improved by 2.396 
+Iteration 568 of at most 1000: 
+The log-likelihood improved by 2.408 
+Iteration 569 of at most 1000: 
+The log-likelihood improved by 2.62 
+Iteration 570 of at most 1000: 
+The log-likelihood improved by 2.166 
+Iteration 571 of at most 1000: 
+The log-likelihood improved by 3.139 
+Iteration 572 of at most 1000: 
+The log-likelihood improved by 4.014 
+Iteration 573 of at most 1000: 
+The log-likelihood improved by 3.532 
+Iteration 574 of at most 1000: 
+The log-likelihood improved by 1.967 
+Iteration 575 of at most 1000: 
+The log-likelihood improved by 3.026 
+Iteration 576 of at most 1000: 
+The log-likelihood improved by 2.803 
+Iteration 577 of at most 1000: 
+The log-likelihood improved by 3.061 
+Iteration 578 of at most 1000: 
+The log-likelihood improved by 2.405 
+Iteration 579 of at most 1000: 
+The log-likelihood improved by 2.222 
+Iteration 580 of at most 1000: 
+The log-likelihood improved by 3.333 
+Iteration 581 of at most 1000: 
+The log-likelihood improved by 2.688 
+Iteration 582 of at most 1000: 
+The log-likelihood improved by 2.292 
+Iteration 583 of at most 1000: 
+The log-likelihood improved by 3.475 
+Iteration 584 of at most 1000: 
+The log-likelihood improved by 3.241 
+Iteration 585 of at most 1000: 
+The log-likelihood improved by 2.181 
+Iteration 586 of at most 1000: 
+The log-likelihood improved by 2.281 
+Iteration 587 of at most 1000: 
+The log-likelihood improved by 2.524 
+Iteration 588 of at most 1000: 
+The log-likelihood improved by 2.67 
+Iteration 589 of at most 1000: 
+The log-likelihood improved by 3.159 
+Iteration 590 of at most 1000: 
+The log-likelihood improved by 2.617 
+Iteration 591 of at most 1000: 
+The log-likelihood improved by 2.46 
+Iteration 592 of at most 1000: 
+The log-likelihood improved by 2.925 
+Iteration 593 of at most 1000: 
+The log-likelihood improved by 2.576 
+Iteration 594 of at most 1000: 
+The log-likelihood improved by 2.026 
+Iteration 595 of at most 1000: 
+The log-likelihood improved by 3.084 
+Iteration 596 of at most 1000: 
+The log-likelihood improved by 3.787 
+Iteration 597 of at most 1000: 
+The log-likelihood improved by 2.822 
+Iteration 598 of at most 1000: 
+The log-likelihood improved by 3.074 
+Iteration 599 of at most 1000: 
+The log-likelihood improved by 2.759 
+Iteration 600 of at most 1000: 
+The log-likelihood improved by 2.896 
+Iteration 601 of at most 1000: 
+The log-likelihood improved by 3.43 
+Iteration 602 of at most 1000: 
+The log-likelihood improved by 3.212 
+Iteration 603 of at most 1000: 
+The log-likelihood improved by 2.8 
+Iteration 604 of at most 1000: 
+The log-likelihood improved by 2.87 
+Iteration 605 of at most 1000: 
+The log-likelihood improved by 1.798 
+Iteration 606 of at most 1000: 
+The log-likelihood improved by 2.035 
+Iteration 607 of at most 1000: 
+The log-likelihood improved by 2.975 
+Iteration 608 of at most 1000: 
+The log-likelihood improved by 2.392 
+Iteration 609 of at most 1000: 
+The log-likelihood improved by 1.722 
+Iteration 610 of at most 1000: 
+The log-likelihood improved by 3.132 
+Iteration 611 of at most 1000: 
+The log-likelihood improved by 3.196 
+Iteration 612 of at most 1000: 
+The log-likelihood improved by 2.676 
+Iteration 613 of at most 1000: 
+The log-likelihood improved by 3.481 
+Iteration 614 of at most 1000: 
+The log-likelihood improved by 2.658 
+Iteration 615 of at most 1000: 
+The log-likelihood improved by 2.529 
+Iteration 616 of at most 1000: 
+The log-likelihood improved by 2.478 
+Iteration 617 of at most 1000: 
+The log-likelihood improved by 1.43 
+Iteration 618 of at most 1000: 
+The log-likelihood improved by 1.752 
+Iteration 619 of at most 1000: 
+The log-likelihood improved by 4.157 
+Iteration 620 of at most 1000: 
+The log-likelihood improved by 3.656 
+Iteration 621 of at most 1000: 
+The log-likelihood improved by 2.749 
+Iteration 622 of at most 1000: 
+The log-likelihood improved by 2.57 
+Iteration 623 of at most 1000: 
+The log-likelihood improved by 3.115 
+Iteration 624 of at most 1000: 
+The log-likelihood improved by 1.901 
+Iteration 625 of at most 1000: 
+The log-likelihood improved by 3.716 
+Iteration 626 of at most 1000: 
+The log-likelihood improved by 1.45 
+Iteration 627 of at most 1000: 
+The log-likelihood improved by 1.493 
+Iteration 628 of at most 1000: 
+The log-likelihood improved by 1.751 
+Iteration 629 of at most 1000: 
+The log-likelihood improved by 3.401 
+Iteration 630 of at most 1000: 
+The log-likelihood improved by 4.296 
+Iteration 631 of at most 1000: 
+The log-likelihood improved by 1.548 
+Iteration 632 of at most 1000: 
+The log-likelihood improved by 3.034 
+Iteration 633 of at most 1000: 
+The log-likelihood improved by 2.629 
+Iteration 634 of at most 1000: 
+The log-likelihood improved by 2.604 
+Iteration 635 of at most 1000: 
+The log-likelihood improved by 3.751 
+Iteration 636 of at most 1000: 
+The log-likelihood improved by 2.289 
+Iteration 637 of at most 1000: 
+The log-likelihood improved by 2.926 
+Iteration 638 of at most 1000: 
+The log-likelihood improved by 2.67 
+Iteration 639 of at most 1000: 
+The log-likelihood improved by 3.129 
+Iteration 640 of at most 1000: 
+The log-likelihood improved by 2.403 
+Iteration 641 of at most 1000: 
+The log-likelihood improved by 2.526 
+Iteration 642 of at most 1000: 
+The log-likelihood improved by 2.656 
+Iteration 643 of at most 1000: 
+The log-likelihood improved by 2.014 
+Iteration 644 of at most 1000: 
+The log-likelihood improved by 3.466 
+Iteration 645 of at most 1000: 
+The log-likelihood improved by 2.689 
+Iteration 646 of at most 1000: 
+The log-likelihood improved by 3.482 
+Iteration 647 of at most 1000: 
+The log-likelihood improved by 1.874 
+Iteration 648 of at most 1000: 
+The log-likelihood improved by 2.274 
+Iteration 649 of at most 1000: 
+The log-likelihood improved by 3.075 
+Iteration 650 of at most 1000: 
+The log-likelihood improved by 2.535 
+Iteration 651 of at most 1000: 
+The log-likelihood improved by 1.938 
+Iteration 652 of at most 1000: 
+The log-likelihood improved by 3.417 
+Iteration 653 of at most 1000: 
+The log-likelihood improved by 2.268 
+Iteration 654 of at most 1000: 
+The log-likelihood improved by 2.721 
+Iteration 655 of at most 1000: 
+The log-likelihood improved by 2.924 
+Iteration 656 of at most 1000: 
+The log-likelihood improved by 2.696 
+Iteration 657 of at most 1000: 
+The log-likelihood improved by 2.109 
+Iteration 658 of at most 1000: 
+The log-likelihood improved by 2.296 
+Iteration 659 of at most 1000: 
+The log-likelihood improved by 1.559 
+Iteration 660 of at most 1000: 
+The log-likelihood improved by 3.018 
+Iteration 661 of at most 1000: 
+The log-likelihood improved by 3.056 
+Iteration 662 of at most 1000: 
+The log-likelihood improved by 2.656 
+Iteration 663 of at most 1000: 
+The log-likelihood improved by 3.603 
+Iteration 664 of at most 1000: 
+The log-likelihood improved by 2.432 
+Iteration 665 of at most 1000: 
+The log-likelihood improved by 3.459 
+Iteration 666 of at most 1000: 
+The log-likelihood improved by 2.21 
+Iteration 667 of at most 1000: 
+The log-likelihood improved by 2.587 
+Iteration 668 of at most 1000: 
+The log-likelihood improved by 3.034 
+Iteration 669 of at most 1000: 
+The log-likelihood improved by 2.811 
+Iteration 670 of at most 1000: 
+The log-likelihood improved by 2.851 
+Iteration 671 of at most 1000: 
+The log-likelihood improved by 3.763 
+Iteration 672 of at most 1000: 
+The log-likelihood improved by 2.779 
+Iteration 673 of at most 1000: 
+The log-likelihood improved by 2.863 
+Iteration 674 of at most 1000: 
+The log-likelihood improved by 2.664 
+Iteration 675 of at most 1000: 
+The log-likelihood improved by 2.732 
+Iteration 676 of at most 1000: 
+The log-likelihood improved by 3.128 
+Iteration 677 of at most 1000: 
+The log-likelihood improved by 2.727 
+Iteration 678 of at most 1000: 
+The log-likelihood improved by 1.963 
+Iteration 679 of at most 1000: 
+The log-likelihood improved by 2.444 
+Iteration 680 of at most 1000: 
+The log-likelihood improved by 2.651 
+Iteration 681 of at most 1000: 
+The log-likelihood improved by 2.082 
+Iteration 682 of at most 1000: 
+The log-likelihood improved by 3.336 
+Iteration 683 of at most 1000: 
+The log-likelihood improved by 3.543 
+Iteration 684 of at most 1000: 
+The log-likelihood improved by 2.895 
+Iteration 685 of at most 1000: 
+The log-likelihood improved by 4.845 
+Iteration 686 of at most 1000: 
+The log-likelihood improved by 2.104 
+Iteration 687 of at most 1000: 
+The log-likelihood improved by 3.607 
+Iteration 688 of at most 1000: 
+The log-likelihood improved by 3.329 
+Iteration 689 of at most 1000: 
+The log-likelihood improved by 1.775 
+Iteration 690 of at most 1000: 
+The log-likelihood improved by 3.529 
+Iteration 691 of at most 1000: 
+The log-likelihood improved by 3.351 
+Iteration 692 of at most 1000: 
+The log-likelihood improved by 2.437 
+Iteration 693 of at most 1000: 
+The log-likelihood improved by 2.262 
+Iteration 694 of at most 1000: 
+The log-likelihood improved by 2.226 
+Iteration 695 of at most 1000: 
+The log-likelihood improved by 3.062 
+Iteration 696 of at most 1000: 
+The log-likelihood improved by 2.224 
+Iteration 697 of at most 1000: 
+The log-likelihood improved by 3.392 
+Iteration 698 of at most 1000: 
+The log-likelihood improved by 2.583 
+Iteration 699 of at most 1000: 
+The log-likelihood improved by 3.35 
+Iteration 700 of at most 1000: 
+The log-likelihood improved by 2.73 
+Iteration 701 of at most 1000: 
+The log-likelihood improved by 2.839 
+Iteration 702 of at most 1000: 
+The log-likelihood improved by 1.829 
+Iteration 703 of at most 1000: 
+The log-likelihood improved by 2.345 
+Iteration 704 of at most 1000: 
+The log-likelihood improved by 3.196 
+Iteration 705 of at most 1000: 
+The log-likelihood improved by 2.136 
+Iteration 706 of at most 1000: 
+The log-likelihood improved by 2.67 
+Iteration 707 of at most 1000: 
+The log-likelihood improved by 2.216 
+Iteration 708 of at most 1000: 
+The log-likelihood improved by 1.682 
+Iteration 709 of at most 1000: 
+The log-likelihood improved by 3.149 
+Iteration 710 of at most 1000: 
+The log-likelihood improved by 2.781 
+Iteration 711 of at most 1000: 
+The log-likelihood improved by 2.408 
+Iteration 712 of at most 1000: 
+The log-likelihood improved by 2.376 
+Iteration 713 of at most 1000: 
+The log-likelihood improved by 2.707 
+Iteration 714 of at most 1000: 
+The log-likelihood improved by 2.922 
+Iteration 715 of at most 1000: 
+The log-likelihood improved by 2.549 
+Iteration 716 of at most 1000: 
+The log-likelihood improved by 2.81 
+Iteration 717 of at most 1000: 
+The log-likelihood improved by 2.211 
+Iteration 718 of at most 1000: 
+The log-likelihood improved by 3.534 
+Iteration 719 of at most 1000: 
+The log-likelihood improved by 2.57 
+Iteration 720 of at most 1000: 
+The log-likelihood improved by 1.759 
+Iteration 721 of at most 1000: 
+The log-likelihood improved by 3.108 
+Iteration 722 of at most 1000: 
+The log-likelihood improved by 2.888 
+Iteration 723 of at most 1000: 
+The log-likelihood improved by 2.708 
+Iteration 724 of at most 1000: 
+The log-likelihood improved by 3.056 
+Iteration 725 of at most 1000: 
+The log-likelihood improved by 2.307 
+Iteration 726 of at most 1000: 
+The log-likelihood improved by 2.542 
+Iteration 727 of at most 1000: 
+The log-likelihood improved by 2.484 
+Iteration 728 of at most 1000: 
+The log-likelihood improved by 2.931 
+Iteration 729 of at most 1000: 
+The log-likelihood improved by 2.07 
+Iteration 730 of at most 1000: 
+The log-likelihood improved by 2.164 
+Iteration 731 of at most 1000: 
+The log-likelihood improved by 3.134 
+Iteration 732 of at most 1000: 
+The log-likelihood improved by 2.976 
+Iteration 733 of at most 1000: 
+The log-likelihood improved by 2.846 
+Iteration 734 of at most 1000: 
+The log-likelihood improved by 3.078 
+Iteration 735 of at most 1000: 
+The log-likelihood improved by 2.89 
+Iteration 736 of at most 1000: 
+The log-likelihood improved by 2.389 
+Iteration 737 of at most 1000: 
+The log-likelihood improved by 3.227 
+Iteration 738 of at most 1000: 
+The log-likelihood improved by 1.752 
+Iteration 739 of at most 1000: 
+The log-likelihood improved by 2.362 
+Iteration 740 of at most 1000: 
+The log-likelihood improved by 2.681 
+Iteration 741 of at most 1000: 
+The log-likelihood improved by 1.719 
+Iteration 742 of at most 1000: 
+The log-likelihood improved by 2.002 
+Iteration 743 of at most 1000: 
+The log-likelihood improved by 2.908 
+Iteration 744 of at most 1000: 
+The log-likelihood improved by 2.876 
+Iteration 745 of at most 1000: 
+The log-likelihood improved by 3.619 
+Iteration 746 of at most 1000: 
+The log-likelihood improved by 2.547 
+Iteration 747 of at most 1000: 
+The log-likelihood improved by 2.726 
+Iteration 748 of at most 1000: 
+The log-likelihood improved by 2.478 
+Iteration 749 of at most 1000: 
+The log-likelihood improved by 2.911 
+Iteration 750 of at most 1000: 
+The log-likelihood improved by 2.104 
+Iteration 751 of at most 1000: 
+The log-likelihood improved by 3.102 
+Iteration 752 of at most 1000: 
+The log-likelihood improved by 1.538 
+Iteration 753 of at most 1000: 
+The log-likelihood improved by 2.845 
+Iteration 754 of at most 1000: 
+The log-likelihood improved by 3.049 
+Iteration 755 of at most 1000: 
+The log-likelihood improved by 2.221 
+Iteration 756 of at most 1000: 
+The log-likelihood improved by 3.342 
+Iteration 757 of at most 1000: 
+The log-likelihood improved by 2.303 
+Iteration 758 of at most 1000: 
+The log-likelihood improved by 3 
+Iteration 759 of at most 1000: 
+The log-likelihood improved by 2.305 
+Iteration 760 of at most 1000: 
+The log-likelihood improved by 2.913 
+Iteration 761 of at most 1000: 
+The log-likelihood improved by 3.12 
+Iteration 762 of at most 1000: 
+The log-likelihood improved by 2.943 
+Iteration 763 of at most 1000: 
+The log-likelihood improved by 2.02 
+Iteration 764 of at most 1000: 
+The log-likelihood improved by 2.297 
+Iteration 765 of at most 1000: 
+The log-likelihood improved by 1.973 
+Iteration 766 of at most 1000: 
+The log-likelihood improved by 2.697 
+Iteration 767 of at most 1000: 
+The log-likelihood improved by 3.222 
+Iteration 768 of at most 1000: 
+The log-likelihood improved by 2.829 
+Iteration 769 of at most 1000: 
+The log-likelihood improved by 3.909 
+Iteration 770 of at most 1000: 
+The log-likelihood improved by 2.408 
+Iteration 771 of at most 1000: 
+The log-likelihood improved by 3.275 
+Iteration 772 of at most 1000: 
+The log-likelihood improved by 2.892 
+Iteration 773 of at most 1000: 
+The log-likelihood improved by 2.832 
+Iteration 774 of at most 1000: 
+The log-likelihood improved by 2.205 
+Iteration 775 of at most 1000: 
+The log-likelihood improved by 3.368 
+Iteration 776 of at most 1000: 
+The log-likelihood improved by 3.125 
+Iteration 777 of at most 1000: 
+The log-likelihood improved by 2.503 
+Iteration 778 of at most 1000: 
+The log-likelihood improved by 3.107 
+Iteration 779 of at most 1000: 
+The log-likelihood improved by 3.97 
+Iteration 780 of at most 1000: 
+The log-likelihood improved by 2.286 
+Iteration 781 of at most 1000: 
+The log-likelihood improved by 3.582 
+Iteration 782 of at most 1000: 
+The log-likelihood improved by 2.253 
+Iteration 783 of at most 1000: 
+The log-likelihood improved by 3.038 
+Iteration 784 of at most 1000: 
+The log-likelihood improved by 1.835 
+Iteration 785 of at most 1000: 
+The log-likelihood improved by 3.037 
+Iteration 786 of at most 1000: 
+The log-likelihood improved by 2.271 
+Iteration 787 of at most 1000: 
+The log-likelihood improved by 2.485 
+Iteration 788 of at most 1000: 
+The log-likelihood improved by 1.726 
+Iteration 789 of at most 1000: 
+The log-likelihood improved by 2.572 
+Iteration 790 of at most 1000: 
+The log-likelihood improved by 2.327 
+Iteration 791 of at most 1000: 
+The log-likelihood improved by 1.772 
+Iteration 792 of at most 1000: 
+The log-likelihood improved by 2.816 
+Iteration 793 of at most 1000: 
+The log-likelihood improved by 2.949 
+Iteration 794 of at most 1000: 
+The log-likelihood improved by 1.707 
+Iteration 795 of at most 1000: 
+The log-likelihood improved by 3.191 
+Iteration 796 of at most 1000: 
+The log-likelihood improved by 3.227 
+Iteration 797 of at most 1000: 
+The log-likelihood improved by 2.896 
+Iteration 798 of at most 1000: 
+The log-likelihood improved by 2.128 
+Iteration 799 of at most 1000: 
+The log-likelihood improved by 2.8 
+Iteration 800 of at most 1000: 
+The log-likelihood improved by 2.709 
+Iteration 801 of at most 1000: 
+The log-likelihood improved by 2.749 
+Iteration 802 of at most 1000: 
+The log-likelihood improved by 2.261 
+Iteration 803 of at most 1000: 
+The log-likelihood improved by 2.037 
+Iteration 804 of at most 1000: 
+The log-likelihood improved by 2.072 
+Iteration 805 of at most 1000: 
+The log-likelihood improved by 2.798 
+Iteration 806 of at most 1000: 
+The log-likelihood improved by 2.44 
+Iteration 807 of at most 1000: 
+The log-likelihood improved by 2.773 
+Iteration 808 of at most 1000: 
+The log-likelihood improved by 2.26 
+Iteration 809 of at most 1000: 
+The log-likelihood improved by 3.119 
+Iteration 810 of at most 1000: 
+The log-likelihood improved by 1.938 
+Iteration 811 of at most 1000: 
+The log-likelihood improved by 3.084 
+Iteration 812 of at most 1000: 
+The log-likelihood improved by 3.826 
+Iteration 813 of at most 1000: 
+The log-likelihood improved by 3.476 
+Iteration 814 of at most 1000: 
+The log-likelihood improved by 1.856 
+Iteration 815 of at most 1000: 
+The log-likelihood improved by 2.679 
+Iteration 816 of at most 1000: 
+The log-likelihood improved by 3.66 
+Iteration 817 of at most 1000: 
+The log-likelihood improved by 2.441 
+Iteration 818 of at most 1000: 
+The log-likelihood improved by 2.435 
+Iteration 819 of at most 1000: 
+The log-likelihood improved by 2.534 
+Iteration 820 of at most 1000: 
+The log-likelihood improved by 2.739 
+Step length converged once. Increasing MCMC sample size.
+Iteration 821 of at most 1000: 
+The log-likelihood improved by 3.203 
+Iteration 822 of at most 1000: 
+The log-likelihood improved by 2.08 
+Iteration 823 of at most 1000: 
+The log-likelihood improved by 2.996 
+Iteration 824 of at most 1000: 
+The log-likelihood improved by 3.374 
+Iteration 825 of at most 1000: 
+The log-likelihood improved by 2.417 
+Iteration 826 of at most 1000: 
+The log-likelihood improved by 2.796 
+Iteration 827 of at most 1000: 
+The log-likelihood improved by 3.903 
+Iteration 828 of at most 1000: 
+The log-likelihood improved by 3.073 
+Iteration 829 of at most 1000: 
+The log-likelihood improved by 2.679 
+Iteration 830 of at most 1000: 
+The log-likelihood improved by 2.432 
+Iteration 831 of at most 1000: 
+The log-likelihood improved by 3.153 
+Iteration 832 of at most 1000: 
+The log-likelihood improved by 1.819 
+Iteration 833 of at most 1000: 
+The log-likelihood improved by 3.454 
+Iteration 834 of at most 1000: 
+The log-likelihood improved by 2.268 
+Iteration 835 of at most 1000: 
+The log-likelihood improved by 2.229 
+Iteration 836 of at most 1000: 
+The log-likelihood improved by 2.252 
+Iteration 837 of at most 1000: 
+The log-likelihood improved by 1.673 
+Iteration 838 of at most 1000: 
+The log-likelihood improved by 2.902 
+Iteration 839 of at most 1000: 
+The log-likelihood improved by 2.831 
+Iteration 840 of at most 1000: 
+The log-likelihood improved by 2.832 
+Iteration 841 of at most 1000: 
+The log-likelihood improved by 2.183 
+Iteration 842 of at most 1000: 
+The log-likelihood improved by 3.397 
+Iteration 843 of at most 1000: 
+The log-likelihood improved by 2.506 
+Iteration 844 of at most 1000: 
+The log-likelihood improved by 2.439 
+Iteration 845 of at most 1000: 
+The log-likelihood improved by 3.042 
+Iteration 846 of at most 1000: 
+The log-likelihood improved by 2.577 
+Iteration 847 of at most 1000: 
+The log-likelihood improved by 3.411 
+Iteration 848 of at most 1000: 
+The log-likelihood improved by 2.029 
+Iteration 849 of at most 1000: 
+The log-likelihood improved by 2.615 
+Iteration 850 of at most 1000: 
+The log-likelihood improved by 2.713 
+Iteration 851 of at most 1000: 
+The log-likelihood improved by 2.565 
+Iteration 852 of at most 1000: 
+The log-likelihood improved by 2.486 
+Iteration 853 of at most 1000: 
+The log-likelihood improved by 1.896 
+Iteration 854 of at most 1000: 
+The log-likelihood improved by 2.708 
+Iteration 855 of at most 1000: 
+The log-likelihood improved by 3.236 
+Iteration 856 of at most 1000: 
+The log-likelihood improved by 2.849 
+Iteration 857 of at most 1000: 
+The log-likelihood improved by 2.93 
+Iteration 858 of at most 1000: 
+The log-likelihood improved by 2.9 
+Iteration 859 of at most 1000: 
+The log-likelihood improved by 2.345 
+Iteration 860 of at most 1000: 
+The log-likelihood improved by 2.8 
+Iteration 861 of at most 1000: 
+The log-likelihood improved by 2.714 
+Iteration 862 of at most 1000: 
+The log-likelihood improved by 2.031 
+Iteration 863 of at most 1000: 
+The log-likelihood improved by 3.589 
+Iteration 864 of at most 1000: 
+The log-likelihood improved by 3.763 
+Iteration 865 of at most 1000: 
+The log-likelihood improved by 2.947 
+Iteration 866 of at most 1000: 
+The log-likelihood improved by 2.591 
+Iteration 867 of at most 1000: 
+The log-likelihood improved by 3.365 
+Iteration 868 of at most 1000: 
+The log-likelihood improved by 1.653 
+Iteration 869 of at most 1000: 
+The log-likelihood improved by 3.943 
+Iteration 870 of at most 1000: 
+The log-likelihood improved by 2.286 
+Iteration 871 of at most 1000: 
+The log-likelihood improved by 2.298 
+Iteration 872 of at most 1000: 
+The log-likelihood improved by 2.411 
+Iteration 873 of at most 1000: 
+The log-likelihood improved by 4.168 
+Iteration 874 of at most 1000: 
+The log-likelihood improved by 3.737 
+Iteration 875 of at most 1000: 
+The log-likelihood improved by 3.84 
+Iteration 876 of at most 1000: 
+The log-likelihood improved by 2.472 
+Iteration 877 of at most 1000: 
+The log-likelihood improved by 1.73 
+Iteration 878 of at most 1000: 
+The log-likelihood improved by 1.874 
+Iteration 879 of at most 1000: 
+The log-likelihood improved by 2.191 
+Iteration 880 of at most 1000: 
+The log-likelihood improved by 3.21 
+Iteration 881 of at most 1000: 
+The log-likelihood improved by 2.656 
+Iteration 882 of at most 1000: 
+The log-likelihood improved by 2.752 
+Iteration 883 of at most 1000: 
+The log-likelihood improved by 1.78 
+Iteration 884 of at most 1000: 
+The log-likelihood improved by 2.374 
+Iteration 885 of at most 1000: 
+The log-likelihood improved by 1.868 
+Iteration 886 of at most 1000: 
+The log-likelihood improved by 2.87 
+Iteration 887 of at most 1000: 
+The log-likelihood improved by 2.787 
+Iteration 888 of at most 1000: 
+The log-likelihood improved by 2.427 
+Iteration 889 of at most 1000: 
+The log-likelihood improved by 2.951 
+Iteration 890 of at most 1000: 
+The log-likelihood improved by 2.373 
+Iteration 891 of at most 1000: 
+The log-likelihood improved by 1.715 
+Iteration 892 of at most 1000: 
+The log-likelihood improved by 2.593 
+Iteration 893 of at most 1000: 
+The log-likelihood improved by 2.011 
+Iteration 894 of at most 1000: 
+The log-likelihood improved by 2.841 
+Iteration 895 of at most 1000: 
+The log-likelihood improved by 2.701 
+Iteration 896 of at most 1000: 
+The log-likelihood improved by 2.512 
+Iteration 897 of at most 1000: 
+The log-likelihood improved by 3.209 
+Iteration 898 of at most 1000: 
+The log-likelihood improved by 2.486 
+Iteration 899 of at most 1000: 
+The log-likelihood improved by 4.178 
+Iteration 900 of at most 1000: 
+The log-likelihood improved by 2.162 
+Iteration 901 of at most 1000: 
+The log-likelihood improved by 2.352 
+Iteration 902 of at most 1000: 
+The log-likelihood improved by 2.044 
+Iteration 903 of at most 1000: 
+The log-likelihood improved by 3.101 
+Iteration 904 of at most 1000: 
+The log-likelihood improved by 2.183 
+Iteration 905 of at most 1000: 
+The log-likelihood improved by 3.838 
+Iteration 906 of at most 1000: 
+The log-likelihood improved by 3.162 
+Iteration 907 of at most 1000: 
+The log-likelihood improved by 2.378 
+Iteration 908 of at most 1000: 
+The log-likelihood improved by 3.189 
+Iteration 909 of at most 1000: 
+The log-likelihood improved by 2.991 
+Iteration 910 of at most 1000: 
+The log-likelihood improved by 3.258 
+Iteration 911 of at most 1000: 
+The log-likelihood improved by 4.269 
+Iteration 912 of at most 1000: 
+The log-likelihood improved by 2.832 
+Iteration 913 of at most 1000: 
+The log-likelihood improved by 1.737 
+Iteration 914 of at most 1000: 
+The log-likelihood improved by 2.849 
+Iteration 915 of at most 1000: 
+The log-likelihood improved by 2.434 
+Iteration 916 of at most 1000: 
+The log-likelihood improved by 2.121 
+Iteration 917 of at most 1000: 
+The log-likelihood improved by 1.802 
+Iteration 918 of at most 1000: 
+The log-likelihood improved by 3.323 
+Iteration 919 of at most 1000: 
+The log-likelihood improved by 2.386 
+Iteration 920 of at most 1000: 
+The log-likelihood improved by 3.642 
+Iteration 921 of at most 1000: 
+The log-likelihood improved by 4.006 
+Iteration 922 of at most 1000: 
+The log-likelihood improved by 2.67 
+Iteration 923 of at most 1000: 
+The log-likelihood improved by 3.331 
+Iteration 924 of at most 1000: 
+The log-likelihood improved by 2.103 
+Iteration 925 of at most 1000: 
+The log-likelihood improved by 2.121 
+Iteration 926 of at most 1000: 
+The log-likelihood improved by 3.367 
+Iteration 927 of at most 1000: 
+The log-likelihood improved by 2.881 
+Iteration 928 of at most 1000: 
+The log-likelihood improved by 3.493 
+Iteration 929 of at most 1000: 
+The log-likelihood improved by 2.175 
+Iteration 930 of at most 1000: 
+The log-likelihood improved by 3.486 
+Iteration 931 of at most 1000: 
+The log-likelihood improved by 3.019 
+Iteration 932 of at most 1000: 
+The log-likelihood improved by 2.596 
+Iteration 933 of at most 1000: 
+The log-likelihood improved by 2.929 
+Iteration 934 of at most 1000: 
+The log-likelihood improved by 2.968 
+Iteration 935 of at most 1000: 
+The log-likelihood improved by 3.461 
+Iteration 936 of at most 1000: 
+The log-likelihood improved by 2.559 
+Iteration 937 of at most 1000: 
+The log-likelihood improved by 2.673 
+Iteration 938 of at most 1000: 
+The log-likelihood improved by 3.598 
+Iteration 939 of at most 1000: 
+The log-likelihood improved by 3.594 
+Iteration 940 of at most 1000: 
+The log-likelihood improved by 2.346 
+Iteration 941 of at most 1000: 
+The log-likelihood improved by 2.569 
+Iteration 942 of at most 1000: 
+The log-likelihood improved by 2.506 
+Iteration 943 of at most 1000: 
+The log-likelihood improved by 3.274 
+Iteration 944 of at most 1000: 
+The log-likelihood improved by 2.888 
+Iteration 945 of at most 1000: 
+The log-likelihood improved by 3.188 
+Iteration 946 of at most 1000: 
+The log-likelihood improved by 2.373 
+Iteration 947 of at most 1000: 
+The log-likelihood improved by 2.532 
+Iteration 948 of at most 1000: 
+The log-likelihood improved by 4.681 
+Iteration 949 of at most 1000: 
+The log-likelihood improved by 2.147 
+Iteration 950 of at most 1000: 
+The log-likelihood improved by 2.582 
+Iteration 951 of at most 1000: 
+The log-likelihood improved by 2.678 
+Iteration 952 of at most 1000: 
+The log-likelihood improved by 2.841 
+Iteration 953 of at most 1000: 
+The log-likelihood improved by 2.979 
+Iteration 954 of at most 1000: 
+The log-likelihood improved by 3.036 
+Iteration 955 of at most 1000: 
+The log-likelihood improved by 2.454 
+Iteration 956 of at most 1000: 
+The log-likelihood improved by 3.059 
+Iteration 957 of at most 1000: 
+The log-likelihood improved by 2.626 
+Iteration 958 of at most 1000: 
+The log-likelihood improved by 2.581 
+Iteration 959 of at most 1000: 
+The log-likelihood improved by 2.634 
+Iteration 960 of at most 1000: 
+The log-likelihood improved by 1.775 
+Iteration 961 of at most 1000: 
+The log-likelihood improved by 2.327 
+Iteration 962 of at most 1000: 
+The log-likelihood improved by 2.228 
+Iteration 963 of at most 1000: 
+The log-likelihood improved by 2.405 
+Iteration 964 of at most 1000: 
+The log-likelihood improved by 2.947 
+Iteration 965 of at most 1000: 
+The log-likelihood improved by 3.398 
+Iteration 966 of at most 1000: 
+The log-likelihood improved by 2.581 
+Iteration 967 of at most 1000: 
+The log-likelihood improved by 2.938 
+Iteration 968 of at most 1000: 
+The log-likelihood improved by 2.341 
+Iteration 969 of at most 1000: 
+The log-likelihood improved by 3.071 
+Iteration 970 of at most 1000: 
+The log-likelihood improved by 2.181 
+Iteration 971 of at most 1000: 
+The log-likelihood improved by 2.658 
+Iteration 972 of at most 1000: 
+The log-likelihood improved by 2.49 
+Iteration 973 of at most 1000: 
+The log-likelihood improved by 2.403 
+Iteration 974 of at most 1000: 
+The log-likelihood improved by 2.893 
+Iteration 975 of at most 1000: 
+The log-likelihood improved by 2.775 
+Iteration 976 of at most 1000: 
+The log-likelihood improved by 1.505 
+Iteration 977 of at most 1000: 
+The log-likelihood improved by 2.397 
+Iteration 978 of at most 1000: 
+The log-likelihood improved by 2.54 
+Iteration 979 of at most 1000: 
+The log-likelihood improved by 2.996 
+Iteration 980 of at most 1000: 
+The log-likelihood improved by 1.976 
+Iteration 981 of at most 1000: 
+The log-likelihood improved by 3.457 
+Iteration 982 of at most 1000: 
+The log-likelihood improved by 1.604 
+Iteration 983 of at most 1000: 
+The log-likelihood improved by 2.635 
+Iteration 984 of at most 1000: 
+The log-likelihood improved by 2.279 
+Iteration 985 of at most 1000: 
+The log-likelihood improved by 2.236 
+Iteration 986 of at most 1000: 
+The log-likelihood improved by 2.521 
+Iteration 987 of at most 1000: 
+The log-likelihood improved by 2.855 
+Iteration 988 of at most 1000: 
+The log-likelihood improved by 2.204 
+Iteration 989 of at most 1000: 
+The log-likelihood improved by 2.742 
+Iteration 990 of at most 1000: 
+The log-likelihood improved by 2.394 
+Iteration 991 of at most 1000: 
+The log-likelihood improved by 2.561 
+Iteration 992 of at most 1000: 
+The log-likelihood improved by 2.634 
+Iteration 993 of at most 1000: 
