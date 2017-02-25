@@ -1,0 +1,27 @@
+\begin{thebibliography}{1}
+
+\bibitem{Desmarais.2012}
+B.~A. Desmarais and S.~J. Cranmer.
+\newblock Statistical mechanics of networks: Estimation and uncertainty.
+\newblock {\em Physica A: Statistical Mechanics and its Applications},
+  391(4):1865--1876, 2012.
+
+\bibitem{Handcock.2003}
+Mark~S. Handcock.
+\newblock {\em Assessing degeneracy in statistical models of social networks:
+  https://www.csss.washington.edu/Papers/wp39.pdf}.
+\newblock 2003.
+
+\bibitem{Hunter.2006}
+David~R. Hunter and Mark~S. Handcock.
+\newblock Inference in curved exponential family models for networks.
+\newblock {\em Journal of Computational and Graphical Statistics},
+  15(3):565--583, 2006.
+
+\bibitem{Wasserman.1996}
+Stanley Wasserman and Philippa Pattison.
+\newblock Logit models and logistic regression for social networks: An
+  introduction to markov graphs and p-star.
+\newblock {\em Psychometrica Vol.61}, 1996.
+
+\end{thebibliography}
