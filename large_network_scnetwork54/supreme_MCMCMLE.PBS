@@ -1,0 +1,37 @@
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=1000:00:00
+#PBS -m abe
+#PBS -M schmid@psu.edu
+#PBS -l mem=128GB
+#PBS -j oe
+
+
+cd /storage/work/cxs5700/Desmarais_paper/large_network54
+
+echo " "
+echo " "
+echo "Job started on `hostname` at `date`"
+
+module load R/3.2.0
+
+R --vanilla <<STOP > 131072_10k_espdsp_rspace.out
+
+load(file="supreme54.RData")
+
+install.packages("statnet", Sys.getenv("R_LIBS_USER"), repos = "http://cran.case.edu" )
+library(statnet)
+
+
+set.seed(1)
+model20.mle<- ergm(scnetwork54~edges+ nodecov('salience')+ nodecov('year.center') + absdiff('year.center') + absdiff('year.center.square') + dsp(0) + esp(0),
+                 control=control.ergm(MCMLE.maxit = 10000,MCMC.samplesize=131072,  parallel=8))  #MCMLE.termination = "Hotelling",MCMC.samplesize=8224,
+summary(model20.mle)
+
+#cov(model20.mle[[2]])
+
+save.image(file="workspace_large.RData")
+
+STOP
+echo " "
+echo "Job Ended at `date`"
+echo " "
