@@ -200,8 +200,8 @@ bootSE.faux <- function( erg.obj, simulation, iters){
 
 # simulation MPLE
 set.seed(5555)
-sim=100
-iter=250
+sim=500
+iter=30
 faux.results.mple <- bootSE.faux(mple, sim,iter)
 
 # coef=Inf appears
@@ -234,8 +234,8 @@ counts[2,2] <- mean(faux.results.mple[[5]][2,]) # sex mcmcmle
 counts[2,3] <- mean(faux.results.mple[[5]][3,]) # gwesp mcmcmle
 
 # Plot
-barplot(counts, beside=TRUE, main="Coverage Probability 90%", ylim=c(0,1),legend = rownames(counts),args.legend = list(x="bottomleft"))
-abline(h=0.9,col="grey", lty=2)
+barplot(counts, beside=TRUE, main="Coverage Probability 95%", ylim=c(0,1),legend = rownames(counts),args.legend = list(x="bottomleft"))
+abline(h=0.95,col="grey", lty=2)
 
 # Histogram of the density of simulated networks
 hist(faux.results.mple[[6]], main="Density of Simulated Networks", xlab="Density")
