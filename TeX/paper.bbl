@@ -6,17 +6,50 @@ B.~A. Desmarais and S.~J. Cranmer.
 \newblock {\em Physica A: Statistical Mechanics and its Applications},
   391(4):1865--1876, 2012.
 
+\bibitem{FowlerJeon2008}
+James~H. Fowler and Sangick Jeon.
+\newblock The authority of supreme court precedent.
+\newblock 30(1):16--30, 2008.
+
 \bibitem{Handcock.2003}
 Mark~S. Handcock.
 \newblock {\em Assessing degeneracy in statistical models of social networks:
   https://www.csss.washington.edu/Papers/wp39.pdf}.
 \newblock 2003.
 
+\bibitem{Huber1981}
+P.J. Huber, J.~Wiley, and W.~InterScience.
+\newblock {\em {Robust statistics}}.
+\newblock Wiley New York, 1981.
+
 \bibitem{Hunter.2006}
 David~R. Hunter and Mark~S. Handcock.
 \newblock Inference in curved exponential family models for networks.
 \newblock {\em Journal of Computational and Graphical Statistics},
   15(3):565--583, 2006.
+
+\bibitem{Fowleretal2007}
+James F. Spriggs Sangick~Jeon James H.~Fowler, Timothy R.~Johnson and Paul~J.
+  Wahlbeck.
+\newblock Network analysis and the law: Measuring the legal importance of
+  precedents at the u.s. supreme court.
+\newblock {\em Political Analysis}, 15(03):324–--346, 2007.
+
+\bibitem{Resnicketal1997}
+{Michael D.} Resnick, {Peter S.} Bearman, {Robert Wm} Blum, {Karl E.} Bauman,
+  {Kathleen M.} Harris, Jo~Jones, Joyce Tabor, Trish Beuhring, {Renee E.}
+  Sieving, Marcia Shew, Marjorie Ireland, {Linda H.} Bearinger, and {J.
+  Richard} Udry.
+\newblock Protecting adolescent's from harm: Findings from the national
+  longitudinal study on adolescent health.
+\newblock {\em JAMA - Journal of the American Medical Association},
+  278(10):823--832, 9 1997.
+
+\bibitem{vanDuijnetal2009}
+{Marijtje A. J.} {van Duijn}, {Krista J.} Gile, and {Mark S.} Handcock.
+\newblock A framework for the comparison of maximum pseudo-likelihood and
+  maximum likelihood estimation of exponential family random graph models.
+\newblock {\em Social Networks}, 31(1):52--62, 1 2009.
 
 \bibitem{Wasserman.1996}
 Stanley Wasserman and Philippa Pattison.
