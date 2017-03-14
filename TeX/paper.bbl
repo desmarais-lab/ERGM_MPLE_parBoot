@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Desmarais.2012}
 B.~A. Desmarais and S.~J. Cranmer.
@@ -34,6 +34,12 @@ James F. Spriggs Sangick~Jeon James H.~Fowler, Timothy R.~Johnson and Paul~J.
 \newblock Network analysis and the law: Measuring the legal importance of
   precedents at the u.s. supreme court.
 \newblock {\em Political Analysis}, 15(03):324–--346, 2007.
+
+\bibitem{Meyn.2009}
+S.~P. Meyn and R.~L. Tweedie.
+\newblock {\em Markov chains and stochastic stability}.
+\newblock Communications and control engineering series. Cambridge University
+  Press, Cambridge and New York, 2nd ed edition, 2009.
 
 \bibitem{Resnicketal1997}
 {Michael D.} Resnick, {Peter S.} Bearman, {Robert Wm} Blum, {Karl E.} Bauman,
