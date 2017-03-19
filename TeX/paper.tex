@@ -66,7 +66,7 @@
  
  \section*{The Exponential Random Graph Model}
 The \textit{exponential random graph model} (ERGM) is a probability model for directed or undirected binary networks. This means neither the weighting nor the temporal change of ties is considered in the model.
-In literature, ERGMs are sometimes also referred to as \textit{p-star} or $p^*$ models (see Wassermann and Pattison \cite{Wasserman.1996}). In the following, we will focus on directed networks, however, undirected networks can be introduced very similar.\\[0.3cm] %This chapter is mainly based on Harris \cite{Harris.}, Hunter et al. \cite{Hunter.2008} and Hunter \cite{Hunter.}. \\[0.3cm]
+In literature, ERGMs are sometimes also referred to as \textit{p-star} or $p^*$ models (see Wassermann and Pattison \cite{Wasserman.1996}, Robins et al. \cite{robins.pattison.2007}). In the following, we will focus on directed networks, however, undirected networks can be introduced very similar.\\[0.3cm] %This chapter is mainly based on Harris \cite{Harris.}, Hunter et al. \cite{Hunter.2008} and Hunter \cite{Hunter.}. \\[0.3cm]
 The ERGM takes the adjacency matrix of an observed network $G^{obs}$ as the manifestation of a matrix-like random variable $Y$. This means that a network of $N$ nodes can be defined as a adjacency matrix $G=(g_{ij})\in \mathbb{R}^{N \times N}$, where $g_{ij} \in \{0,1\}$ for all $i,j \in \{1,\dots , N\}$. $g_{ij}=1$ means that there is an edge between actors $i$ and $j$, while $g_{ij}=0$ indicates that these actors are not directly connected. Since the model does not consider loops, one has $g_{ii}=0$ for all $i \in \{1,\dots , N\}$. Furthermore, define
 $$ \mathcal{G}(N) := \left\{ G \in \mathbb{R}^{(N \times N)}: g_{ij} \in \{0,1\},~g_{ii}=0\right\}$$
 as the set of all possible networks on $N$ nodes without loops. Note that the cardinality of set $\mathcal{G}(N)$ is increasing exponentially for every newly included actor, which results in $2^{N(N-1)/2}$ total elements. Therefore, for an already small number of actors the cardinalty of $\mathcal{G}(N)$ turns out to be an astronomically large number. For this reason calculating the MLE is either extremely time-consuming or with today's technology not achievable. As a consequence, literature usually makes use of Markov Chain Monte Carlo (MCMC) methods.\\  
@@ -233,10 +233,17 @@ Since the MPLE has the advantage of being approximately exact and computationall
 We verify the consistency of the bootstrapped MPLE by conducting a simulation study on the same two networks with the same paramtrization as in the previous chapter: The Faux Mesa High friendship network and the Faux Magnolia High friendship network. \\[0.3cm]
 For the simulation study, we determine the MPLE for the model and treat these estimates as the networks 'true' parameter values. We then use these parameter values to simulate a sample of $1000$ networks from the distribution of $Y$. For each of the $1000$ networks we calculate the confidence intervals based on the MCMCMLE and the logistic regression and examine whether the 'true' parameter values lie in these intervals. In addition, we determine the bootstrapped MPLE confidence intervals by sampling $500$ networks for each of the originally sampled $1000$ networks, by using the respective MPLE as parameter values. For every newly sampled network, we again determine the MPLE and then take the $2.5$th and $97.5$th percentile of the MPLE estimates to obtain 95\% bootstrap confidence intervals. Similar as for the MCMCMLE and the logistic regression, we verify whether the 'true' parameter value can be found in the bootstrapped confidence interval. Figures ref1 and ref2 visualize the coverage probabilities for each of the three methods for both networks.
 
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=.4]{Coverage_faux_mesa_high}
+\caption{The Coverage Probability results of the Faux Mesa High network for bootstrapped MPLE, MCMCMLE and logistic regression }
+\label{rmse}
+\end{center}
+\end{figure}
 
 \begin{itemize}
 
-\item include plot
+\item include magnolia plot
 \item Describe plots
 \item describe advantage over MPLE (better coverage) and MCMCMLE (faster)
 \item can easily be parallelized/ using multiple cores -> increases speed
@@ -248,7 +255,8 @@ For the simulation study, we determine the MPLE for the model and treat these es
 
 \section*{Supreme Court Citation Network Data}
 
-\cite{FowlerJeon2008}, \cite{Fowleretal2007}
+In order to demonstrate the computational advantage of the bootstrapped MPLE to the commonly used MCMCMLE we apply both approaches to the U.S. Supreme Court Citation Network developed by Fowler and Jeon \cite{FowlerJeon2008} and Fowler et al. \cite{Fowleretal2007}. The citation network we use consists of 9223 majority opinions written by the U.S. Supreme Court from 1954 to 2002. In this undirected network an edge occurs between two verticies (i.e. between two majority opinions) if one majority opinion cites the other. The endogenous statistics we include into this model are the number of edges, the edge-wise 0-shared partner (esp(0)) statistic and the dyad-wise 0-shared partner statistic (dsp(0)) (Snijders et al. \cite{SnijdersTomA.B..2006}, Hunter and Handcock \cite{Hunter.2006}). The esp(k) statistic counts the number of pairs which are directly linked and share exactly k partners. The dsp(k) statistic is quite similar to esp(k), but does not require the two vertices to be directly linked. ({\it add explanation for adding esp(0) and dsp(0)}). 
+The two nodal attributes we consider for this network are the year the majority opinion was drafted as well as an attribute that indicates whether a case appears on the Oxford list of salient cases. Beside these two nodal attributes we furthermore include the difference between the years of publication as an edge attribute. Since we do expect a non-linear effect fot this edge attribute, we include this variable as a second-degree polynomial.
  
  \section*{Results/Discussion}
 \begin{itemize}

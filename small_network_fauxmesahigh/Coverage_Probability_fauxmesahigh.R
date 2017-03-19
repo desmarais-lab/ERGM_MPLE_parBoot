@@ -201,7 +201,7 @@ bootSE.faux <- function( erg.obj, simulation, iters){
 # simulation MPLE
 set.seed(5555)
 sim=500
-iter=30
+iter=1000
 faux.results.mple <- bootSE.faux(mple, sim,iter)
 
 # coef=Inf appears

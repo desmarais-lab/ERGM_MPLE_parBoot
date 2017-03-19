@@ -51,6 +51,18 @@ S.~P. Meyn and R.~L. Tweedie.
 \newblock {\em JAMA - Journal of the American Medical Association},
   278(10):823--832, 9 1997.
 
+\bibitem{robins.pattison.2007}
+Garry Robins, Pip Pattison, Yuval Kalish, and Dean Lusher.
+\newblock An introduction to exponential random graph (p*) models for social
+  networks.
+\newblock {\em Social Networks}, 29(2):173--191, May 2007.
+
+\bibitem{SnijdersTomA.B..2006}
+Tom A.~B. Snijders, Philippa~E. Pattison, Garry~L. Robins, and Mark~S.
+  Handcock.
+\newblock New specifications for exponential random graph models.
+\newblock {\em Sociological Methodology}, 36(1):99--153, 2006.
+
 \bibitem{vanDuijnetal2009}
 {Marijtje A. J.} {van Duijn}, {Krista J.} Gile, and {Mark S.} Handcock.
 \newblock A framework for the comparison of maximum pseudo-likelihood and
