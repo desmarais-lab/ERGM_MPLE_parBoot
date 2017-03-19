@@ -1,0 +1,98 @@
+#PBS -l nodes=1:ppn=5
+#PBS -l walltime=200:00:00
+#PBS -m abe
+#PBS -M schmid@psu.edu
+#PBS -l mem=128GB
+#PBS -j oe
+
+
+cd /storage/work/cxs5700/Desmarais_paper/large_network54
+
+echo " "
+echo " "
+echo "Job started on `hostname` at `date`"
+
+module load R/3.2.0
+
+R --vanilla <<STOP > test_parallel4.out
+
+install.packages("statnet", Sys.getenv("R_LIBS_USER"), repos = "http://cran.case.edu" )
+install.packages("ergm", Sys.getenv("R_LIBS_USER"), repos = "http://cran.case.edu" )
+library(statnet)
+library(doParallel)
+library(foreach)
+
+
+registerDoParallel(cores=5)
+
+
+# get data
+load(file="supreme54.RData")
+
+#mple <- try(ergm(scnetwork~edges+ nodecov('salience')+ nodecov('year.center') + absdiff('year.center') + absdiff('year.center.square') + dsp(0) + esp(0), estimate = "MPLE" )) #
+#summary(mple)
+
+#main function
+boot.single.iteration.5.core4 <- function( erg.obj, simulation){ #simulation must be dividable by 5
+  
+  
+  #create empty matrices for bootstrap estimates
+  coef <- matrix(0, 7, simulation/4)
+  rownames(coef) <- c("edges", "salience", "year.nodecov", "year.absdiff", "year.absdiff.square", 'dsp0', "esp0")
+  Std.err <- matrix(0,7,simulation/4)
+  rownames(Std.err) <-c("edges", "salience", "year.nodecov", "year.absdiff", "year.absdiff.square", 'dsp0', "esp0")
+  
+  #simulate network from true values
+  net.mple <- simulate.ergm(mple, nsim=simulation, control=control.simulate.ergm(MCMC.burnin=5000000, MCMC.interval=50000))#, control=control.simulate.ergm(MCMC.burnin=5000000, MCMC.interval=100) ) # simulate network
+  
+  
+  coef1<-foreach(i=(3*simulation/4+1):(simulation), .combine=cbind)%dopar%{
+    library(ergm)
+
+    #estimate coefficients
+    sim.mple <- ergm(net.mple[[i]]~edges+ nodecov('salience')+ nodecov('year.center') + absdiff('year.center') + absdiff('year.center.square') + dsp(0) + esp(0), estimate= "MPLE")
+  
+  
+    # loop for numbers of simulations in each iteration
+  
+    net<- simulate.ergm(sim.mple, nsim=1)
+  
+
+    #estimate coefficients
+    bootest <- ergm(net~edges+ nodecov('salience')+ nodecov('year.center') + absdiff('year.center') + absdiff('year.center.square') + dsp(0) + esp(0), estimate= "MPLE")
+    
+    coef(bootest)
+    
+  }
+  
+  
+  # bootstrap.CI: if coef(mple) is in BootCI, save 1 otherwise 0
+  # create empty matrix
+  #bootstrap.CI <- matrix(0,4,2)
+  #colnames(bootstrap.CI)<- c("upper", "lower")
+  #rownames(bootstrap.CI)<- c("edges", "salience", "year", "kstar2")
+  
+  # calculate the bootstrap intervals
+  #bootstrap.CI[1,]<-quantile(coef[1,], probs = c(0.975, 0.025)) # edges
+  #bootstrap.CI[2,]<-quantile(coef[2,], probs = c(0.975, 0.025)) # salience
+  #bootstrap.CI[3,]<-quantile(coef[3,], probs = c(0.975, 0.025)) # year
+  #bootstrap.CI[4,]<-quantile(coef[4,], probs = c(0.975, 0.025)) # kstar2
+  
+  
+  return(coef1)
+}
+
+
+set.seed(455)
+boot <- boot.single.iteration.5.core4(mple,500)
+boot
+
+
+save(boot,file="coverage_parallel_scnetwork4.RData")
+
+
+
+STOP
+echo " "
+echo "Job Ended at `date`"
+echo " "
