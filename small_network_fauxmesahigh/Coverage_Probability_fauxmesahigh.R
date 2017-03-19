@@ -200,8 +200,9 @@ bootSE.faux <- function( erg.obj, simulation, iters){
 
 # simulation MPLE
 set.seed(5555)
-sim=100
-iter=500
+
+sim=500
+iter=1000
 faux.results.mple <- bootSE.faux(mple, sim,iter)
 coverage.mesa<- faux.results.mple
 
