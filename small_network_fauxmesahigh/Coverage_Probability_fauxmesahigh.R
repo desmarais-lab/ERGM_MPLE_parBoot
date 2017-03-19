@@ -115,7 +115,7 @@ bootSE.faux <- function( erg.obj, simulation, iters){
         logistic.coverage[m,j]=1
       }}
     
-    
+    # parametric bootstrap
     for ( i in 1:simulation){  # loop for numbers of simulations in each iteration
       
       net<- simulate.ergm(sim.mple, nsim=1)
@@ -200,9 +200,10 @@ bootSE.faux <- function( erg.obj, simulation, iters){
 
 # simulation MPLE
 set.seed(5555)
-sim=500
-iter=30
+sim=100
+iter=500
 faux.results.mple <- bootSE.faux(mple, sim,iter)
+coverage.mesa<- faux.results.mple
 
 # coef=Inf appears
 faux.results.mple[[1]][!is.finite(faux.results.mple[[1]])] <- NA
@@ -234,7 +235,9 @@ counts[2,2] <- mean(faux.results.mple[[5]][2,]) # sex mcmcmle
 counts[2,3] <- mean(faux.results.mple[[5]][3,]) # gwesp mcmcmle
 
 # Plot
-barplot(counts, beside=TRUE, main="Coverage Probability 95%", ylim=c(0,1),legend = rownames(counts),args.legend = list(x="bottomleft"))
+barplot(counts, beside=TRUE, main="Coverage Probability Faux Mesa High", ylim=c(0,1),
+        legend = rownames(counts),args.legend = list(x="bottomleft", cex=1.5), cex.axis=1.5,
+        cex.names = 2, cex.main=2)
 abline(h=0.95,col="grey", lty=2)
 
 # Histogram of the density of simulated networks
