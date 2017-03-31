@@ -28,6 +28,12 @@ David~R. Hunter and Mark~S. Handcock.
 \newblock {\em Journal of Computational and Graphical Statistics},
   15(3):565--583, 2006.
 
+\bibitem{Hyvarinen2006}
+Aapo Hyvärinen.
+\newblock Consistency of pseudolikelihood estimation of fully visible boltzmann
+  machines.
+\newblock {\em Neural Computation}, 18(10):2283--2292, 2006.
+
 \bibitem{Fowleretal2007}
 James F. Spriggs Sangick~Jeon James H.~Fowler, Timothy R.~Johnson and Paul~J.
   Wahlbeck.
@@ -62,6 +68,12 @@ Tom A.~B. Snijders, Philippa~E. Pattison, Garry~L. Robins, and Mark~S.
   Handcock.
 \newblock New specifications for exponential random graph models.
 \newblock {\em Sociological Methodology}, 36(1):99--153, 2006.
+
+\bibitem{StraussIkeda1990}
+David Strauss and Michael Ikeda.
+\newblock Pseudolikelihood estimation for social networks.
+\newblock {\em Journal of the American Statistical Association}, 85:204--212,
+  1990.
 
 \bibitem{vanDuijnetal2009}
 {Marijtje A. J.} {van Duijn}, {Krista J.} Gile, and {Mark S.} Handcock.
