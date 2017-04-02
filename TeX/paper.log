@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.24)  30 MAR 2017 22:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.24)  2 APR 2017 13:51
 entering extended mode
 **paper.tex
 ("C:\Users\Geiler Typ\Documents\GitHub\ERGM_MPLE_parBoot\TeX\paper.tex"
@@ -1511,10 +1511,10 @@ Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 [7] <RMSE_paper.pdf, id=103, 844.15375pt x 597.23125pt>
 File: RMSE_paper.pdf Graphic file (type pdf)
  <use RMSE_paper.pdf>
-Package pdftex.def Info: RMSE_paper.pdf used on input line 221.
+Package pdftex.def Info: RMSE_paper.pdf used on input line 222.
 (pdftex.def)             Requested size: 422.07584pt x 298.61488pt.
 
-Overfull \hbox (23.73726pt too wide) in paragraph at lines 221--222
+Overfull \hbox (23.73726pt too wide) in paragraph at lines 222--223
  [] 
  []
 
@@ -1527,31 +1527,29 @@ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.228 
+l.229 
        <C:/Users/Geiler Typ/Documents/GitHub/ERGM_MPLE_parBoot/TeX/RMSE_paper.p
-df>] <Coverage_Mesa_Magnolia.pdf, id=127, 844.15375pt x 597.23125pt>
-File: Coverage_Mesa_Magnolia.pdf Graphic file (type pdf)
+df>] <Coverage_Mesa_Magnolia_height05.pdf, id=127, 794.97pt x 397.485pt>
+File: Coverage_Mesa_Magnolia_height05.pdf Graphic file (type pdf)
 
-<use Coverage_Mesa_Magnolia.pdf>
-Package pdftex.def Info: Coverage_Mesa_Magnolia.pdf used on input line 234.
-(pdftex.def)             Requested size: 379.86568pt x 268.75157pt.
+<use Coverage_Mesa_Magnolia_height05.pdf>
+Package pdftex.def Info: Coverage_Mesa_Magnolia_height05.pdf used on input line
+ 235.
+(pdftex.def)             Requested size: 397.48402pt x 198.742pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Bias_plots.pdf, id=128, 844.15375pt x 597.23125pt>
-File: Bias_plots.pdf Graphic file (type pdf)
- <use Bias_plots.pdf>
-Package pdftex.def Info: Bias_plots.pdf used on input line 242.
-(pdftex.def)             Requested size: 337.65552pt x 238.88826pt.
+<bias_plots_05.pdf, id=128, 844.15375pt x 397.485pt>
+File: bias_plots_05.pdf Graphic file (type pdf)
+ <use bias_plots_05.pdf>
+Package pdftex.def Info: bias_plots_05.pdf used on input line 243.
+(pdftex.def)             Requested size: 337.65552pt x 158.99118pt.
 
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [9]
-Overfull \vbox (32.97855pt too high) has occurred while \output is active []
-
-
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
@@ -1560,28 +1558,26 @@ Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.247 \noindent
-                Since the MPLE has the advantage of being approximately exac...
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
-s been already used, duplicate ignored
+l.249 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.247 \noindent
-                Since the MPLE has the advantage of being approximately exac...
- <C:/Users/Geiler Typ/Documents/GitHub/ERGM_MPLE_parBoot/TeX/Coverage_Mesa_Magn
-olia.pdf> <C:/Users/Geiler Typ/Documents/GitHub/ERGM_MPLE_parBoot/TeX/Bias_plot
-s.pdf
+l.249 
+       <C:/Users/Geiler Typ/Documents/GitHub/ERGM_MPLE_parBoot/TeX/Coverage_Mes
+a_Magnolia_height05.pdf> <C:/Users/Geiler Typ/Documents/GitHub/ERGM_MPLE_parBoo
+t/TeX/bias_plots_05.pdf
 
 pdfTeX warning: pdflatex (file C:/Users/Geiler Typ/Documents/GitHub/ERGM_MPLE_p
-arBoot/TeX/Bias_plots.pdf): PDF inclusion: multiple pdfs with page group includ
-ed in a single page
+arBoot/TeX/bias_plots_05.pdf): PDF inclusion: multiple pdfs with page group inc
+luded in a single page
 >]
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [11]
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 263.
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 264.
 
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\dstroke\udsrom.fd"
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
@@ -1598,7 +1594,7 @@ Class scrartcl Warning: Usage of deprecated font command `\it'!
 (scrartcl)              Note also, that KOMA-Script will remove the definition
 (scrartcl)              of `\it' anytime until release of about version 3.20.
 (scrartcl)              But for now, KOMA-Script will replace deprecated `\it'
-(scrartcl)              by `\normalfont \itshape ' on input line 266.
+(scrartcl)              by `\normalfont \itshape ' on input line 267.
 
 
 Class scrartcl Warning: Usage of deprecated font command `\it'!
@@ -1612,28 +1608,48 @@ Class scrartcl Warning: Usage of deprecated font command `\it'!
 (scrartcl)              Note also, that KOMA-Script will remove the definition
 (scrartcl)              of `\it' anytime until release of about version 3.20.
 (scrartcl)              But for now, KOMA-Script will replace deprecated `\it'
-(scrartcl)              by `\normalfont \itshape ' on input line 270.
+(scrartcl)              by `\normalfont \itshape ' on input line 271.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--273
+
+ []
 
 
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 296--297
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 297--298
-
- []
+Class scrartcl Warning: Usage of deprecated font command `\it'!
+(scrartcl)              You should note, that in 1994 font command `\it' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\it' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\it'
+(scrartcl)              by `\normalfont \itshape ' on input line 275.
 
 
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 298--299
+Underfull \hbox (badness 10000) in paragraph at lines 300--301
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--302
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 302--303
 
  []
 
@@ -1650,22 +1666,22 @@ Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 311.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 311.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 315.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 315.
  ("C:\Users\Geiler Typ\Documents\GitHub\ERGM_MPLE_parBoot\TeX\paper.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 311.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 311.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 315.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 315.
 Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 311.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 315.
  ) 
 Here is how much of TeX's memory you used:
  23138 strings out of 493921
- 404331 string characters out of 3144861
+ 404391 string characters out of 3144861
  577534 words of memory out of 3000000
  25875 multiletter control sequences out of 15000+200000
  123700 words of font info for 95 fonts, out of 3000000 for 9000
@@ -1691,9 +1707,9 @@ nts/type1/public/lm/lmssbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 lmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 >
-Output written on paper.pdf (16 pages, 394682 bytes).
+Output written on paper.pdf (16 pages, 397690 bytes).
 PDF statistics:
- 290 PDF objects out of 1000 (max. 8388607)
+ 293 PDF objects out of 1000 (max. 8388607)
  57 named destinations out of 1000 (max. 500000)
  12316 words of extra memory for PDF output out of 14400 (max. 10000000)
 
