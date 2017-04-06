@@ -1,4 +1,4 @@
-#PBS -l nodes=1:ppn=1
+#PBS -l nodes=1:ppn=8
 #PBS -l walltime=1000:00:00
 #PBS -m abe
 #PBS -M schmid@psu.edu
@@ -14,7 +14,7 @@ echo "Job started on `hostname` at `date`"
 
 module load R/3.2.0
 
-R --vanilla <<STOP > yearsq_dspesp_iso_32768_10k_Hotelling.out
+R --vanilla <<STOP > 131072_10k_espdsp_rspace.out
 
 load(file="supreme54.RData")
 
@@ -23,13 +23,13 @@ library(statnet)
 
 
 set.seed(1)
-model20.mle<- ergm(scnetwork54~edges+ nodecov('salience')+ nodecov('year.center') + absdiff('year.center') + absdiff('year.center.square')+ isolates + dsp(0) + esp(0),
-                   control=control.ergm(MCMLE.maxit = 10000,MCMLE.termination = "Hotelling",MCMC.samplesize=32768)) 
+model20.mle<- ergm(scnetwork54~edges+ nodecov('salience')+ nodecov('year.center') + absdiff('year.center') + absdiff('year.center.square') + dsp(0) + esp(0),
+                 control=control.ergm(MCMLE.maxit = 10000,MCMC.samplesize=131072,  parallel=8))  #MCMLE.termination = "Hotelling",MCMC.samplesize=8224,
 summary(model20.mle)
 
-cov(model20.mle[[2]])
+#cov(model20.mle[[2]])
 
-#save.image(file="workspace_large.RData")
+save.image(file="workspace_large.RData")
 
 STOP
 echo " "

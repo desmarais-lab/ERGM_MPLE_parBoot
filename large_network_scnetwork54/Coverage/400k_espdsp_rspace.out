@@ -1,0 +1,171 @@
+
+R version 3.2.0 (2015-04-16) -- "Full of Ingredients"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: x86_64-unknown-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> 
+> load(file="supreme54.RData")
+> 
+> install.packages("statnet", Sys.getenv("R_LIBS_USER"), repos = "http://cran.case.edu" )
+unable to reach CRAN
+
+The downloaded source packages are in
+	'/tmp/Rtmp4FpSu7/downloaded_packages'
+> library(statnet)
+> 
+> 
+> set.seed(1)
+> model20.mle<- ergm(scnetwork54~edges+ nodecov('salience')+ nodecov('year.center') + absdiff('year.center') + absdiff('year.center.square') + dsp(0) + esp(0),
++                  control=control.ergm(MCMLE.maxit = 10000,MCMC.samplesize=400000, parallel=8))  #MCMLE.termination = "Hotelling",MCMC.samplesize=8224,
+Starting maximum likelihood estimation via MCMLE:
+Iteration 1 of at most 10000: 
+The log-likelihood did not improve.
+Iteration 2 of at most 10000: 
+The log-likelihood improved by 4.815 
+Iteration 3 of at most 10000: 
+The log-likelihood improved by 5.014 
+Iteration 4 of at most 10000: 
+The log-likelihood improved by 5.363 
+Iteration 5 of at most 10000: 
+The log-likelihood improved by 3.94 
+Iteration 6 of at most 10000: 
+The log-likelihood improved by 5.01 
+Iteration 7 of at most 10000: 
+The log-likelihood improved by 4.219 
+Iteration 8 of at most 10000: 
+The log-likelihood improved by 4.908 
+Iteration 9 of at most 10000: 
+The log-likelihood improved by 4.563 
+Iteration 10 of at most 10000: 
+The log-likelihood improved by 5.045 
+Iteration 11 of at most 10000: 
+The log-likelihood improved by 4.327 
+Iteration 12 of at most 10000: 
+The log-likelihood improved by 5.202 
+Iteration 13 of at most 10000: 
+The log-likelihood improved by 4.079 
+Iteration 14 of at most 10000: 
+The log-likelihood improved by 5.634 
+Iteration 15 of at most 10000: 
+The log-likelihood improved by 5.031 
+Iteration 16 of at most 10000: 
+The log-likelihood improved by 4.533 
+Iteration 17 of at most 10000: 
+The log-likelihood improved by 5.303 
+Iteration 18 of at most 10000: 
+The log-likelihood improved by 4.521 
+Iteration 19 of at most 10000: 
+The log-likelihood improved by 4.753 
+Iteration 20 of at most 10000: 
+The log-likelihood improved by 4.411 
+Iteration 21 of at most 10000: 
+The log-likelihood improved by 5.35 
+Iteration 22 of at most 10000: 
+The log-likelihood improved by 6.054 
+Iteration 23 of at most 10000: 
+The log-likelihood improved by 4.344 
+Iteration 24 of at most 10000: 
+The log-likelihood improved by 5.627 
+Iteration 25 of at most 10000: 
+The log-likelihood improved by 5.34 
+Iteration 26 of at most 10000: 
+The log-likelihood improved by 5.331 
+Iteration 27 of at most 10000: 
+The log-likelihood improved by 4.746 
+Iteration 28 of at most 10000: 
+The log-likelihood improved by 5.287 
+Iteration 29 of at most 10000: 
+The log-likelihood improved by 4.895 
+Iteration 30 of at most 10000: 
+The log-likelihood improved by 5.361 
+Iteration 31 of at most 10000: 
+The log-likelihood improved by 7.373 
+Iteration 32 of at most 10000: 
+The log-likelihood improved by 5.872 
+Iteration 33 of at most 10000: 
+The log-likelihood improved by 5.619 
+Iteration 34 of at most 10000: 
+The log-likelihood improved by 5.892 
+Iteration 35 of at most 10000: 
+The log-likelihood improved by 5.7 
+Iteration 36 of at most 10000: 
+The log-likelihood improved by 6.547 
+Iteration 37 of at most 10000: 
+The log-likelihood improved by 6.047 
+Iteration 38 of at most 10000: 
+The log-likelihood improved by 5.953 
+Iteration 39 of at most 10000: 
+The log-likelihood improved by 5.244 
+Iteration 40 of at most 10000: 
+The log-likelihood improved by 5.958 
+Iteration 41 of at most 10000: 
+The log-likelihood improved by 5.07 
+Iteration 42 of at most 10000: 
+The log-likelihood improved by 5.715 
+Iteration 43 of at most 10000: 
+The log-likelihood improved by 5.486 
+Iteration 44 of at most 10000: 
+The log-likelihood improved by 6.262 
+Iteration 45 of at most 10000: 
+The log-likelihood improved by 5.784 
+Iteration 46 of at most 10000: 
+The log-likelihood improved by 5.547 
+Iteration 47 of at most 10000: 
+The log-likelihood improved by 5.485 
+Iteration 48 of at most 10000: 
+The log-likelihood improved by 5.542 
+Iteration 49 of at most 10000: 
+The log-likelihood improved by 5.202 
+Step length converged once. Increasing MCMC sample size.
+Iteration 50 of at most 10000: 
+The log-likelihood improved by 0.7501 
+Step length converged twice. Stopping.
+Evaluating log-likelihood at the estimate. Using 20 bridges: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 .
+
+This model was fit using MCMC.  To examine model diagnostics and check for degeneracy, use the mcmc.diagnostics() function.
+> summary(model20.mle)
+
+==========================
+Summary of model fit
+==========================
+
+Formula:   scnetwork54 ~ edges + nodecov("salience") + nodecov("year.center") + 
+    absdiff("year.center") + absdiff("year.center.square") + 
+    dsp(0) + esp(0)
+
+Iterations:  50 out of 10000 
+
+Monte Carlo MLE Results:
+                             Estimate Std. Error MCMC %  p-value    
+edges                      -5.6609242  0.0264325      0  < 1e-04 ***
+nodecov.salience            0.5962626  0.0143723      0  < 1e-04 ***
+nodecov.year.center         0.2554630  0.0109631      0  < 1e-04 ***
+absdiff.year.center        -2.4599220  0.1598776      0  < 1e-04 ***
+absdiff.year.center.square  0.2185506  0.0650180      0 0.000776 ***
+dsp0                        0.0006796  0.0002944      0 0.020957 *  
+esp0                       -3.1287931  0.0119686      0  < 1e-04 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+     Null Deviance: 58955291  on 42527253  degrees of freedom
+ Residual Deviance:   821783  on 42527246  degrees of freedom
+ 
+AIC: 821797    BIC: 821906    (Smaller is better.) 
+> 
+> #cov(model20.mle[[2]])
+> 
+> save.image(file="workspace_large_400k.RData")
+> 
+> 

@@ -1,0 +1,446 @@
+
+R version 3.2.0 (2015-04-16) -- "Full of Ingredients"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: x86_64-unknown-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> 
+> load(file="workspace_large_400k.RData")
+> 
+> install.packages("statnet", Sys.getenv("R_LIBS_USER"), repos = "http://cran.case.edu" )
+unable to reach CRAN
+
+The downloaded source packages are in
+	'/tmp/RtmpEvVKMD/downloaded_packages'
+> library(statnet)
+> 
+> 
+> set.seed(1)
+> pdf("scnetwork_traceplot.pdf",width=7,height=5)
+> 
+> mcmc.diagnostics(model20.mle)
+Sample statistics summary:
+
+Iterations = 16384:204815360
+Thinning interval = 1024 
+Number of chains = 8 
+Sample size per chain = 2e+05 
+
+1. Empirical mean and standard deviation for each variable,
+   plus standard error of the mean:
+
+                                Mean       SD Naive SE Time-series SE
+edges                       -599.403   522.43  0.41301         28.487
+nodecov.salience            -200.234   216.80  0.17140         13.013
+nodecov.year.center        -1426.858  1262.03  0.99772         68.708
+absdiff.year.center         -104.952   107.43  0.08493          4.501
+absdiff.year.center.square  -248.043   261.96  0.20710         10.965
+dsp0                       26205.509 23337.65 18.45003       1429.954
+esp0                           5.326    85.02  0.06721          1.077
+
+2. Quantiles for each variable:
+
+                               2.5%     25%     50%      75%   97.5%
+edges                       -1621.0  -962.0  -575.0  -232.00   388.0
+nodecov.salience             -627.0  -351.0  -205.0   -50.00   214.0
+nodecov.year.center         -3928.6 -2271.8 -1383.2  -546.81   956.9
+absdiff.year.center          -314.9  -177.5  -106.6   -31.02   103.5
+absdiff.year.center.square   -755.0  -425.9  -255.3   -70.89   265.8
+dsp0                       -18123.0  9721.0 25750.0 43257.00 69820.0
+esp0                         -160.0   -52.0     5.0    63.00   172.0
+
+
+Sample statistics cross-correlations:
+                                 edges nodecov.salience nodecov.year.center
+edges                       1.00000000       0.65670301          0.99130038
+nodecov.salience            0.65670301       1.00000000          0.65317414
+nodecov.year.center         0.99130038       0.65317414          1.00000000
+absdiff.year.center         0.88224558       0.54868082          0.87762080
+absdiff.year.center.square  0.87295572       0.54462002          0.87982101
+dsp0                       -0.93750321      -0.85128378         -0.93446094
+esp0                        0.09699172      -0.02739658          0.09128572
+                           absdiff.year.center absdiff.year.center.square
+edges                                0.8822456                  0.8729557
+nodecov.salience                     0.5486808                  0.5446200
+nodecov.year.center                  0.8776208                  0.8798210
+absdiff.year.center                  1.0000000                  0.9944437
+absdiff.year.center.square           0.9944437                  1.0000000
+dsp0                                -0.8014479                 -0.7952618
+esp0                                 0.1246940                  0.1187039
+                                  dsp0        esp0
+edges                      -0.93750321  0.09699172
+nodecov.salience           -0.85128378 -0.02739658
+nodecov.year.center        -0.93446094  0.09128572
+absdiff.year.center        -0.80144791  0.12469397
+absdiff.year.center.square -0.79526180  0.11870388
+dsp0                        1.00000000 -0.04392468
+esp0                       -0.04392468  1.00000000
+
+Sample statistics auto-correlation:
+Chain 1 
+             edges nodecov.salience nodecov.year.center absdiff.year.center
+Lag 0    1.0000000        1.0000000           1.0000000           1.0000000
+Lag 1024 0.9995941        0.9996911           0.9995701           0.9991944
+Lag 2048 0.9991904        0.9993818           0.9991419           0.9983923
+Lag 3072 0.9987902        0.9990760           0.9987178           0.9975965
+Lag 4096 0.9983906        0.9987720           0.9982944           0.9968045
+Lag 5120 0.9979932        0.9984696           0.9978736           0.9960189
+         absdiff.year.center.square      dsp0      esp0
+Lag 0                     1.0000000 1.0000000 1.0000000
+Lag 1024                  0.9991093 0.9997214 0.9920690
+Lag 2048                  0.9982217 0.9994431 0.9842662
+Lag 3072                  0.9973416 0.9991679 0.9765582
+Lag 4096                  0.9964667 0.9988932 0.9688987
+Lag 5120                  0.9955992 0.9986216 0.9613304
+Chain 2 
+             edges nodecov.salience nodecov.year.center absdiff.year.center
+Lag 0    1.0000000        1.0000000           1.0000000           1.0000000
+Lag 1024 0.9996732        0.9996727           0.9996775           0.9993859
+Lag 2048 0.9993494        0.9993489           0.9993574           0.9987758
+Lag 3072 0.9990278        0.9990262           0.9990396           0.9981701
+Lag 4096 0.9987066        0.9987043           0.9987222           0.9975650
+Lag 5120 0.9983855        0.9983830           0.9984052           0.9969593
+         absdiff.year.center.square      dsp0      esp0
+Lag 0                     1.0000000 1.0000000 1.0000000
+Lag 1024                  0.9994486 0.9997154 0.9921895
+Lag 2048                  0.9989008 0.9994337 0.9844659
+Lag 3072                  0.9983568 0.9991540 0.9767988
+Lag 4096                  0.9978132 0.9988754 0.9691900
+Lag 5120                  0.9972701 0.9985975 0.9615871
+Chain 3 
+             edges nodecov.salience nodecov.year.center absdiff.year.center
+Lag 0    1.0000000        1.0000000           1.0000000           1.0000000
+Lag 1024 0.9994805        0.9996003           0.9995322           0.9990792
+Lag 2048 0.9989626        0.9992002           0.9990657           0.9981629
+Lag 3072 0.9984460        0.9988014           0.9986001           0.9972566
+Lag 4096 0.9979342        0.9984056           0.9981387           0.9963582
+Lag 5120 0.9974266        0.9980130           0.9976810           0.9954658
+         absdiff.year.center.square      dsp0      esp0
+Lag 0                     1.0000000 1.0000000 1.0000000
+Lag 1024                  0.9991591 0.9996554 0.9926349
+Lag 2048                  0.9983227 0.9993119 0.9852853
+Lag 3072                  0.9974958 0.9989672 0.9779719
+Lag 4096                  0.9966764 0.9986251 0.9707731
+Lag 5120                  0.9958616 0.9982850 0.9636175
+Chain 4 
+             edges nodecov.salience nodecov.year.center absdiff.year.center
+Lag 0    1.0000000        1.0000000           1.0000000           1.0000000
+Lag 1024 0.9995589        0.9996803           0.9994812           0.9991357
+Lag 2048 0.9991173        0.9993632           0.9989623           0.9982715
+Lag 3072 0.9986777        0.9990489           0.9984458           0.9974096
+Lag 4096 0.9982427        0.9987385           0.9979345           0.9965590
+Lag 5120 0.9978113        0.9984290           0.9974274           0.9957128
+         absdiff.year.center.square      dsp0      esp0
+Lag 0                     1.0000000 1.0000000 1.0000000
+Lag 1024                  0.9990576 0.9996259 0.9919874
+Lag 2048                  0.9981154 0.9992523 0.9840288
+Lag 3072                  0.9971749 0.9988821 0.9760964
+Lag 4096                  0.9962468 0.9985168 0.9682083
+Lag 5120                  0.9953236 0.9981548 0.9604200
+Chain 5 
+             edges nodecov.salience nodecov.year.center absdiff.year.center
+Lag 0    1.0000000        1.0000000           1.0000000           1.0000000
+Lag 1024 0.9996804        0.9998135           0.9996790           0.9994370
+Lag 2048 0.9993630        0.9996280           0.9993606           0.9988779
+Lag 3072 0.9990468        0.9994434           0.9990431           0.9983228
+Lag 4096 0.9987310        0.9992600           0.9987263           0.9977690
+Lag 5120 0.9984192        0.9990775           0.9984136           0.9972229
+         absdiff.year.center.square      dsp0      esp0
+Lag 0                     1.0000000 1.0000000 1.0000000
+Lag 1024                  0.9994119 0.9997853 0.9925006
+Lag 2048                  0.9988280 0.9995718 0.9850348
+Lag 3072                  0.9982477 0.9993586 0.9775817
+Lag 4096                  0.9976689 0.9991448 0.9701872
+Lag 5120                  0.9970976 0.9989329 0.9628430
+Chain 6 
+             edges nodecov.salience nodecov.year.center absdiff.year.center
+Lag 0    1.0000000        1.0000000           1.0000000           1.0000000
+Lag 1024 0.9996674        0.9997194           0.9996501           0.9994712
+Lag 2048 0.9993375        0.9994386           0.9993031           0.9989419
+Lag 3072 0.9990111        0.9991591           0.9989596           0.9984164
+Lag 4096 0.9986886        0.9988814           0.9986196           0.9978986
+Lag 5120 0.9983697        0.9986060           0.9982835           0.9973854
+         absdiff.year.center.square      dsp0      esp0
+Lag 0                     1.0000000 1.0000000 1.0000000
+Lag 1024                  0.9994447 0.9997399 0.9916992
+Lag 2048                  0.9988891 0.9994801 0.9835209
+Lag 3072                  0.9983377 0.9992228 0.9754174
+Lag 4096                  0.9977943 0.9989679 0.9674540
+Lag 5120                  0.9972560 0.9987156 0.9595762
+Chain 7 
+             edges nodecov.salience nodecov.year.center absdiff.year.center
+Lag 0    1.0000000        1.0000000           1.0000000           1.0000000
+Lag 1024 0.9997605        0.9997568           0.9997794           0.9995349
+Lag 2048 0.9995220        0.9995160           0.9995596           0.9990727
+Lag 3072 0.9992851        0.9992761           0.9993411           0.9986122
+Lag 4096 0.9990503        0.9990370           0.9991241           0.9981557
+Lag 5120 0.9988151        0.9987999           0.9989061           0.9976980
+         absdiff.year.center.square      dsp0      esp0
+Lag 0                     1.0000000 1.0000000 1.0000000
+Lag 1024                  0.9995472 0.9998286 0.9923203
+Lag 2048                  0.9990974 0.9996579 0.9846990
+Lag 3072                  0.9986494 0.9994880 0.9771308
+Lag 4096                  0.9982055 0.9993189 0.9696292
+Lag 5120                  0.9977597 0.9991497 0.9622076
+Chain 8 
+             edges nodecov.salience nodecov.year.center absdiff.year.center
+Lag 0    1.0000000        1.0000000           1.0000000           1.0000000
+Lag 1024 0.9995329        0.9996873           0.9995810           0.9991330
+Lag 2048 0.9990670        0.9993765           0.9991629           0.9982687
+Lag 3072 0.9986074        0.9990665           0.9987509           0.9974144
+Lag 4096 0.9981528        0.9987588           0.9983430           0.9965671
+Lag 5120 0.9976980        0.9984524           0.9979355           0.9957256
+         absdiff.year.center.square      dsp0      esp0
+Lag 0                     1.0000000 1.0000000 1.0000000
+Lag 1024                  0.9991857 0.9997024 0.9923703
+Lag 2048                  0.9983737 0.9994074 0.9847430
+Lag 3072                  0.9975722 0.9991159 0.9772267
+Lag 4096                  0.9967767 0.9988265 0.9698033
+Lag 5120                  0.9959877 0.9985362 0.9624037
+
+Sample statistics burn-in diagnostic (Geweke):
+Chain 8 
+
+Fraction in 1st window = 0.1
+Fraction in 2nd window = 0.5 
+
+                     edges           nodecov.salience 
+                   13.6792                     2.0550 
+       nodecov.year.center        absdiff.year.center 
+                   12.3205                     8.3382 
+absdiff.year.center.square                       dsp0 
+                    6.9392                    -8.8428 
+                      esp0 
+                   -0.4815 
+
+Individual P-values (lower = worse):
+                     edges           nodecov.salience 
+              1.350895e-42               3.988001e-02 
+       nodecov.year.center        absdiff.year.center 
+              7.026939e-35               7.542468e-17 
+absdiff.year.center.square                       dsp0 
+              3.944255e-12               9.335502e-19 
+                      esp0 
+              6.301485e-01 
+Joint P-value (lower = worse):  0.001031371 .
+Chain 8 
+
+Fraction in 1st window = 0.1
+Fraction in 2nd window = 0.5 
+
+                     edges           nodecov.salience 
+                 -10.45632                   -4.57636 
+       nodecov.year.center        absdiff.year.center 
+                 -11.21585                  -10.95264 
+absdiff.year.center.square                       dsp0 
+                 -10.88359                    8.67573 
+                      esp0 
+                   0.02723 
+
+Individual P-values (lower = worse):
+                     edges           nodecov.salience 
+              1.370739e-25               4.731305e-06 
+       nodecov.year.center        absdiff.year.center 
+              3.408812e-29               6.454104e-28 
+absdiff.year.center.square                       dsp0 
+              1.380162e-27               4.109177e-18 
+                      esp0 
+              9.782725e-01 
+Joint P-value (lower = worse):  0.009307078 .
+Chain 8 
+
+Fraction in 1st window = 0.1
+Fraction in 2nd window = 0.5 
+
+                     edges           nodecov.salience 
+                   -0.9760                    -0.5904 
+       nodecov.year.center        absdiff.year.center 
+                   -2.0267                    -0.5268 
+absdiff.year.center.square                       dsp0 
+                   -0.7423                     1.1265 
+                      esp0 
+                    0.8715 
+
+Individual P-values (lower = worse):
+                     edges           nodecov.salience 
+                0.32905519                 0.55493290 
+       nodecov.year.center        absdiff.year.center 
+                0.04268825                 0.59834974 
+absdiff.year.center.square                       dsp0 
+                0.45792115                 0.25994148 
+                      esp0 
+                0.38350769 
+Joint P-value (lower = worse):  0.4007118 .
+Chain 8 
+
+Fraction in 1st window = 0.1
+Fraction in 2nd window = 0.5 
+
+                     edges           nodecov.salience 
+                   -2.5636                    -0.5797 
+       nodecov.year.center        absdiff.year.center 
+                   -2.1959                     1.2071 
+absdiff.year.center.square                       dsp0 
+                    0.9192                     0.9836 
+                      esp0 
+                    3.1657 
+
+Individual P-values (lower = worse):
+                     edges           nodecov.salience 
+                0.01035960                 0.56210125 
+       nodecov.year.center        absdiff.year.center 
+                0.02809926                 0.22737998 
+absdiff.year.center.square                       dsp0 
+                0.35797868                 0.32529798 
+                      esp0 
+                0.00154725 
+Joint P-value (lower = worse):  0.001122104 .
+Chain 8 
+
+Fraction in 1st window = 0.1
+Fraction in 2nd window = 0.5 
+
+                     edges           nodecov.salience 
+                   3.62191                    0.69687 
+       nodecov.year.center        absdiff.year.center 
+                   4.18459                   -0.11729 
+absdiff.year.center.square                       dsp0 
+                  -0.09148                   -3.24200 
+                      esp0 
+                   1.25332 
+
+Individual P-values (lower = worse):
+                     edges           nodecov.salience 
+              2.924389e-04               4.858861e-01 
+       nodecov.year.center        absdiff.year.center 
+              2.856834e-05               9.066315e-01 
+absdiff.year.center.square                       dsp0 
+              9.271146e-01               1.186939e-03 
+                      esp0 
+              2.100908e-01 
+Joint P-value (lower = worse):  0.003112399 .
+Chain 8 
+
+Fraction in 1st window = 0.1
+Fraction in 2nd window = 0.5 
+
+                     edges           nodecov.salience 
+                    1.4133                     2.1947 
+       nodecov.year.center        absdiff.year.center 
+                    0.6256                     2.9496 
+absdiff.year.center.square                       dsp0 
+                    2.6703                    -2.0341 
+                      esp0 
+                    0.7388 
+
+Individual P-values (lower = worse):
+                     edges           nodecov.salience 
+               0.157563302                0.028188139 
+       nodecov.year.center        absdiff.year.center 
+               0.531602134                0.003181627 
+absdiff.year.center.square                       dsp0 
+               0.007578183                0.041936520 
+                      esp0 
+               0.460008846 
+Joint P-value (lower = worse):  0.003304965 .
+Chain 8 
+
+Fraction in 1st window = 0.1
+Fraction in 2nd window = 0.5 
+
+                     edges           nodecov.salience 
+                     5.907                      4.544 
+       nodecov.year.center        absdiff.year.center 
+                     4.568                      4.153 
+absdiff.year.center.square                       dsp0 
+                     3.710                     -5.610 
+                      esp0 
+                    -0.905 
+
+Individual P-values (lower = worse):
+                     edges           nodecov.salience 
+              3.492302e-09               5.527601e-06 
+       nodecov.year.center        absdiff.year.center 
+              4.919122e-06               3.275163e-05 
+absdiff.year.center.square                       dsp0 
+              2.074605e-04               2.019270e-08 
+                      esp0 
+              3.654780e-01 
+Joint P-value (lower = worse):  3.095857e-05 .
+Chain 8 
+
+Fraction in 1st window = 0.1
+Fraction in 2nd window = 0.5 
+
+                     edges           nodecov.salience 
+                     4.862                      4.825 
+       nodecov.year.center        absdiff.year.center 
+                     5.453                      2.951 
+absdiff.year.center.square                       dsp0 
+                     3.177                     -5.368 
+                      esp0 
+                     1.331 
+
+Individual P-values (lower = worse):
+                     edges           nodecov.salience 
+              1.160216e-06               1.401392e-06 
+       nodecov.year.center        absdiff.year.center 
+              4.951543e-08               3.171972e-03 
+absdiff.year.center.square                       dsp0 
+              1.487525e-03               7.954912e-08 
+                      esp0 
+              1.831724e-01 
+Joint P-value (lower = worse):  5.010653e-08 .
+
+MCMC diagnostics shown here are from the last round of simulation, prior to computation of final parameter estimates. Because the final estimates are refinements of those used for this simulation run, these diagnostics may understate model performance. To directly assess the performance of the final model on in-model statistics, please use the GOF command: gof(ergmFitObject, GOF=~model).
+> dev.off()
+null device 
+          1 
+> 
+> gf.degeneracy <- gof(model20.mle, GOF=~model)
+> summary(gf.degeneracy)
+
+Goodness-of-fit for model statistics 
+
+                                   obs          min         mean         max
+edges                         69411.00    37117.000    43912.910    67658.00
+nodecov.salience              17719.00    10120.000    12170.720    17446.00
+nodecov.year.center          167182.87    89237.156   105662.208   162975.34
+absdiff.year.center           13543.79     6875.828     8074.109    13112.37
+absdiff.year.center.square    32753.03    16612.886    19529.746    31715.05
+dsp0                       41048715.00 41097406.000 41742192.090 41947753.00
+esp0                           7121.00     6915.000     7225.690     7440.00
+                           MC p-value
+edges                            0.00
+nodecov.salience                 0.00
+nodecov.year.center              0.00
+absdiff.year.center              0.00
+absdiff.year.center.square       0.00
+dsp0                             0.00
+esp0                             0.32
+> 
+> 
+> pdf("scnetwork_gof.pdf",width=7,height=5)
+> gf2 <- gof(model20.mle)
+> par(mfrow=c(2,2))
+> plot(gf2)
+> dev.off()
+null device 
+          1 
+> 
+> 
+> 
+> save.image(file="MCMCdiag.RData")
+> 
+> 
