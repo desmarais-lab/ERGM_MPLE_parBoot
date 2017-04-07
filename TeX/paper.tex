@@ -66,7 +66,7 @@ The field of network science faces a double-edge sword when it comes to computat
  
  \section*{The Exponential Random Graph Model}
 The \textit{exponential random graph model} (ERGM) is a probability model for directed or undirected binary networks. This means neither the weighting nor the temporal change of ties is considered in the model.
-In literature, ERGMs are sometimes also referred to as \textit{p-star} or $p^*$ models (see Wassermann and Pattison \cite{Wasserman.1996}, Robins et al. \cite{robins.pattison.2007}). In the following, we will focus on directed networks, however, undirected networks can be introduced very similar.\\[0.3cm] %This chapter is mainly based on Harris \cite{Harris.}, Hunter et al. \cite{Hunter.2008} and Hunter \cite{Hunter.}. \\[0.3cm]
+In literature, ERGMs are sometimes also referred to as \textit{p-star} or $p^*$ models (see Wassermann and Pattison \cite{Wasserman.1996}, Robins et al. \cite{robins.pattison.2007}). In the following, we will focus on directed networks, however, undirected networks can be introduced very similar.\\[0.3cm] 
 The ERGM takes the adjacency matrix of an observed network $G^{obs}$ as the manifestation of a matrix-like random variable $Y$. This means that a network of $N$ nodes can be defined as a adjacency matrix $G=(g_{ij})\in \mathbb{R}^{N \times N}$, where $g_{ij} \in \{0,1\}$ for all $i,j \in \{1,\dots , N\}$. $g_{ij}=1$ means that there is an edge between actors $i$ and $j$, while $g_{ij}=0$ indicates that these actors are not directly connected. Since the model does not consider loops, one has $g_{ii}=0$ for all $i \in \{1,\dots , N\}$. Furthermore, define
 $$ \mathcal{G}(N) := \left\{ G \in \mathbb{R}^{(N \times N)}: g_{ij} \in \{0,1\},~g_{ii}=0\right\}$$
 as the set of all possible networks on $N$ nodes without loops. Note that the cardinality of set $\mathcal{G}(N)$ is increasing exponentially for every newly included actor, which results in $2^{N(N-1)/2}$ total elements. Therefore, for an already small number of actors the cardinalty of $\mathcal{G}(N)$ turns out to be an astronomically large number. For this reason calculating the MLE is either extremely time-consuming or with today's technology not achievable. As a consequence, literature usually makes use of Markov Chain Monte Carlo (MCMC) methods.\\  
@@ -166,23 +166,10 @@ s(\theta) \approx -\frac{\partial}{\partial \theta} \log \left( \frac{1}{L} \cdo
 %
 This approximate score function now can be used as usual, i.e., it can be iteratively approximately optimized with the \textit{Newton-Raphson algorithm}. As a result, the approximate maximum-likelihood estimator for the parameters can be computed.\\[0.4cm]
 As pleasant as this may sound, the immediate question arises: How can a sufficient number of suitable drawings $G_1,...,G_L$ be taken from the distribution $\mathbb{P}_{\theta_0}$? \\
-For this purpose, the \textit{Markov Chain Monte Carlo (MCMC)} methods can be used. This approach does not deliberately ignore the dependency structures inside the network. Furthermore, the Marcov Chain Monte Carlo Maximum Likelihood Estimator (MCMLE) approaches the MLE as the number of networks simulated to approximate the likelihood goes to infinity.
-%When it comes to the interpretation of the coefficients one can show that
-%\begin{equation}
-%\frac{\mathbb{P}_{\theta}(Y_{ij}=1 | Y_{ij}^c=G_{ij}^c)}{\mathbb{P}_{\theta}(Y_{ij}=0 %| Y_{ij}^c=G_{ij}^c)}
-%= \exp(\theta_1 (\Delta_1 G)_{ij}) \cdot ... \cdot \exp( \theta_q (\Delta_q G)_{ij})
-%\label{Inter2}
-%\end{equation}
-%where the condition $Y_{ij}^c=G_{ij}^c$ is short for: $Y_{pq}=g_{pq}$ for all $(p,q)\in \{1,\dots,N\}^2$ with $(p,q) \neq (i,j)$ and refers to the rest of the network.
-%The expression $(\Delta G)_{ij}:=\Gamma(G_{ij}^+) - \Gamma(G_{ij}^-)$ is called the \textit{change statistic}. $G_{ij}^+$ emerges from $G$, while assuming $g_{ij}=1$ and $G_{ij}^-$ emerges from $G$, while assuming $g_{ij}=0$. This means that the $k$th component of $(\Delta G)_{ij}$ captures the difference between the networks $G_{ij}^+$ and $G_{ij}^-$ on the $k$th integrated statistic in the model.\\[0.3cm]
-%Equation (\ref{Inter2}) now enables a \textit{ceteris-paribus analysis} of the parameters in the model:\\
-%If the $k$th change statistic $(\Delta_k G)_{ij}$ increases one unit to $(\Delta_k G)_{ij}+1$, while all the other change statistics remain unchanged, the odds of occurrence of edge $(i,j)$, conditional on the rest of the network, is multiplied by the factor $\exp(\theta_k)$. This means that for $\theta_k$, $k \in \{1, \ldots , q\}$ the conditional odds of occurence increase if $\theta_k > 0 $, decrease if $\theta_k < 0 $ and stay the same if $\theta_k = 0 $. 
-%Therefore, the interpretation of the parameter happens very similar to logistic regression analysis. 
-%Notice that for the sake of simplicity we did not condition on exogenous network statistics in this chapter.
+For this purpose, the \textit{Markov Chain Monte Carlo (MCMC)} methods can be used. This approach does not deliberately ignore the dependency structures inside the network. Furthermore, the Marcov Chain Monte Carlo Maximum Likelihood Estimator (MCMLE) approaches the MLE as the number of networks simulated to approximate the likelihood goes to infinity.\\[0.3cm]
 
 No matter which kind of MCMC algorithm is used, the basic idea is the following:
 \\One constructs a \textit{Markov chain} $(Y_t)_{t \in \mathbb{N}}$ on the set of all possible networks $\mathcal{A}(N)$ of $N$ nodes, whose \textit{stationary distribution} is in conformity with the distribution $\mathbb{P}_{\theta_0}$. One can show that every single realization (or \textit{trajectory}) 
-%$$(A_t)_{t \in \mathbb{N}}:= (Y_t(\omega))_{t \in \mathbb{N}}$$
 of this stochastic process accomplishes the convergence result (\ref{konver}) (for this version of the \textit{Law of big numbers for Markov chains} we reference Meyn and Tweedie \cite{Meyn.2009}). As a result, sub-sequences of $(A_t)_{t \in \mathbb{N}}$ which are sufficiently large enough can be used for approximation (\ref{approx}).\\[0.3cm]
 Snijders \cite{Snijders.2002b} provides a Metropolis Hastings algorithm on how to simulate networks:
 Choose a matrix $G^{(0)} \in \mathcal{G}(N)$ to start with (e.g., the observed network). For $k \in \{0,...,L-1\}$ recursively proceed as follows:\\
