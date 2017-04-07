@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.24)  2 APR 2017 13:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.24)  6 APR 2017 21:35
 entering extended mode
 **paper.tex
 ("C:\Users\Geiler Typ\Documents\GitHub\ERGM_MPLE_parBoot\TeX\paper.tex"
@@ -1459,6 +1459,34 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 LaTeX Warning: No \author given.
 
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 65.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 65.
+
 [1
 
 
@@ -1471,6 +1499,10 @@ Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [3]
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
+
+
+[4]
 
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 140.
 
@@ -1478,9 +1510,9 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 140.
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-[4]
+[5]
 
-LaTeX Warning: Citation `Snijders.2002b' on page 5 undefined on input line 187.
+LaTeX Warning: Citation `Snijders.2002b' on page 6 undefined on input line 187.
 
 
 
@@ -1488,14 +1520,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 183--190
 
  []
 
-
-Overfull \vbox (1.39674pt too high) has occurred while \output is active []
-
-
-[5]
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 195.
 
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
@@ -1508,7 +1535,7 @@ Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-[7] <RMSE_paper.pdf, id=103, 844.15375pt x 597.23125pt>
+[7] <RMSE_paper.pdf, id=104, 844.15375pt x 597.23125pt>
 File: RMSE_paper.pdf Graphic file (type pdf)
  <use RMSE_paper.pdf>
 Package pdftex.def Info: RMSE_paper.pdf used on input line 222.
@@ -1519,17 +1546,9 @@ Overfull \hbox (23.73726pt too wide) in paragraph at lines 222--223
  []
 
 
-Overfull \vbox (1.39674pt too high) has occurred while \output is active []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-[8pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.229 
-       <C:/Users/Geiler Typ/Documents/GitHub/ERGM_MPLE_parBoot/TeX/RMSE_paper.p
-df>] <Coverage_Mesa_Magnolia_height05.pdf, id=127, 794.97pt x 397.485pt>
+<Coverage_Mesa_Magnolia_height05.pdf, id=107, 794.97pt x 397.485pt>
 File: Coverage_Mesa_Magnolia_height05.pdf Graphic file (type pdf)
 
 <use Coverage_Mesa_Magnolia_height05.pdf>
@@ -1537,19 +1556,27 @@ Package pdftex.def Info: Coverage_Mesa_Magnolia_height05.pdf used on input line
  235.
 (pdftex.def)             Requested size: 397.48402pt x 198.742pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<bias_plots_05.pdf, id=128, 844.15375pt x 397.485pt>
-File: bias_plots_05.pdf Graphic file (type pdf)
- <use bias_plots_05.pdf>
-Package pdftex.def Info: bias_plots_05.pdf used on input line 243.
-(pdftex.def)             Requested size: 337.65552pt x 158.99118pt.
-
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-[9]
+[8]
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
+
+
+[9pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.240 
+       <C:/Users/Geiler Typ/Documents/GitHub/ERGM_MPLE_parBoot/TeX/RMSE_paper.p
+df>] <bias_plots_05.pdf, id=134, 844.15375pt x 397.485pt>
+File: bias_plots_05.pdf Graphic file (type pdf)
+
+<use bias_plots_05.pdf>
+Package pdftex.def Info: bias_plots_05.pdf used on input line 243.
+(pdftex.def)             Requested size: 337.65552pt x 158.99118pt.
+
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
@@ -1680,11 +1707,11 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 315.
  ) 
 Here is how much of TeX's memory you used:
- 23138 strings out of 493921
- 404391 string characters out of 3144861
- 577534 words of memory out of 3000000
- 25875 multiletter control sequences out of 15000+200000
- 123700 words of font info for 95 fonts, out of 3000000 for 9000
+ 23140 strings out of 493921
+ 404419 string characters out of 3144861
+ 578534 words of memory out of 3000000
+ 25876 multiletter control sequences out of 15000+200000
+ 127971 words of font info for 96 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  64i,9n,60p,3233b,436s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
@@ -1693,23 +1720,23 @@ eX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.9/font
 s/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips
 /lm/lm-mathex.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/dstroke
 /dsrom10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
-e1/public/lm/lmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm
-/lmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/lm/lmro10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/public/lm/lmssbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
-/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/
-lmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb
->
-Output written on paper.pdf (16 pages, 397690 bytes).
+b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbxi10.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+lm/lmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/lm/lmro10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
+public/lm/lmssbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm
+/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on paper.pdf (16 pages, 418943 bytes).
 PDF statistics:
- 293 PDF objects out of 1000 (max. 8388607)
+ 297 PDF objects out of 1000 (max. 8388607)
  57 named destinations out of 1000 (max. 500000)
  12316 words of extra memory for PDF output out of 14400 (max. 10000000)
 
