@@ -1,0 +1,36 @@
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=3000:00:00
+#PBS -m abe
+#PBS -M schmid@psu.edu
+#PBS -l mem=128GB
+#PBS -j oe
+
+
+cd /storage/work/cxs5700/Desmarais_paper/large_network54
+
+echo " "
+echo " "
+echo "Job started on `hostname` at `date`"
+
+module load R/3.2.0
+
+R --vanilla <<STOP > mcmle_runtime.out
+
+load(file="supreme54.RData")
+
+install.packages("statnet", Sys.getenv("R_LIBS_USER"), repos = "http://cran.case.edu" )
+library(statnet)
+
+
+set.seed(1)
+model20.mle<- system.time(ergm(scnetwork54~edges+ nodecov('salience')+ nodecov('year.center') + absdiff('year.center') + absdiff('year.center.square') + dsp(0) + esp(0), eval.loglik=FALSE,
+                 control=control.ergm(MCMLE.maxit = 10000,MCMC.samplesize=1000000, MCMC.interval=10000, parallel=8)))  
+model20.mle
+
+#cov(model20.mle[[2]])
+
+
+
+STOP
+echo " "
+echo "Job Ended at `date`"
