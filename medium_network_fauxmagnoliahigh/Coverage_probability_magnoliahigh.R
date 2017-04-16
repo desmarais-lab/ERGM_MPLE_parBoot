@@ -6,12 +6,13 @@ library(statnet)
 ##################################
 # Faux_mesa_high, 205 nodes
 ##################################
-
+#qw<-ergm(faux.magnolia.high ~ edges +nodematch("Sex")+esp(0))
+#summary(qw)
 
 # get data
-data(faux.mesa.high)
+data(faux.magnolia.high)
 
-mple <- try(ergm(faux.mesa.high ~ edges +nodematch("Sex")+gwesp(0.25,fixed=TRUE), estimate = "MPLE" )) #
+mple <- try(ergm(faux.magnolia.high ~ edges +nodematch("Sex")+gwesp(0.5,fixed=TRUE), estimate = "MPLE" )) #
 summary(mple)
 
 #main function
@@ -40,6 +41,9 @@ bootSE.faux <- function( erg.obj, simulation, iters){
   # create vector for density
   density <- c()
   
+  net.mple <- simulate.ergm(mple, nsim=iters, 
+             control=control.simulate.ergm(MCMC.burnin=5000000, MCMC.interval=3000000)) 
+  
   for(j in 1:iters){ # loop for number of iterations
     
     print(j)
@@ -51,23 +55,23 @@ bootSE.faux <- function( erg.obj, simulation, iters){
     rownames(Std.err) <- c("edges", "sex", "gwesp")
     
     #simulate network from true values
-    net.mple <- simulate.ergm(mple, nsim=1)#, control=control.simulate.ergm(MCMC.burnin=5000000, MCMC.interval=100) ) # simulate network
+    # simulate network
     
     #estimate coefficients
-    sim.mple <- ergm(net.mple~edges+ nodematch("Sex")+gwesp(0.25,fixed=TRUE), estimate= "MPLE")
+    sim.mple <- ergm(net.mple[[j]]~edges+ nodematch("Sex")+gwesp(0.5,fixed=TRUE), estimate= "MPLE")
     
     #############
     # MCMCMLE
     ############
     
-    bootest.mcmcmle <- try(ergm(net.mple~edges+ nodematch("Sex")+gwesp(0.25,fixed=TRUE))) #estimate coefficients
+    bootest.mcmcmle <- try(ergm(net.mple[[j]]~edges+ nodematch("Sex")+gwesp(0.5,fixed=TRUE))) #estimate coefficients
     
     # save values
     if(summary(bootest.mcmcmle)[2]=="try-error"){ # in case the ERGM degenerates => safe NA
       mcmcmle.sim[,j] <-NA
     }
     else{ # otherwise safe estimates
-      mcmcmle.sim[,j] <-summary(bootest.mcmcmle)$coef[,1]   
+      mcmcmle.sim[,j] <-coef(bootest.mcmcmle)  
     } 
     
     # calculate MCMCMLE CI for each simulation
@@ -115,34 +119,36 @@ bootSE.faux <- function( erg.obj, simulation, iters){
         logistic.coverage[m,j]=1
       }}
     
+    net<- simulate.ergm(sim.mple, nsim=simulation,
+          control=control.simulate.ergm(MCMC.burnin=5000000, MCMC.interval=3000000))
+    
     # parametric bootstrap
     for ( i in 1:simulation){  # loop for numbers of simulations in each iteration
       
-      net<- simulate.ergm(sim.mple, nsim=1)
-     
+      
       #save(net, file=paste((j-1)*simulation+i, '_sim_net.Rdata', sep='') )
       
       # calculate density of network
       
-      density[(j-1)*simulation+i]<- network.density(net)
+      density[(j-1)*simulation+i]<- network.density(net[[i]])
       
       #estimate coefficients
-      bootest <- try(ergm(net~edges+ nodematch("Sex")+gwesp(0.25,fixed=TRUE), estimate= "MPLE"))
+      bootest <- try(ergm(net[[i]]~edges+ nodematch("Sex")+gwesp(0.5,fixed=TRUE), estimate= "MPLE"))
       
       # save values
       if(summary(bootest)[2]=="try-error"){ # in case the ERGM degenerates => safe NA
         mple.sim[,(j-1)*simulation+i] <-NA
         coef[,i]<- NA
-        Std.err[,i] <- NA
+        #Std.err[,i] <- NA
       }
       else{ # otherwise safe estimates
         mple.sim[,(j-1)*simulation+i] <-summary(bootest)$coef[,1]   
-        coef[,i]<-summary(bootest)$coef[,1]
-        Std.err[,i] <- summary(bootest)$coef[,2]
+        coef[,i]<-coef(bootest)
+        #Std.err[,i] <- summary(bootest)$coef[,2]
       }
       
       
-     
+      
       
     } # end for loop i
     
@@ -201,9 +207,8 @@ bootSE.faux <- function( erg.obj, simulation, iters){
 # simulation MPLE
 set.seed(5555)
 sim=100
-iter=500
-faux.results.mple <- bootSE.faux(mple, sim,iter)
-coverage.mesa<- faux.results.mple
+iter=20
+faux.results.mple2 <- bootSE.faux(mple, sim,iter)
 
 # coef=Inf appears
 faux.results.mple[[1]][!is.finite(faux.results.mple[[1]])] <- NA
@@ -235,15 +240,14 @@ counts[2,2] <- mean(faux.results.mple[[5]][2,]) # sex mcmcmle
 counts[2,3] <- mean(faux.results.mple[[5]][3,]) # gwesp mcmcmle
 
 # Plot
-barplot(counts, beside=TRUE, main="Coverage Probability Faux Mesa High", ylim=c(0,1),
-        legend = rownames(counts),args.legend = list(x="bottomleft", cex=1.5), cex.axis=1.5,
-        cex.names = 2, cex.main=2)
+barplot(counts, beside=TRUE, main="Coverage Probability Faux Magnolia High", ylim=c(0,1),legend = rownames(counts),args.legend = list(x="bottomleft", cex=1.5),
+         cex=1.5, cex.axis=1.5,cex.names = 2, cex.main=2)
 abline(h=0.95,col="grey", lty=2, lwd=2)
 
 # Histogram of the density of simulated networks
 hist(faux.results.mple[[6]], main="Density of Simulated Networks", xlab="Density")
-dens.faux.mesa=network.density(faux.mesa.high)
-abline(v=dens.faux.mesa,col="red")
+dens.faux.magnolia=network.density(faux.magnolia.high)
+abline(v=dens.faux.magnolia,col="red")
 
 ## Bias plot
 
@@ -278,8 +282,53 @@ for(i in 1:10){
 }
 
 
+#######################################
+#######################################
+## system time MCMCMLE vs MPLE
+
+bootMPLE <- function(net, simulation){
+  for ( j in 1:simulation){  # loop for numbers of simulations in each iteration
+    
+    #estimate coefficients
+    bootest <- try(ergm(net[[j]]~edges+ nodematch("Sex")+gwesp(0.5,fixed=TRUE), estimate= "MPLE"))
+    
+  }
+}
 
 
+mple <- try(ergm(faux.magnolia.high ~ edges +nodematch("Sex")+gwesp(0.5,fixed=TRUE), estimate = "MPLE" )) #
+summary(mple)
+
+# empty vectors to store system times
+
+mcmle<- c()
+boot.mple<- c()
+simulation=500
+iter=100
+
+set.seed(5555)
+net.mple <- simulate.ergm(mple, nsim=iter )
+
+for ( i in 1:iter){
+  print(i)
+  
+  # mcmcmle system time
+  a<- system.time(try(ergm(net.mple[[i]]~edges+ nodematch("Sex")+gwesp(0.5,fixed=TRUE))))
+  mcmle[i]<- a[3]
+  
+  #### boot MPLE
+  
+  #estimate coefficients
+  sim.mple <- ergm(net.mple[[i]]~edges+ nodematch("Sex")+gwesp(0.5,fixed=TRUE), estimate= "MPLE")
+  
+  # simulate.networks
+  net<- simulate.ergm(sim.mple, nsim=simulation)
+  
+  # save computing time
+  b<- system.time(bootMPLE(net, simulation))
+  boot.mple[i]<- b[3]
+  
+}
 
 
 
@@ -287,41 +336,38 @@ for(i in 1:10){
 time.mle<- c()
 time.simulation<- c()
 
-for (i in 1:100){
+
+for (i in 41:50){
   print(i)
   set.seed(i*1000)
-  b<- system.time(ergm(faux.mesa.high ~ edges +nodematch("Sex")+gwesp(0.25,fixed=TRUE), eval.loglik=FALSE,
-                       control=control.ergm(MCMC.samplesize = 2000, MCMC.interval=2000  )))
+  b<- system.time(ergm(faux.magnolia.high ~ edges +nodematch("Sex")+gwesp(0.25,fixed=TRUE), control=control.ergm(MCMLE.maxit=100,
+                  MCMC.samplesize = 8000, MCMC.interval=5000), eval.loglik=FALSE))
   time.mle[i]<- b[3]
   
   #get numbers of iterations
   set.seed(i*1000)
-  model<- ergm(faux.mesa.high ~ edges +nodematch("Sex")+gwesp(0.25,fixed=TRUE), eval.loglik=FALSE,
-               control=control.ergm(MCMC.samplesize = 2000, MCMC.interval=2000 ))
+  model<- ergm(faux.magnolia.high ~ edges +nodematch("Sex")+gwesp(0.25,fixed=TRUE), control=control.ergm(MCMLE.maxit=100,
+               MCMC.samplesize = 8000, MCMC.interval=5000 ), eval.loglik=FALSE)
   time.simulation[i]<-b[3]/(model$iterations)
   
 }
-
-median(time.mle) # 12.59
-median(time.simulation) #6.295 => need 500 networks for bootMPLE => 6.295/4=1.573
+median(time.mle) # 119.07
+median(time.simulation) #39.83 => need 500 networks for bootMPLE => 39.83/16=2.49
 
 # median run time for MPLE
 time.mple<- c()
 
-
+set.seed(123)
 for (i in 1:100){
   print(i)
-  b<- system.time(ergm(faux.mesa.high ~ edges +nodematch("Sex")+gwesp(0.25,fixed=TRUE), estimate="MPLE"))
+  b<- system.time(ergm(faux.magnolia.high ~ edges +nodematch("Sex")+gwesp(0.5,fixed=TRUE), 
+                       control=control.ergm(MCMLE.maxit=100), estimate="MPLE"))
   time.mple[i]<-b[3]
-  
-  
 }
-median(time.mple) # 0.05
-
-
+median(time.mple) # 0.51
 
 # time for simulating network 
 
 # simulating 1024 networks
-sim.time<- system.time(simulate(mple, nsim=1024)) # 9.78
+sim.time<- system.time(simulate(mple, nsim=1024)) # 42.08
 
