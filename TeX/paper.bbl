@@ -57,6 +57,12 @@ S.~P. Meyn and R.~L. Tweedie.
 \newblock {\em JAMA - Journal of the American Medical Association},
   278(10):823--832, 9 1997.
 
+\bibitem{Rinaldo2009}
+Alessandro Rinaldo, Stephen~E. Fienberg, and Yi~Zhou.
+\newblock On the geometry of discrete exponential families with application to
+  exponential random graph models.
+\newblock {\em Electronic Journal of Statistics}, 3:446--484, 2009.
+
 \bibitem{robins.pattison.2007}
 Garry Robins, Pip Pattison, Yuval Kalish, and Dean Lusher.
 \newblock An introduction to exponential random graph (p*) models for social
