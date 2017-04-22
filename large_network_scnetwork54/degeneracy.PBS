@@ -1,0 +1,56 @@
+#PBS -l nodes=1:ppn=5
+#PBS -l walltime=600:00:00
+#PBS -m abe
+#PBS -M schmid@psu.edu
+#PBS -l mem=128GB
+#PBS -j oe
+
+
+cd /storage/work/cxs5700/Desmarais_paper/large_network54
+
+echo " "
+echo " "
+echo "Job started on `hostname` at `date`"
+
+module load R/3.2.0
+
+R --vanilla <<STOP > bootmple_degeneracy.out
+
+load(file="supreme54.RData")
+
+install.packages(c("statnet", "ergm","doParallel","foreach"), Sys.getenv("R_LIBS_USER"), repos = "http://cran.case.edu" )
+library(statnet)
+library(doParallel)
+library(foreach)
+
+registerDoParallel(cores=5)
+
+coeff <- matrix(0, 7, 500)
+ rownames(coeff) <- c("edges", "salience", "year.nodecov", "year.absdiff", "year.absdiff.square", 'dsp0', "esp0")
+
+set.seed(455)
+net.mple <- simulate.ergm(mple, nsim=500, control=control.simulate.ergm( MCMC.interval=10000))
+
+
+coef1<-foreach(i=1:500, .combine=cbind)%dopar%{
+  library(ergm)
+  
+  #estimate coefficients
+  sim.mple <- ergm(net.mple[[i]]~edges+ nodecov('salience')+ nodecov('year.center') + absdiff('year.center') + absdiff('year.center.square') + dsp(0) + esp(0), estimate= "MPLE")
+  
+  
+  gf <- gof(sim.mple)
+  g<- gf[[3]][,5]
+  g
+  
+}  
+
+
+coef1
+
+save.image(file="degeneracy.RData")
+
+
+STOP
+echo " "
+echo "Job Ended at `date`"
