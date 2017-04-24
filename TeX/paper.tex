@@ -12,6 +12,8 @@
 \usepackage{aliascnt}
 \usepackage{lmodern}
 \usepackage{mdwlist}
+\usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor}
 \usepackage{listings}
 \usepackage[activate]{pdfcprot}
 \usepackage{graphicx}
@@ -255,8 +257,25 @@ where $m\neq i$, $m \neq j$ and $\mathds{1}_k(x)$ is an indicator that is define
 The two nodal attributes we consider for this network are the year the majority opinion was drafted as well as an attribute that indicates whether a case appears on the Oxford list of salient cases. In order to include nodal covariates into the ERGM, the vector of nodal attributes is expanded into an artificial matrix $C$, which has the same dimensions as $G$. The first row of matrix $C$ consists of the first actor's attribute, repeated $N$ times. The second row of matrix $C$, consists of the second actor's atribute, repeated $N$ times, and so on. Then, the statistics for a nodal covariate is defined as
 $$\Gamma_{nodal}: \mathcal{G}(N) \to \mathbb{R}~~,~~G \mapsto \sum_{i<j}^{N}g_{ij}c_{ij}$$
 Beside these two nodal attributes, we furthermore include the difference between the years of publication as an edge attribute. An edge attribute can be written as a matrix $E$ of the same dimensions as the observed adjacency matrix $G$. In this case entry $e_{ij}$ is filled with the absolute difference between the year of case $i$ and case $j$. Then, the corresponding statistic can be calculated the same way as nodal covariates. Since we do expect a non-linear effect for this edge attribute, we include this variable as a second-degree polynomial by creating a matrix $E^2$, where the matrix gets squared componentwise.\\[0.3cm]
-We estimate the coefficient of this matrix using both techniques, the MCMLE and the bootstrapped MPLE. The MCMLE requires a sample size of at least $100000$ networks to converge. The bootstrapped MPLE was estimated by using 500 simulated networks. As we described in the chapter {\it Estimation}, only one edge at a time is changed when simulating networks. For better comparison, we chose the same Burn-In ($163840$ MH-steps) and the same number of iterations ($10240$ MH-steps) for sampling networks. The results can be found in table ??.
-\\[0.3cm]
+We estimate the coefficient of this matrix using both techniques, the MCMLE and the bootstrapped MPLE. The MCMLE requires a sample size of at least $100000$ networks to converge. The bootstrapped MPLE was estimated by using 500 simulated networks. As we described in the chapter {\it Estimation}, only one edge at a time is changed when simulating networks. For better comparison, we chose the same Burn-In ($163840$ MH-steps) and the same number of iterations ($10240$ MH-steps) for sampling networks. The results can be found in table \ref{sc_results}.\\[0.3cm]
+
+\begin{table}[]
+\centering
+\begin{tabular}{|>{\columncolor[HTML]{EFEFEF}}l |l|l|l|l|}
+\hline
+\cellcolor[HTML]{EFEFEF}                   & \multicolumn{2}{l|}{\cellcolor[HTML]{EFEFEF}bootstrapped MPLE}       & \multicolumn{2}{c|}{\cellcolor[HTML]{EFEFEF}MCMLE}                   \\ \cline{2-5} 
+\multirow{-2}{*}{\cellcolor[HTML]{EFEFEF}} & \cellcolor[HTML]{EFEFEF}Estimate & \cellcolor[HTML]{EFEFEF}St. Error & \cellcolor[HTML]{EFEFEF}Estimate & \cellcolor[HTML]{EFEFEF}St. Error \\ \hline \hline
+Edges                                      &                                  &                                   & -5.657                           & 0.028                             \\ \hline
+Nodecov.Salience                           &                                  &                                   & 0.592                            & 0.012                             \\ \hline
+Nodecov.Year                               &                                  &                                   & 0.253                            & 0.012                             \\ \hline
+Absdiff.Year                               &                                  &                                   & -2.470                           & 0.160                             \\ \hline
+Absdiff.Year.Squared                       &                                  &                                   & 0.221                            & 0.066                             \\ \hline
+DSP(0)                                     &                                  &                                   & 0.0005                           & 0.0002                            \\ \hline
+ESP(0)                                     &                                  &                                   & -3.129                           & 0.012                             \\ \hline
+\end{tabular}
+\caption{Estimation results for the Supreme Court Network using the MCMLE and the bootstrapped MPLE}
+\label{sc_results}
+\end{table}
 $$\text{insert table with boot MPLE and MCMLE results}$$
 The bootstrapped MPLE is not only simple and fast, it is also embarrassingly parallel, meaning that there is no problem seperating the computation into several tasks. In other words, by using multiple cores, the computing time for estimating bootstrapped MPLE confidence intervals can be reduced substantially. Figure \ref{comptime} illustrates the relative computing time of the bootstrapped MPLE using 500 simulated networks and the MCMLE for the three networks Faux Mesa High (205 nodes), Faux Magnolia High (1461 nodes) and Supreme Court Citation (9223 nodes) for an increasing number of computing cores. For the small network we simulate $2000$ networks using a MCMC interval of $2000$ steps, for the medium network we simulate $8000$ networks using a MCMC interval of $5000$ steps and for the large network we simulate 1 million networks using $10,000$ MCMC steps in order to approximate the likelihood appropriately. The chosen sample sizes and MCMC steps are necessary to guarantee a good model fit. We define the simulation time of the bootstrapped MPLE as a function of the number of available computing cores x:
 $$\text{boostrapped MPLE time} = \text{network simulation time} + \cfrac{500 \cdot \text{MPLE estimation time}}{x}$$     
