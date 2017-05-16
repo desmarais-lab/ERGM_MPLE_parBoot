@@ -41,6 +41,11 @@ James F. Spriggs Sangick~Jeon James H.~Fowler, Timothy R.~Johnson and Paul~J.
   precedents at the u.s. supreme court.
 \newblock {\em Political Analysis}, 15(03):324–--346, 2007.
 
+\bibitem{Lindsay1988}
+Bruce~G. Lindsay.
+\newblock Composite likelihood methods.
+\newblock {\em Contemporary Mathematics}, 80(1), 1988.
+
 \bibitem{Meyn.2009}
 S.~P. Meyn and R.~L. Tweedie.
 \newblock {\em Markov chains and stochastic stability}.
@@ -68,6 +73,11 @@ Garry Robins, Pip Pattison, Yuval Kalish, and Dean Lusher.
 \newblock An introduction to exponential random graph (p*) models for social
   networks.
 \newblock {\em Social Networks}, 29(2):173--191, May 2007.
+
+\bibitem{shalizi2013}
+Cosma~Rohilla Shalizi and Alessandro Rinaldo.
+\newblock Consistency under sampling of exponential random graph models.
+\newblock {\em Ann. Statist.}, (2):508--535, 04.
 
 \bibitem{SnijdersTomA.B..2006}
 Tom A.~B. Snijders, Philippa~E. Pattison, Garry~L. Robins, and Mark~S.
