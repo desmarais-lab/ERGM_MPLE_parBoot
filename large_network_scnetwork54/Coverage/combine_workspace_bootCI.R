@@ -17,7 +17,8 @@ boot4<- boot
 rm(boot)
 
 # combine results
-boot<-cbind(boot1, boot2, boot4)
+boot<-cbind(boot1, boot2, boot3, boot4)
+rm(boot1,boot2, boot3, boot4)
 
 # bootstrap.CI: if coef(mple) is in BootCI, save 1 otherwise 0
 # create empty matrix
