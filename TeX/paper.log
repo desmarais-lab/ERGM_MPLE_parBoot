@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.24)  16 MAY 2017 14:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.24)  23 MAY 2017 17:12
 entering extended mode
 **paper.tex
 ("C:\Users\Geiler Typ\Documents\GitHub\ERGM_MPLE_parBoot\TeX\paper.tex"
@@ -1536,11 +1536,6 @@ Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [5]
-
-LaTeX Warning: Citation `Snijders.2002b' on page 6 undefined on input line 176.
-
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 173--179
 
  []
@@ -1560,7 +1555,7 @@ Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-[7] <RMSE_paper.pdf, id=109, 844.15375pt x 597.23125pt>
+[7] <RMSE_paper.pdf, id=111, 844.15375pt x 597.23125pt>
 File: RMSE_paper.pdf Graphic file (type pdf)
  <use RMSE_paper.pdf>
 Package pdftex.def Info: RMSE_paper.pdf used on input line 213.
@@ -1573,7 +1568,7 @@ Overfull \hbox (23.73726pt too wide) in paragraph at lines 213--214
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Coverage_Mesa_Magnolia_height05.pdf, id=112, 794.97pt x 397.485pt>
+<Coverage_Mesa_Magnolia_height05.pdf, id=114, 794.97pt x 397.485pt>
 File: Coverage_Mesa_Magnolia_height05.pdf Graphic file (type pdf)
 
 <use Coverage_Mesa_Magnolia_height05.pdf>
@@ -1595,7 +1590,7 @@ has been already used, duplicate ignored
                                                   \fi \fi 
 l.231 
        <C:/Users/Geiler Typ/Documents/GitHub/ERGM_MPLE_parBoot/TeX/RMSE_paper.p
-df>] <bias_plots_05.pdf, id=140, 844.15375pt x 397.485pt>
+df>] <bias_plots_05.pdf, id=142, 844.15375pt x 397.485pt>
 File: bias_plots_05.pdf Graphic file (type pdf)
 
 <use bias_plots_05.pdf>
@@ -1681,7 +1676,7 @@ Overfull \hbox (51.96837pt too wide) in paragraph at lines 266--280
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-[13] <rel_time.pdf, id=211, 722.7pt x 505.89pt>
+[13] <rel_time.pdf, id=213, 722.7pt x 505.89pt>
 File: rel_time.pdf Graphic file (type pdf)
  <use rel_time.pdf>
 Package pdftex.def Info: rel_time.pdf used on input line 293.
@@ -1757,16 +1752,12 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 339.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 339.
 Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Warning: There were undefined references.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 339.
  ) 
 Here is how much of TeX's memory you used:
- 23277 strings out of 493921
- 406376 string characters out of 3144861
- 582422 words of memory out of 3000000
+ 23278 strings out of 493921
+ 406393 string characters out of 3144861
+ 582458 words of memory out of 3000000
  25995 multiletter control sequences out of 15000+200000
  127971 words of font info for 96 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1791,9 +1782,9 @@ public/lm/lmssbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm
 /lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on paper.pdf (18 pages, 458552 bytes).
+Output written on paper.pdf (18 pages, 458292 bytes).
 PDF statistics:
- 337 PDF objects out of 1000 (max. 8388607)
- 64 named destinations out of 1000 (max. 500000)
+ 339 PDF objects out of 1000 (max. 8388607)
+ 65 named destinations out of 1000 (max. 500000)
  12321 words of extra memory for PDF output out of 14400 (max. 10000000)
 

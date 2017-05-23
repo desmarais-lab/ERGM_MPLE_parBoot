@@ -5,7 +5,6 @@ I was expecting an "="---line 91 of file bib.bib
  : url = "http://dx.doi.org/10.1214/12-AOS1044", add 
  :                                                   to Citavi project by DOI
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Snijders.2002b"
 Too many commas in name 1 of "James H. Fowler, Timothy R. Johnson, James F. Spriggs, Sangick Jeon and Paul J. Wahlbeck" for entry Fowleretal2007
 while executing---line 1049 of file plain.bst
 Warning--empty journal in FowlerJeon2008
