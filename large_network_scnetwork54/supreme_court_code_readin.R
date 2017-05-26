@@ -8,6 +8,17 @@ edgelist[,2] <- paste("c",edgelist[,2],sep="")
 node_attributes <- read.csv("judicial.csv",stringsAsFactors=F)
 node_attributes[,1] <- paste("c",node_attributes$caseid,sep="")
 
+### Add additional attributes from the SCDB
+## See data documentation, http://scdb.wustl.edu/_brickFiles/2016_01/SCDB_2016_01_codebook.pdf
+SCDB <- read.csv("SCDB_2016_01_caseCentered_Citation.csv",stringsAsFactors=F)
+SCDBinFowler <- match(SCDB$usCite,node_attributes$usid)
+SCDB <- SCDB[!is.na(SCDBinFowler),]
+SCDBinFowler <- match(SCDB$usCite,node_attributes$usid)
+node_attributes$issueArea <- NA
+node_attributes$issueArea[SCDBinFowler] <- SCDB$issueArea
+node_attributes$lawType <- NA
+node_attributes$lawType[SCDBinFowler] <- SCDB$lawType
+
 ### Create a netowrk object
 ## The following sequence assures that edges are matched to the correct nodes
 library(network)
