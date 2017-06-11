@@ -1,0 +1,192 @@
+
+R version 3.3.3 (2017-03-06) -- "Another Canoe"
+Copyright (C) 2017 The R Foundation for Statistical Computing
+Platform: x86_64-redhat-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> 
+> load(file="supreme_additional_data.RData")
+> 
+> #install.packages("statnet", Sys.getenv("R_LIBS_USER"), repos = "http://cran.case.edu" )
+> library(statnet)
+> 
+> set.seed(5555)
+> model<- ergm(scnetwork_additional_data~edges+ nodecov('salience')+ nodecov('year.center') + absdiff('year.center') + absdiff('year.center.square')+nodemix('area')+ nodemix('type') + dsp(0) + esp(0),
++                   estimate="MPLE") #MCMLE.termination = "Hotelling",MCMC.samplesize=8224,
+Observed statistic(s) mix.area.7.11, mix.type.4.8, mix.type.8.8, and mix.type.8.9 are at their smallest attainable values. Their coefficients will be fixed at -Inf.
+Evaluating log-likelihood at the estimate. 
+> summary(model)
+
+==========================
+Summary of model fit
+==========================
+
+Formula:   scnetwork_additional_data ~ edges + nodecov("salience") + nodecov("year.center") + 
+    absdiff("year.center") + absdiff("year.center.square") + 
+    nodemix("area") + nodemix("type") + dsp(0) + esp(0)
+
+Iterations:  NA 
+
+Maximum Pseudolikelihood Results:
+                            Estimate Std. Error MCMC %  p-value    
+edges                       0.970323   4.922682      0 0.843739    
+nodecov.salience            1.004410   0.042635      0  < 1e-04 ***
+nodecov.year.center         0.510535   0.061530      0  < 1e-04 ***
+absdiff.year.center         2.667830   0.576837      0  < 1e-04 ***
+absdiff.year.center.square -1.942488   0.256070      0  < 1e-04 ***
+mix.area.1.1               -2.125278   1.125908      0 0.059078 .  
+mix.area.1.2               -3.489934   1.128863      0 0.001991 ** 
+mix.area.2.2               -2.106025   1.125777      0 0.061382 .  
+mix.area.1.3               -3.470377   1.132316      0 0.002178 ** 
+mix.area.2.3               -3.264272   1.130688      0 0.003890 ** 
+mix.area.3.3               -1.748852   1.126768      0 0.120639    
+mix.area.1.4               -3.220745   1.132920      0 0.004471 ** 
+mix.area.2.4               -2.995614   1.133157      0 0.008203 ** 
+mix.area.3.4               -3.166133   1.141918      0 0.005560 ** 
+mix.area.4.4               -1.681215   1.134405      0 0.138334    
+mix.area.1.5               -3.465244   1.163244      0 0.002892 ** 
+mix.area.2.5               -3.046838   1.145872      0 0.007838 ** 
+mix.area.3.5               -2.829602   1.147182      0 0.013641 *  
+mix.area.4.5               -3.178698   1.212842      0 0.008771 ** 
+mix.area.5.5               -0.505918   1.161296      0 0.663091    
+mix.area.1.6               -4.024517   1.235607      0 0.001125 ** 
+mix.area.2.6               -3.523846   1.171210      0 0.002623 ** 
+mix.area.3.6               -2.568911   1.161544      0 0.026992 *  
+mix.area.4.6               -2.855370   1.283655      0 0.026121 *  
+mix.area.5.6               -3.899852   1.843363      0 0.034377 *  
+mix.area.6.6               -1.048526   1.169501      0 0.369954    
+mix.area.1.7               -4.303427   1.173019      0 0.000244 ***
+mix.area.2.7               -3.838923   1.149761      0 0.000841 ***
+mix.area.3.7               -3.179528   1.159136      0 0.006088 ** 
+mix.area.4.7               -4.150421   1.265242      0 0.001037 ** 
+mix.area.5.7               -3.697163   1.347092      0 0.006059 ** 
+mix.area.6.7               -3.846642   1.472281      0 0.008983 ** 
+mix.area.7.7               -2.003647   1.133837      0 0.077205 .  
+mix.area.1.8               -4.260620   1.134942      0 0.000174 ***
+mix.area.2.8               -3.723959   1.129214      0 0.000974 ***
+mix.area.3.8               -3.491616   1.135879      0 0.002113 ** 
+mix.area.4.8               -3.504275   1.140382      0 0.002120 ** 
+mix.area.5.8               -3.444793   1.176646      0 0.003415 ** 
+mix.area.6.8               -3.784417   1.187794      0 0.001442 ** 
+mix.area.7.8               -3.828879   1.141150      0 0.000793 ***
+mix.area.8.8               -2.571384   1.125984      0 0.022391 *  
+mix.area.1.9               -3.986778   1.136154      0 0.000450 ***
+mix.area.2.9               -3.318748   1.129589      0 0.003303 ** 
+mix.area.3.9               -3.363033   1.139139      0 0.003155 ** 
+mix.area.4.9               -3.580022   1.153174      0 0.001906 ** 
+mix.area.5.9               -3.135418   1.179457      0 0.007852 ** 
+mix.area.6.9               -3.285172   1.206214      0 0.006459 ** 
+mix.area.7.9               -3.698805   1.150218      0 0.001301 ** 
+mix.area.8.9               -3.513794   1.129212      0 0.001860 ** 
+mix.area.9.9               -2.616592   1.129729      0 0.020552 *  
+mix.area.1.10              -4.224475   1.173068      0 0.000317 ***
+mix.area.2.10              -3.365331   1.140060      0 0.003158 ** 
+mix.area.3.10              -3.335766   1.175085      0 0.004529 ** 
+mix.area.4.10              -3.825894   1.228771      0 0.001848 ** 
+mix.area.5.10              -3.540506   1.401548      0 0.011532 *  
+mix.area.6.10              -3.466269   1.359273      0 0.010770 *  
+mix.area.7.10              -2.763689   1.144577      0 0.015753 *  
+mix.area.8.10              -3.082305   1.131971      0 0.006470 ** 
+mix.area.9.10              -3.370533   1.144242      0 0.003223 ** 
+mix.area.10.10             -1.476026   1.133466      0 0.192840    
+mix.area.1.11              -5.871862   2.744899      0 0.032420 *  
+mix.area.2.11              -4.247591   1.564743      0 0.006636 ** 
+mix.area.3.11              -4.926053   2.745659      0 0.072793 .  
+mix.area.4.11              -2.713010   1.439468      0 0.059466 .  
+mix.area.5.11              -4.129519   4.482519      0 0.356920    
+mix.area.6.11              -3.385572   3.271048      0 0.300664    
+mix.area.7.11                   -Inf   0.000000      0  < 1e-04 ***
+mix.area.8.11              -4.093895   1.376571      0 0.002940 ** 
+mix.area.9.11              -3.943565   1.425952      0 0.005682 ** 
+mix.area.10.11             -3.323205   1.671942      0 0.046852 *  
+mix.area.11.11             -0.156812   1.564183      0 0.920144    
+mix.area.1.12              -4.591822   1.185184      0 0.000107 ***
+mix.area.2.12              -4.775639   1.191952      0  < 1e-04 ***
+mix.area.3.12              -3.990803   1.217237      0 0.001043 ** 
+mix.area.4.12              -4.352854   1.327897      0 0.001045 ** 
+mix.area.5.12              -4.602837   1.685275      0 0.006310 ** 
+mix.area.6.12              -4.667265   1.581586      0 0.003167 ** 
+mix.area.7.12              -5.273335   1.371885      0 0.000121 ***
+mix.area.8.12              -4.460564   1.156039      0 0.000114 ***
+mix.area.9.12              -4.824253   1.212270      0  < 1e-04 ***
+mix.area.10.12             -5.088977   1.443998      0 0.000425 ***
+mix.area.11.12             -5.506737   4.480693      0 0.219075    
+mix.area.12.12             -2.797906   1.146562      0 0.014677 *  
+mix.area.1.13              -3.694856   1.340418      0 0.005842 ** 
+mix.area.2.13              -3.629853   1.292055      0 0.004964 ** 
+mix.area.3.13              -3.289719   1.322587      0 0.012870 *  
+mix.area.4.13              -3.083524   1.569220      0 0.049414 *  
+mix.area.5.13              -3.851826   2.008164      0 0.055100 .  
+mix.area.6.13              -2.509724   2.461469      0 0.307916    
+mix.area.7.13              -3.669821   2.265829      0 0.105310    
+mix.area.8.13              -3.310089   1.263745      0 0.008812 ** 
+mix.area.9.13              -3.498523   1.273487      0 0.006011 ** 
+mix.area.10.13             -3.463259   1.564466      0 0.026849 *  
+mix.area.11.13             -2.871724   4.541864      0 0.527205    
+mix.area.12.13             -2.677513   1.664614      0 0.107728    
+mix.area.13.13                    NA   0.000000      0       NA    
+mix.type.1.1               -0.931107   4.790679      0 0.845896    
+mix.type.1.2               -2.099737   4.790277      0 0.661145    
+mix.type.2.2               -1.797441   4.789538      0 0.707449    
+mix.type.1.3               -2.710794   4.790858      0 0.571512    
+mix.type.2.3               -2.613407   4.789676      0 0.585318    
+mix.type.3.3               -1.883860   4.789313      0 0.694063    
+mix.type.1.4               -3.002861   4.814820      0 0.532844    
+mix.type.2.4               -3.016342   4.792283      0 0.529076    
+mix.type.3.4               -2.840634   4.792487      0 0.553364    
+mix.type.4.4               -1.670789   4.798445      0 0.727695    
+mix.type.1.5               -2.382886   4.800331      0 0.619612    
+mix.type.2.5               -2.416065   4.790528      0 0.614021    
+mix.type.3.5               -2.865719   4.792261      0 0.549847    
+mix.type.4.5               -3.302088   4.813794      0 0.492736    
+mix.type.5.5               -1.364845   4.794026      0 0.775876    
+mix.type.1.6               -2.379618   4.791156      0 0.619423    
+mix.type.2.6               -2.590941   4.789919      0 0.588566    
+mix.type.3.6               -2.609376   4.789570      0 0.585888    
+mix.type.4.6               -2.978443   4.795027      0 0.534499    
+mix.type.5.6               -2.803944   4.794106      0 0.558633    
+mix.type.6.6               -2.079650   4.790020      0 0.664170    
+mix.type.1.8               -0.874547   4.913653      0 0.858736    
+mix.type.2.8               -1.550248   4.824585      0 0.747966    
+mix.type.3.8               -2.559766   4.922446      0 0.603050    
+mix.type.4.8                    -Inf   0.000000      0  < 1e-04 ***
+mix.type.5.8               -0.815625   4.945760      0 0.869012    
+mix.type.6.8               -2.159075   4.923921      0 0.661033    
+mix.type.8.8                    -Inf   0.000000      0  < 1e-04 ***
+mix.type.1.9               -2.933230   5.275744      0 0.578222    
+mix.type.2.9               -2.588501   4.922167      0 0.598967    
+mix.type.3.9               -2.000723   4.828315      0 0.678601    
+mix.type.4.9               -3.086480   6.465714      0 0.633105    
+mix.type.5.9               -3.440581   5.482483      0 0.530293    
+mix.type.6.9               -2.294419   4.889270      0 0.638872    
+mix.type.8.9                    -Inf   0.000000      0  < 1e-04 ***
+mix.type.9.9                      NA   0.000000      0       NA    
+dsp0                        0.037119   0.001192      0  < 1e-04 ***
+esp0                       -1.766653   0.020199      0  < 1e-04 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Warning:  The standard errors are based on naive pseudolikelihood and are suspect.
+
+     Null Pseudo-deviance: 27576553  on 19892278  degrees of freedom
+ Residual Pseudo-deviance:       NA  on 19892144  degrees of freedom
+ 
+AIC: NA    BIC: NA    (Smaller is better.) 
+
+ Warning: The following terms have infinite coefficient estimates:
+  mix.area.7.11 mix.type.4.8 mix.type.8.8 mix.type.8.9 
+> 
+> save.image(file="MPLE_additional_attributes.RData")
+> 
+> 

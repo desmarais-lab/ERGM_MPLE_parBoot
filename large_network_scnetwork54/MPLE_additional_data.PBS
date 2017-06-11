@@ -1,0 +1,34 @@
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=100:00:00
+#PBS -m abe
+#PBS -M schmid@psu.edu
+#PBS -l mem=128GB
+#PBS -j oe
+
+
+cd /storage/work/cxs5700/Desmarais_paper/large_network54
+
+echo " "
+echo " "
+echo "Job started on `hostname` at `date`"
+
+module load r/3.3
+
+R --vanilla <<STOP > MPLE_add_data.out
+
+load(file="supreme_additional_data.RData")
+
+#install.packages("statnet", Sys.getenv("R_LIBS_USER"), repos = "http://cran.case.edu" )
+library(statnet)
+
+set.seed(5555)
+model<- ergm(scnetwork_additional_data~edges+ nodecov('salience')+ nodecov('year.center') + absdiff('year.center') + absdiff('year.center.square')+nodemix('area')+ nodemix('type') + dsp(0) + esp(0),
+                  estimate="MPLE") #MCMLE.termination = "Hotelling",MCMC.samplesize=8224,
+summary(model)
+
+save.image(file="MPLE_additional_attributes.RData")
+
+STOP
+echo " "
+echo "Job Ended at `date`"
+echo " "

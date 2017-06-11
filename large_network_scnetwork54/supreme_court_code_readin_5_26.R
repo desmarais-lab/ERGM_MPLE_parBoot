@@ -49,11 +49,25 @@ for(i in 98500:length(edge_row)){ #stopped at 98500
   scnetwork[cbind(edge_row[(i-1):i], edge_col[(i-1):i])] <- 1}
 
 ### Lets use the age of the case and the salience indicator
-set.vertex.attribute(scnetwork,c("year","salience"),node_attributes[,c("year","oxford")])
+set.vertex.attribute(scnetwork,c("year","salience", "area", "type"),node_attributes[,c("year","oxford", "issueArea", "lawType")])
 
 
-# only use vertexes created after 1953
+# only use vertices created after 1953
 sc<- scnetwork
 
 scnetwork54<- delete.vertices(sc, 1:21065)
 rm(sc)
+
+save.image(file="supreme54.RData")
+
+# only use vertices where issua area and law type is known
+
+sc<- scnetwork
+
+nodes.to.delete <- which(is.na(node_attributes$issueArea) | is.na(node_attributes$lawType), arr.ind=TRUE)
+
+scnetwork_additional_data <- delete.vertices(sc, nodes.to.delete)
+rm(sc)
+
+
+save.image(file="supreme_additional_data.RData")
