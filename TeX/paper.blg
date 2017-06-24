@@ -5,12 +5,8 @@ I was expecting an "="---line 91 of file bib.bib
  : url = "http://dx.doi.org/10.1214/12-AOS1044", add 
  :                                                   to Citavi project by DOI
 I'm skipping whatever remains of this entry
-Too many commas in name 1 of "James H. Fowler, Timothy R. Johnson, James F. Spriggs, Sangick Jeon and Paul J. Wahlbeck" for entry Fowleretal2007
-while executing---line 1049 of file plain.bst
-Warning--empty journal in FowlerJeon2008
+Warning--empty journal in Fowler2006b
 Warning--empty publisher in Handcock.2003
-Too many commas in name 1 of "James H. Fowler, Timothy R. Johnson, James F. Spriggs, Sangick Jeon and Paul J. Wahlbeck" for entry Fowleretal2007
-while executing---line 1090 of file plain.bst
 Warning--there's a number but no volume in shalizi2013
 Warning--there's a month but no year in shalizi2013
-(There were 3 error messages)
+(There was 1 error message)

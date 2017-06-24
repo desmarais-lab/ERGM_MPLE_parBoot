@@ -249,13 +249,29 @@ For the simulation study, we determine the MPLE for the model and treat these es
 Figure \ref{bias} illustrates the bias between the 'true' network coefficients $\theta$ and the MPLE estimates. \textcolor{blue}{(=> not degenerate?, maybe provide boxplots for scnetwork)}
 \noindent This simulation study shows that bootstrapped MPLE is able to overcome the main disadvantage of the MPLE by retaining the validity of confidence intervals. Furthermore, this method also adopts the advantage of the MPLE of being consistent. However, the main advantage of the bootstrapped MPLE is the rapidity of the estimation that provides a computational benefit, especially if the size of the examined network is extremely large.
 
-\section*{Supreme Court Citation Network Data}
+\section*{Cosponsorship Network Data}
 
-In order to demonstrate the computational advantage of the bootstrapped MPLE to the commonly used MCMLE we apply both approaches to the U.S. Supreme Court Citation Network developed by Fowler and Jeon \cite{FowlerJeon2008} and Fowler et al. \cite{Fowleretal2007}. The citation network we use consists of 9223 majority opinions written by the U.S. Supreme Court from 1954 to 2002. In this undirected network an edge occurs between two vertices (i.e. between two majority opinions) if one majority opinion cites the other. The endogenous statistics we include into this model are the number of edges, the edge-wise 0-shared partner (esp(0)) statistic and the dyad-wise 0-shared partner statistic (dsp(0)) (Snijders et al. \cite{SnijdersTomA.B..2006}, Hunter and Handcock \cite{Hunter.2006}). The esp(k) statistic counts the number of pairs which are directly linked and share exactly k partners. The dsp(k) statistic is quite similar to esp(k), but does not require the two vertices to be directly linked. Mathematically written, esp(k) and dsp(k) are defined as 
-$$\Gamma_{esp(k)}: \mathcal{G}(N) \to \mathbb{R}~~,~~G \mapsto \sum_{i<j}^{N} \left[\mathds{1}_{k} \left(\sum_{m=1}^{N} g_{im}g_{jm}g_{ij} \right)\right]$$
-$$\Gamma_{dsp(k)}: \mathcal{G}(N) \to \mathbb{R}~~,~~G \mapsto \sum_{i<j}^{N} \left[\mathds{1}_{k} \left(\sum_{m=1}^{N} g_{im}g_{jm} \right)\right]$$
-where $m\neq i$, $m \neq j$ and $\mathds{1}_k(x)$ is an indicator that is defined as $1$, if $k=x$ and $0$, if $k\neq x$.
-({\it add explanation for adding esp(0) and dsp(0)}). 
+In order to demonstrate the computational advantage of the bootstrapped MPLE to the commonly used MCMLE we apply both approaches to the data on Cosponsorships in the U.S. Senate and U.S. House of Representatives for the 93rd to 108th Congresses developed by Fowler (2006) \cite{Fowler2006a} \cite{Fowler2006b}. The cosponsorship network consists of 2635 nodes and contains information of over 280,000 pieces of legislation proposed in the U.S. House and Senate for the time period 1973 - 2004. In this network each node indicates on cosponsor and an edge indicates the link of each cosponsor of a piece of legislation to its sponsor. The endogenous statistics we include into this model are the number of edges and the alternating k-star statistic as it was introduced by Snijders et al. \cite{SnijdersTomA.B..2006} and modified by Hunter and Handcock (2006) \cite{Hunter.2006}. The alternating k-star statistic adds one network statistic to the model equal to a weighted alternating sequence of k-star statistics with weight parameter $\lambda$ and is a way to include a networks entire degree distribution as a network statistic. In this model we fix the weight paramter $\lambda=0.4975$. 
+Snijders et al. \cite{SnijdersTomA.B..2006} introduced an approach involving $k$-star statistics $S_1(A), \dots , S_{N-1}(A)$, where $S_k(A)$ denotes the number of $k$-stars in the network, $k \in \{1, \dots , N-1\}$. For simplicity, let us define
+$$S_k(A):=\Gamma_{star(k)}(A) $$
+\textit{define kstar}.
+Note that in every network $S_1(A)=\Gamma_{edges}(A)$, i.e., $S_1(A)$ is equal to the number of edges in the network.
+On this basis, Snijders introduces the \textit{alternating k-star statistics}
+\begin{equation*}
+\mathfrak{S}(A,\lambda):= \sum_{k=2}^{N-1}(-\cfrac{1}{\lambda})^{k-2}S_k(A)=    S_2(A)-\cfrac{S_3(A)}{\lambda}+ \dots + (-1)^{N-3}\cfrac{S_{N-1}(A)}{\lambda^{N-3}}
+\end{equation*} 
+Models with this statistic and a fixed decay parameter turn out to be standard ERGMs and Hunter and Handcock \cite{Hunter.2006} succeeded in proving that one can also rewrite alternating k-stars as a function of a network's degree distribution
+\begin{equation}
+\mathfrak{S}(A,\lambda)= \lambda\Biggr(\lambda\sum_{j=1}^{N-1}\Biggr( 1-\biggr(1-\cfrac{1}{\lambda}\biggl)^j\Biggl)D_j(A) + 2S_1(A)\Biggl)
+\label{alto}
+\end{equation}
+where $D_j(A):= \Gamma_{deg(j)}(A)$ is the number of nodes with and degree of $j$. 
+In the next step, we define the \textit{geometrically weighted degree} statistic as the first summand of (\ref{alto})
+\begin{equation}
+\Gamma_{gwd}(A,\lambda):= \lambda\sum_{j=1}^{N-1}\Biggr(1- \biggr(1-\cfrac{1}{\lambda}\biggl)^j\Biggl)D_j(A)
+\end{equation}
+At this point it also becomes obvious where the \textit{geometrically} comes from. It simply refers to the geometric sequence $(1-\frac{1}{\lambda})^j$ which appears in these statistics.\\[0.3cm]
+\textbf{continue here}
 The two nodal attributes we consider for this network are the year the majority opinion was drafted as well as an attribute that indicates whether a case appears on the Oxford list of salient cases. In order to include nodal covariates into the ERGM, the vector of nodal attributes is expanded into an artificial matrix $C$, which has the same dimensions as $G$. The first row of matrix $C$ consists of the first actor's attribute, repeated $N$ times. The second row of matrix $C$, consists of the second actor's attribute, repeated $N$ times, and so on. Then, the statistics for a nodal covariate is defined as
 $$\Gamma_{nodal}: \mathcal{G}(N) \to \mathbb{R}~~,~~G \mapsto \sum_{i<j}^{N}g_{ij}c_{ij}$$
 Beside these two nodal attributes, we furthermore include the difference between the years of publication as an edge attribute. An edge attribute can be written as a matrix $E$ of the same dimensions as the observed adjacency matrix $G$. In this case entry $e_{ij}$ is filled with the absolute difference between the year of case $i$ and case $j$. Then, the corresponding statistic can be calculated the same way as nodal covariates. Since we do expect a non-linear effect for this edge attribute, we include this variable as a second-degree polynomial by creating a matrix $E^2$, where the matrix gets squared component wise.\\[0.3cm]
