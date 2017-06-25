@@ -271,35 +271,27 @@ In the next step, we define the \textit{geometrically weighted degree} statistic
 \Gamma_{gwd}(A,\lambda):= \lambda\sum_{j=1}^{N-1}\Biggr(1- \biggr(1-\cfrac{1}{\lambda}\biggl)^j\Biggl)D_j(A)
 \end{equation}
 At this point it also becomes obvious where the \textit{geometrically} comes from. It simply refers to the geometric sequence $(1-\frac{1}{\lambda})^j$ which appears in these statistics.\\[0.3cm]
-\textbf{continue here}
-The nodal attribute that we implement for this network 
- In order to include nodal covariates into the ERGM, the vector of nodal attributes is expanded into an artificial matrix $C$, which has the same dimensions as $G$. The first row of matrix $C$ consists of the first actor's attribute, repeated $N$ times. The second row of matrix $C$, consists of the second actor's attribute, repeated $N$ times, and so on. Then, the statistics for a nodal covariate is defined as
+As nodal attribute we implement the partisanship of the bill sponsor. In order to include nodal covariates into the ERGM, the vector of nodal attributes is expanded into an artificial matrix $C$, which has the same dimensions as $G$. The first row of matrix $C$ consists of the first actor's attribute, repeated $N$ times. The second row of matrix $C$, consists of the second actor's attribute, repeated $N$ times, and so on. Then, the statistics for a nodal covariate is defined as
 $$\Gamma_{nodal}: \mathcal{G}(N) \to \mathbb{R}~~,~~G \mapsto \sum_{i<j}^{N}g_{ij}c_{ij}$$
 Beside these two nodal attributes, we furthermore include the difference between the years of publication as an edge attribute. An edge attribute can be written as a matrix $E$ of the same dimensions as the observed adjacency matrix $G$. In this case entry $e_{ij}$ is filled with the absolute difference between the year of case $i$ and case $j$. Then, the corresponding statistic can be calculated the same way as nodal covariates. Since we do expect a non-linear effect for this edge attribute, we include this variable as a second-degree polynomial by creating a matrix $E^2$, where the matrix gets squared component wise.\\[0.3cm]
-We estimate the coefficient of this matrix using both techniques, the MCMLE and the bootstrapped MPLE. The MCMLE requires a sample size of at least $100000$ networks to converge. The bootstrapped MPLE was estimated by using 500 simulated networks. As we described in the chapter {\it Estimation}, only one edge at a time is changed when simulating networks. For better comparison, we chose the same Burn-In ($163840$ MH-steps) and the same number of iterations ($10240$ MH-steps) for sampling networks. The results can be found in table \ref{sc_results}.\\[0.3cm]
+We estimate the coefficient of this matrix using both techniques, the MCMLE and the bootstrapped MPLE. The MCMLE requires a sample size of at least $1000$ networks to converge. The bootstrapped MPLE was estimated by using 500 simulated networks. As we described in the chapter {\it Estimation}, only one edge at a time is changed when simulating networks. For better comparison, we chose the same Burn-In ($300.000$ MH-steps) and the same number of iterations ($30.000$ MH-steps) for sampling networks. The results can be found in table \ref{sc_results}.\\[0.3cm]
 
 
 \begin{table}[]
-\hspace*{-1.5cm}
+%\hspace*{-1.5cm}
 \begin{tabular}{|
 >{\columncolor[HTML]{EFEFEF}}l |l|l|l|l|l|l|}
 \hline
 \cellcolor[HTML]{EFEFEF}                   & \multicolumn{2}{c|}{\cellcolor[HTML]{EFEFEF}MCMLE}                   & \multicolumn{2}{c|}{\cellcolor[HTML]{EFEFEF}Logistic Regression}       & \multicolumn{2}{c|}{\cellcolor[HTML]{EFEFEF}bootstrapped MPLE}     \\ \cline{2-7} 
 \multirow{-2}{*}{\cellcolor[HTML]{EFEFEF}} & \cellcolor[HTML]{EFEFEF}Estimate & \cellcolor[HTML]{EFEFEF}St. Error & \cellcolor[HTML]{EFEFEF}Estimate & \cellcolor[HTML]{EFEFEF}St. Error & \cellcolor[HTML]{EFEFEF}Lower Bound & \cellcolor[HTML]{EFEFEF}Upper Bound \\ \hline
 Edges                                      & -5.657                           & 0.028                             & -4.568                       & 0.038                                    & -5.160 & -4.530  \\ \hline
-Nodecov.Salience                           & 0.592                            & 0.012                             &   1.482                               & 0.009                                   & 1.413 & 1.890  \\ \hline
-Nodecov.Year                               & 0.253                            & 0.012                             &     0.208                             & 0.015                                   & 0.182 & 0.504  \\ \hline
-Absdiff.Year                               & -2.470                           & 0.160                             &  -3.121                                & 0.194                             & -3.308 & -2.434  \\ \hline
-Absdiff.Year.Squared                       & 0.221                            & 0.066                             &   0.436                               & 0.080                                   & -0.028 & 0.517  \\ \hline
-DSP(0)                                     & 0.0005                           & 0.0002                            &    0.021                              & 0.0002                                   & 0.019 & 0.031  \\ \hline
-ESP(0)                                     & -3.129                           & 0.012                             &    -2.162                              & 0.004                                   & -2.179 & -1.511  \\ \hline
+Spnsor Party                          & 0.592                            & 0.012                             &   1.482                               & 0.009                                   & 1.413 & 1.890  \\ \hline
+Alternating k-star                              & 0.253                            & 0.012                             &     0.208                             & 0.015                                   & 0.182 & 0.504  \\ \hline
 \end{tabular}
-\caption{Estimation results for the Supreme Court Network using MCMLE, bootstrapped MPLE and logistic regression}
+\caption{Estimation results for the Cosponsorship network using MCMLE, logistic regression and bootstrapped MPLE}
 \label{sc_results}
-\hspace*{-1cm}
+%\hspace*{-1cm}
 \end{table}
-
-
 \noindent The bootstrapped MPLE is not only simple and fast, it is also embarrassingly parallel, meaning that there is no problem separating the computation into several tasks. In other words, by using multiple cores, the computing time for estimating bootstrapped MPLE confidence intervals can be reduced substantially. Figure \ref{comptime} illustrates the relative computing time of the bootstrapped MPLE using 500 simulated networks and the MCMLE for the three networks Faux Mesa High (205 nodes), Faux Magnolia High (1461 nodes) and Supreme Court Citation (9223 nodes) for an increasing number of computing cores. For the small network we simulate $2000$ networks using a MCMC interval of $2000$ steps, for the medium network we simulate $8000$ networks using a MCMC interval of $5000$ steps and for the large network we simulate 1 million networks using $10,000$ MCMC steps in order to approximate the likelihood appropriately. The chosen sample sizes and MCMC steps are necessary to guarantee a good model fit. We define the simulation time of the bootstrapped MPLE as a function of the number of available computing cores x:
 $$\text{boostrapped MPLE time} = \text{network simulation time} + \cfrac{500 \cdot \text{MPLE estimation time}}{x}$$     
 Based on this, we define the relative computing time as
