@@ -157,11 +157,23 @@ median(time.mcmle)
 
 # simulate 500 networks from mple
 
-sim.mple <- simulate(mple, nsim=500)#, control=control.simulate(MCMC.burnin=3000000,MCMC.interval=30000))
+coefs <- matrix(0, 3, 10)
 
-for ( i in 1:500){
-  
-  bootest<- ergm(sim.mple[[i]]~edges+ +nodematch("sponsorParty")+altkstar(0.4975,fixed=T), eval.loglik = FALSE, estimate="MPLE" ) 
-  
-  
+set.seed(1111)
+sim.mple <- simulate(mple, nsim=10)#, control=control.simulate(MCMC.burnin=3000000,MCMC.interval=30000))
+
+for ( i in 1:10){
+  print(i)
+  bootest<- ergm(sim.mple[[i]]~edges +nodematch("sponsorParty")+altkstar(0.4975,fixed=T), eval.loglik = FALSE, estimate="MPLE" ) 
+  coefs[,i]<-coef(bootest)
 }
+
+# create empty matrix to store bootstrap.CI
+bootstrap.CI <- matrix(0,3,2)
+colnames(bootstrap.CI)<- c("upper", "lower")
+rownames(bootstrap.CI)<- c("edges", "sponsor", "altkstar")
+
+# calculate the bootstrap intervals
+bootstrap.CI[1,]<-quantile(coefs[1,], probs = c(0.975, 0.025)) # edges
+bootstrap.CI[2,]<-quantile(coefs[2,], probs = c(0.975, 0.025)) # sponsor
+bootstrap.CI[3,]<-quantile(coefs[3,], probs = c(0.975, 0.025)) # altkstar
