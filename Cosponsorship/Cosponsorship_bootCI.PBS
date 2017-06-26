@@ -1,0 +1,63 @@
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=200:00:00
+#PBS -m abe
+#PBS -M schmid@psu.edu
+#PBS -l mem=128GB
+#PBS -j oe
+
+
+cd /storage/work/cxs5700/Desmarais_paper/large_network_add
+
+echo " "
+echo " "
+echo "Job started on `hostname` at `date`"
+
+module load r/3.3
+
+R --vanilla <<STOP > cosponsor_bootCI.out
+
+load(file="cosponsorship.RData")
+
+#install.packages("statnet", Sys.getenv("R_LIBS_USER"), repos = "http://cran.case.edu" )
+library(statnet)
+
+set.seed(1111)
+mple<- ergm(cosponsorNetwork~edges+nodematch("sponsorParty")+altkstar(0.4975,fixed=T), estimate="MPLE")
+
+
+## calculate the MPLE Bootstrap confidence intervals for the cosposorship network
+
+# simulate 500 networks from mple
+
+coefs <- matrix(0, 3, 500)
+
+set.seed(1111)
+sim.mple <- simulate(mple, nsim=500, control=control.simulate(MCMC.burnin=3000000,MCMC.interval=30000))
+
+for ( i in 1:500){
+  print(i)
+  bootest<- ergm(sim.mple[[i]]~edges +nodematch("sponsorParty")+altkstar(0.4975,fixed=T), eval.loglik = FALSE, estimate="MPLE" ) 
+  coefs[,i]<-coef(bootest)
+}
+
+# create empty matrix to store bootstrap.CI
+bootstrap.CI <- matrix(0,3,2)
+colnames(bootstrap.CI)<- c("upper", "lower")
+rownames(bootstrap.CI)<- c("edges", "sponsor", "altkstar")
+
+# calculate the bootstrap intervals
+bootstrap.CI[1,]<-quantile(coefs[1,], probs = c(0.975, 0.025)) # edges
+bootstrap.CI[2,]<-quantile(coefs[2,], probs = c(0.975, 0.025)) # sponsor
+bootstrap.CI[3,]<-quantile(coefs[3,], probs = c(0.975, 0.025)) # altkstar
+
+
+
+
+
+save.image(file="cosponsorship_bootCI.RData")
+
+
+STOP
+echo " "
+echo "Job Ended at `date`"
+echo " "
