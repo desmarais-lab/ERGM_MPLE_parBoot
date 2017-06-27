@@ -55,6 +55,8 @@ summary(mple)
 # simulate 500 networks
 set.seed(1234)
 sim.mple<- simulate.ergm(mple, nsim=500,  statsonly = TRUE, control=control.simulate.ergm(MCMC.interval=200000))
+
+
 # get observed statistics by simulating 25 times with MCMC.interval=MCMC.brunin=1. Then, take the mode
 
 d<- dim(sim.mple)[2] # save number of columns
@@ -64,6 +66,7 @@ set.seed(1)
 net.stats <- numeric(d)
 A <- matrix(0,25,d)
 for(i in 1:25){
+  print(i)
     set.seed(i*1000)
     simulated.network = simulate.ergm(mple, nsim=1, control=control.simulate.ergm(MCMC.burnin=1, MCMC.interval=1), statsonly = TRUE)
     A[i,]<- simulated.network
@@ -94,25 +97,25 @@ altkstar.obs
 pdf(file="MPLEDegeneracyCheck.pdf",width=4,height=8)
 par(mfrow=c(3,2))
 
-plot(sim.mple[,1], ylab="Value", type="l", main="Edges")
-abline(h=net.stats[1])
+plot(sim.mple[,1], ylab="Value", xlab="Sample" , type="l", main="Edges", cex.main=2, cex.lab=1.8, cex.axis=1.4)
+abline(h=net.stats[1], col='red', lwd=2)
 
-hist(sim.mple[,1], main="Edges", xlab="Value") 
-abline(v=edges.obs, col='red')
+hist(sim.mple[,1], main="Edges", xlab="Value", cex.main=2, cex.lab=1.8, cex.axis=1.4) 
+abline(v=edges.obs, col='red', lwd=3)
 
-plot(sim.mple[,2], ylab="Value", type="l", main="Sponsor Party")
-abline(h=net.stats[2])
+plot(sim.mple[,2], ylab="Value", xlab="Sample", type="l", main="Sponsor Party", cex.main=2, cex.lab=1.8, cex.axis=1.4)
+abline(h=net.stats[2], col='red', lwd=2)
 
-hist(sim.mple[,2], main="Sponsor Party", xlab="Value") 
-abline(v=sponsorParty.obs, col='red')
+hist(sim.mple[,2], main="Sponsor Party", xlab="Value", cex.main=2, cex.lab=1.8, cex.axis=1.4) 
+abline(v=sponsorParty.obs, col='red', lwd=3)
 
-plot(sim.mple[,3], ylab="Value", type="l", main="Alternating K-Star")
-abline(h=net.stats[3])
+plot(sim.mple[,3], ylab="Value", xlab="Sample", type="l", main="Alternating K-Star", cex.main=2, cex.lab=1.8, cex.axis=1.3)
+abline(h=net.stats[3], col='red', lwd=3)
 
-hist(sim.mple[,3], main="Alternating K-Star", xlab="Value") 
-abline(v=altkstar.obs, col='red')
+hist(sim.mple[,3], main="Alternating K-Star", xlab="Value", cex.main=2, cex.lab=1.8, cex.axis=1.4) 
+abline(v=altkstar.obs, col='red', lwd=2)
 
-
+# 6x8 inches
 dev.off()
 
 save.image(file="MPLE_add_data_hist_half.RData")
@@ -121,7 +124,7 @@ save.image(file="MPLE_add_data_hist_half.RData")
 # now MCMLE
 
 set.seed(5555)
-mcmle<- ergm(cosponsorNetwork~edges+nodematch("sponsorParty")+altkstar(0.4975,fixed=T), eval.loglik = FALSE, control = control.ergm(MCMC.interval = 30000, MCMC.burnin = 300000))
+mcmle<- ergm(cosponsorNetwork~edges+nodematch("sponsorParty")+altkstar(0.4975,fixed=T), eval.loglik = FALSE, control = control.ergm(MCMC.interval = 200000))
 summary(mcmle)
 
 mcmc.diagnostics(mcmle)
