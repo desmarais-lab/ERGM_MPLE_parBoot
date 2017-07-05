@@ -250,7 +250,7 @@ Figure \ref{bias} illustrates the bias between the 'true' network coefficients $
 
 \section*{Cosponsorship Network Data}
 
-To demonstrate the computational advantage of the bootstrapped MPLE to the commonly used MCMLE we apply both approaches to the data on Cosponsorships in the U.S. Senate and U.S. House of Representatives for the 93rd to 108th Congresses developed by Fowler (2006) \cite{Fowler2006a} \cite{Fowler2006b}. The cosponsorship network consists of 2635 nodes and contains information of over 280,000 pieces of legislation proposed in the U.S. House and Senate for the time period 1973 - 2004. In this network bills are tied together based on the similarity of the sets of legislators who cosponsor them. The endogenous statistics we include into this model are the number of edges and the alternating k-star statistic as it was introduced by Snijders et al. \cite{SnijdersTomA.B..2006} and modified by Hunter and Handcock (2006) \cite{Hunter.2006}. The alternating k-star statistic adds one network statistic to the model equal to a weighted alternating sequence of k-star statistics with weight parameter $\lambda$ and is a way to include a networks entire degree distribution as a network statistic. In this model we fix the weight paramter $\lambda=0.4975$. 
+To demonstrate the computational advantage of the bootstrapped MPLE to the commonly used MCMLE we apply both approaches to the data on Cosponsorships in the U.S. Senate and U.S. House of Representatives for the 93rd to 108th Congresses developed by Fowler (2006) \cite{Fowler2006a} \cite{Fowler2006b}. The cosponsorship network consists of 2635 nodes (in this case senators) and contains information of over 280,000 pieces of legislation proposed in the U.S. House and Senate for the time period 1973 - 2004. In this network bills are tied together based on the similarity of the sets of legislators who cosponsor them. This means that an edge emerges between senators $i$ and $j$ if senator $i$ cosponsors legislation sponsored by senator $j$. The endogenous statistics we include into this model are the number of edges and the alternating k-star statistic as it was introduced by Snijders et al. \cite{SnijdersTomA.B..2006} and modified by Hunter and Handcock (2006) \cite{Hunter.2006}. The alternating k-star statistic adds one network statistic to the model equal to a weighted alternating sequence of k-star statistics with weight parameter $\lambda$ and is a way to include a networks entire degree distribution as a network statistic. In this model we fix the weight paramter $\lambda=0.4975$. 
 Snijders et al. \cite{SnijdersTomA.B..2006} introduced an approach involving $k$-star statistics $S_1(A), \dots , S_{N-1}(A)$, where $S_k(A)$ denotes the number of $k$-stars in the network, $k \in \{1, \dots , N-1\}$. For simplicity, let us define
 $$S_k(A):=\Gamma_{star(k)}(A) $$
 \textit{define kstar}.
@@ -328,14 +328,9 @@ Otherwise, the values of the simulated networks systematically differ from the c
 
 
  \section*{Results/Discussion}
-\begin{itemize}
-  
- \item  Bootstrap MPLE is an improvement of the MPLE and performs just as good as the MCMLE. \\
-\item Bootstrap MPLE has the advantage of being fast + multiple cores\\ 
-\item Bootstrap MPLE is consistent\\
-\item Conclusion: For very large networks the Bootstrap MPLE approach is more reasonable
-   
-\end{itemize}
+In the past years the ERGM grew in popularity in many different fields and with this popularity also the size of the considered networks rose. As the size of the network increases, it becomes unclear how many simulated networks are necessary for the conventional MCMLE method in order to provide reliable results. Furthermore, as an increasing number of simulated networks is necessary for the MCMLE, the computing time rapidly goes sky high. For this reason it is essential to develop different methods that provide faster estimation than the MCMLE, but still lead to reliable results.\\
+In this paper we introduced the bootstrapped MPLE as an alternative estimation method for ERGMs and compared the performance to the commonly applied MCMLE. Based on a simulation study we first pointed out that the larger the size of a network is the larger the MCMC sample size has to be chosen in order for the MCMLE to outperform the fast and simple MPLE. However, the big disadvantage of the MPLE is that even though it is an approximately exact estimator, it underestimates the standard error. For this reason, we propose a parametric bootstrap method to attune the standard error. On the basis of another simulation study on two different networks we demonstrate that the bootstrapped MPLE covers the true coefficients just as well as the MCMLE, while the simple MPLE performs clearly poorer. This means that the bootstrapped MPLE combines the advantages of both methods, the MPLE and the MCMLE, because it is still simple, fast and provides approximately exact results, but also does not underestimate the standard error. We conclude that the bootstrapped MPLE should be regarded as a propitious alternative to the MCMLE. It also has the advantage of being embarrassingly parallel, which leads to a rapid speed-up of the calculation if multiple computing cores are used.
+
 
    
 \newpage
