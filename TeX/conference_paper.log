@@ -1,0 +1,526 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.24)  17 JUL 2017 13:59
+entering extended mode
+**conference_paper.tex
+
+("C:\Users\Geiler Typ\Desktop\PSU\Bruce Desmarais\Big Data Conference\IEEE_CS_L
+atex8.5x11x2\conference_paper.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+
+("C:\Users\Geiler Typ\Desktop\PSU\Bruce Desmarais\Big Data Conference\IEEE_CS_L
+atex8.5x11x2\IEEEtran.cls"
+Document Class: IEEEtran 2007/03/05 V1.7a by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpcountA=\count79
+\@IEEEtrantmpcountB=\count80
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 373.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen104
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen105
+\CLASSINFOnormalsizeunitybaselineskip=\dimen106
+\IEEEnormaljot=\dimen107
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+\IEEEilabelindentA=\dimen108
+\IEEEilabelindentB=\dimen109
+\IEEEilabelindent=\dimen110
+\IEEEelabelindent=\dimen111
+\IEEEdlabelindent=\dimen112
+\IEEElabelindent=\dimen113
+\IEEEiednormlabelsep=\dimen114
+\IEEEiedmathlabelsep=\dimen115
+\IEEEiedtopsep=\skip41
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@IEEEsubequation=\count85
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count86
+\c@table=\count87
+\@IEEEeqnnumcols=\count88
+\@IEEEeqncolcnt=\count89
+\@IEEEtmpitemindent=\dimen116
+\c@IEEEbiography=\count90
+\@IEEEtranrubishbin=\box26
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\cite\cite.sty"
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count91
+))
+\Gin@req@height=\dimen117
+\Gin@req@width=\dimen118
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen119
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen120
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count92
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count93
+\leftroot@=\count94
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count95
+\DOTSCASE@=\count96
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen121
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count97
+\c@MaxMatrixCols=\count98
+\dotsspace@=\muskip10
+\c@parentequation=\count99
+\dspbrk@lvl=\count100
+\tag@help=\toks17
+\row@=\count101
+\column@=\count102
+\maxfields@=\count103
+\andhelp@=\toks18
+\eqnshift@=\dimen122
+\alignsep@=\dimen123
+\tagshift@=\dimen124
+\tagwidth@=\dimen125
+\totwidth@=\dimen126
+\lineht@=\dimen127
+\@envbody=\toks19
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks21
+\thm@bodyfont=\toks22
+\thm@headfont=\toks23
+\thm@notefont=\toks24
+\thm@headpunct=\toks25
+\thm@preskip=\skip47
+\thm@postskip=\skip48
+\thm@headsep=\skip49
+\dth@everypar=\toks26
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen128
+\extrarowheight=\dimen129
+\NC@list=\toks27
+\extratabsurround=\skip50
+\backup@length=\skip51
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+\everycr=\toks28
+\minrowclearance=\skip52
+)
+\rownum=\count104
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen130
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\multicol.sty"
+Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
+\c@tracingmulticols=\count105
+\mult@box=\box29
+\multicol@leftmargin=\dimen131
+\c@unbalance=\count106
+\c@collectmore=\count107
+\doublecol@number=\count108
+\multicoltolerance=\count109
+\multicolpretolerance=\count110
+\full@width=\dimen132
+\page@free=\dimen133
+\premulticols=\dimen134
+\postmulticols=\dimen135
+\multicolsep=\skip53
+\multicolbaselineskip=\skip54
+\partial@page=\box30
+\last@line=\box31
+\mult@rightbox=\box32
+\mult@grightbox=\box33
+\mult@gfirstbox=\box34
+\mult@firstbox=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\c@columnbadness=\count111
+\c@finalcolumnbadness=\count112
+\last@try=\dimen136
+\multicolovershoot=\dimen137
+\multicolundershoot=\dimen138
+\mult@nat@firstbox=\box53
+\colbreak@box=\box54
+\multicol@sort@counter=\count113
+)
+("C:\Users\Geiler Typ\Desktop\PSU\Bruce Desmarais\Big Data Conference\IEEE_CS_L
+atex8.5x11x2\conference_paper.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 352.
+LaTeX Font Info:    ... okay on input line 352.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 352.
+LaTeX Font Info:    ... okay on input line 352.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 352.
+LaTeX Font Info:    ... okay on input line 352.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 352.
+LaTeX Font Info:    ... okay on input line 352.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 352.
+LaTeX Font Info:    ... okay on input line 352.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 352.
+LaTeX Font Info:    ... okay on input line 352.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count114
+\scratchdimen=\dimen139
+\scratchbox=\box55
+\nofMPsegments=\count115
+\nofMParguments=\count116
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count117
+\MPscratchDim=\dimen140
+\MPnumerator=\count118
+\makeMPintoPDFobject=\count119
+\everyMPtoPDFconversion=\toks30
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 408.
+LaTeX Font Info:    Try loading font information for U+msa on input line 439.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 439.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1{C:/Users/Geiler Typ/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+]
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 513.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 513.
+
+[2]
+Underfull \hbox (badness 2809) in paragraph at lines 537--542
+\OT1/ptm/m/n/10 ig-nore the de-pen-dency struc-tures in-side the net-work.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 537--542
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 543--549
+
+ []
+
+[3] <RMSE_10k.pdf, id=27, 844.15375pt x 597.23125pt>
+File: RMSE_10k.pdf Graphic file (type pdf)
+ <use RMSE_10k.pdf>
+Package pdftex.def Info: RMSE_10k.pdf used on input line 579.
+(pdftex.def)             Requested size: 252.94499pt x 178.95204pt.
+
+Overfull \hbox (9.03374pt too wide) in paragraph at lines 579--580
+ [][] 
+ []
+
+<Coverage_Mesa_Magnolia_height05.pdf, id=28, 794.97pt x 397.485pt>
+File: Coverage_Mesa_Magnolia_height05.pdf Graphic file (type pdf)
+
+<use Coverage_Mesa_Magnolia_height05.pdf>
+Package pdftex.def Info: Coverage_Mesa_Magnolia_height05.pdf used on input line
+ 592.
+(pdftex.def)             Requested size: 252.94499pt x 126.46997pt.
+
+Overfull \hbox (9.03374pt too wide) in paragraph at lines 592--593
+ [][] 
+ []
+
+[4 <C:/Users/Geiler Typ/Desktop/PSU/Bruce Desmarais/Big Data Conference/IEEE_CS
+_Latex8.5x11x2/RMSE_10k.pdf>]
+<bias_plots_05.pdf, id=48, 844.15375pt x 397.485pt>
+File: bias_plots_05.pdf Graphic file (type pdf)
+ <use bias_plots_05.pdf>
+Package pdftex.def Info: bias_plots_05.pdf used on input line 599.
+(pdftex.def)             Requested size: 252.94499pt x 119.10085pt.
+
+Overfull \hbox (9.03374pt too wide) in paragraph at lines 599--600
+ [][] 
+ []
+
+
+Underfull \vbox (badness 1400) has occurred while \output is active []
+
+ [5 <C:/Users/Geiler Typ/Desktop/PSU/Bruce Desmarais/Big Data Conference/IEEE_C
+S_Latex8.5x11x2/Coverage_Mesa_Magnolia_height05.pdf> <C:/Users/Geiler Typ/Deskt
+op/PSU/Bruce Desmarais/Big Data Conference/IEEE_CS_Latex8.5x11x2/bias_plots_05.
+pdf
+
+pdfTeX warning: pdflatex (file C:/Users/Geiler Typ/Desktop/PSU/Bruce Desmarais/
+Big Data Conference/IEEE_CS_Latex8.5x11x2/bias_plots_05.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+>]
+LaTeX Font Info:    Try loading font information for U+euf on input line 637.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+Underfull \hbox (badness 5652) in paragraph at lines 648--650
+\OT1/ptm/m/n/10 At this point it also be-comes ob-vi-ous where the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 648--650
+
+ []
+
+
+Underfull \hbox (badness 3219) in paragraph at lines 652--655
+\OT1/ptm/m/it/10 al-tk-star?)\OT1/ptm/m/n/10 . The boot-strapped MPLE bounds, h
+ow-ever,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 652--655
+
+ []
+
+[6] <rel_time.pdf, id=90, 722.7pt x 505.89pt>
+File: rel_time.pdf Graphic file (type pdf)
+ <use rel_time.pdf>
+Package pdftex.def Info: rel_time.pdf used on input line 668.
+(pdftex.def)             Requested size: 216.81pt x 151.76816pt.
+
+<MPLE_histogram_traceplot_cosponsorship.pdf, id=91, 578.16pt x 433.62pt>
+File: MPLE_histogram_traceplot_cosponsorship.pdf Graphic file (type pdf)
+
+<use MPLE_histogram_traceplot_cosponsorship.pdf>
+Package pdftex.def Info: MPLE_histogram_traceplot_cosponsorship.pdf used on inp
+ut line 680.
+(pdftex.def)             Requested size: 216.81pt x 162.6071pt.
+ [7 <C:/Users/Geiler Typ/Desktop/PSU/Bruce Desmarais/Big Data Conference/IEEE_C
+S_Latex8.5x11x2/rel_time.pdf> <C:/Users/Geiler Typ/Desktop/PSU/Bruce Desmarais/
+Big Data Conference/IEEE_CS_Latex8.5x11x2/MPLE_histogram_traceplot_cosponsorshi
+p.pdf
+
+pdfTeX warning: pdflatex (file C:/Users/Geiler Typ/Desktop/PSU/Bruce Desmarais/
+Big Data Conference/IEEE_CS_Latex8.5x11x2/MPLE_histogram_traceplot_cosponsorshi
+p.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+("C:\Users\Geiler Typ\Desktop\PSU\Bruce Desmarais\Big Data Conference\IEEE_CS_L
+atex8.5x11x2\conference_paper.bbl"
+Underfull \hbox (badness 10000) in paragraph at lines 20--24
+[]\OT1/ptm/m/n/9 Mark S. Hand-cock.  \OT1/ptm/m/it/9 As-sess-ing de-gen-er-acy
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--24
+\OT1/ptm/m/it/9 in sta-tis-ti-cal mod-els of so-cial net-works:
+ []
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¤ in font ptmr7t!
+)
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[8]
+("C:\Users\Geiler Typ\Desktop\PSU\Bruce Desmarais\Big Data Conference\IEEE_CS_L
+atex8.5x11x2\conference_paper.aux") ) 
+Here is how much of TeX's memory you used:
+ 3678 strings out of 493921
+ 51648 string characters out of 3144861
+ 122473 words of memory out of 3000000
+ 6916 multiletter control sequences out of 15000+200000
+ 44125 words of font info for 91 fonts, out of 3000000 for 9000
+ 844 hyphenation exceptions out of 8191
+ 41i,21n,35p,1604b,309s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/e
+nc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmmi5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/urw/times/utmri8a.pfb>
+Output written on conference_paper.pdf (8 pages, 409700 bytes).
+PDF statistics:
+ 193 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+

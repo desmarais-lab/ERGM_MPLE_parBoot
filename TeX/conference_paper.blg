@@ -1,0 +1,12 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: conference_paper.aux
+The style file: plain.bst
+Database file #1: bib.bib
+I was expecting an "="---line 91 of file bib.bib
+ : url = "http://dx.doi.org/10.1214/12-AOS1044", add 
+ :                                                   to Citavi project by DOI
+I'm skipping whatever remains of this entry
+Warning--empty journal in Fowler2006b
+Warning--empty publisher in Handcock.2003
+Warning--there's a number but no volume in shalizi2013
+Warning--there's a month but no year in shalizi2013
+(There was 1 error message)
