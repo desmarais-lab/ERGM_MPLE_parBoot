@@ -171,6 +171,7 @@
 \usepackage[cmex10]{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage{dsfont}
 % A popular package from the American Mathematical Society that provides
 % many useful and powerful commands for dealing with mathematics. If using
 % it, be sure to load this package with the cmex10 option to ensure that
@@ -353,7 +354,7 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{Exponential Random Graph Models with Big Networks:\\ Maximum Pseudolikelihood Estimation and the Parametric Bootstrap}
+\title{Exponential Random Graph Models with Big Networks: Maximum Pseudolikelihood Estimation and the Parametric Bootstrap}
 
 
 % author names and affiliations
@@ -432,17 +433,17 @@ network, ERGM, parametric bootstrap, maximum pseudolikelihood
 
 
 \section{Introduction}
-The field of network science faces a double-edge sword when it comes to computational limitations to innovation. First, the networks under study are growing larger with each year. {\bf [CHRISTIAN, WOULD YOU CHECK OUT N NODES IN {\em SOCIAL NETWORKS}?]}. Second, analytical methods are growing more sophisticated, increasingly involving estimation and optimization, going beyond descriptive calculations {\bf [Could also classify articles based on whether a statistical model is used {\em SOCIAL NETWORKS}?]}. In order to avoid a limiting horizon in which state-of-the-art methods cannot be used with state-of-the-art ``big'' data, network methodologists need to consider all available options in easing the computational burden of tools for network analysis.
+\noindent The field of network science faces a double-edge sword when it comes to computational limitations to innovation. First, the networks under study are growing larger with each year. {\bf [CHRISTIAN, WOULD YOU CHECK OUT N NODES IN {\em SOCIAL NETWORKS}?]}. Second, analytical methods are growing more sophisticated, increasingly involving estimation and optimization, going beyond descriptive calculations {\bf [Could also classify articles based on whether a statistical model is used {\em SOCIAL NETWORKS}?]}. In order to avoid a limiting horizon in which state-of-the-art methods cannot be used with state-of-the-art ``big'' data, network methodologists need to consider all available options in easing the computational burden of tools for network analysis.
 
 \section{The Exponential Random Graph Model}
 \noindent The \textit{exponential random graph model} (ERGM) is a probability model for directed or undirected binary networks. This means neither the weighting nor the temporal change of ties is considered in the model.
-In literature, ERGMs are sometimes also referred to as \textit{p-star} or $p^*$ models (see Wassermann and Pattison \cite{Wasserman.1996}, Robins et al. \cite{robins.pattison.2007}). In the following, we will focus on directed networks; however, undirected networks can be introduced very similar.\\[0.3cm] 
+In literature, ERGMs are sometimes also referred to as \textit{p-star} or $p^*$ models (see Wassermann and Pattison \cite{Wasserman.1996}, Robins et al. \cite{robins.pattison.2007}). In the following, we will introduce the ERGM for directed networks; however, undirected networks can be introduced very similar.\\[0.3cm] 
 The ERGM takes the adjacency matrix of an observed network $G^{obs}$ as the manifestation of a matrix-like random variable $Y$. This means that a network of $N$ nodes can be defined as a adjacency matrix $G=(g_{ij})\in \mathbb{R}^{N \times N}$, where $g_{ij} \in \{0,1\}$ for all $i,j \in \{1,\dots , N\}$. $g_{ij}=1$ means that there is an edge between actors $i$ and $j$, while $g_{ij}=0$ indicates that these actors are not directly connected. Since the model does not consider loops, one has $g_{ii}=0$ for all $i \in \{1,\dots , N\}$. Furthermore, define
 $$ \mathcal{G}(N) := \left\{ G \in \mathbb{R}^{(N \times N)}: g_{ij} \in \{0,1\},~g_{ii}=0\right\}$$
-as the set of all possible networks on $N$ nodes without loops. Note that the cardinality of set $\mathcal{G}(N)$ is increasing exponentially for every newly included actor, which results in $2^{N(N-1)/2}$ total elements. Therefore, for an already small number of actors the cardinality of $\mathcal{G}(N)$ turns out to be an astronomically large number. For this reason calculating the MLE is either extremely time-consuming or with today's technology not achievable. As a consequence, literature usually makes use of Markov Chain Monte Carlo (MCMC) methods.\\  
+as the set of all possible networks on $N$ nodes without loops. Note that the cardinality of set $\mathcal{G}(N)$ is increasing exponentially for every newly included actor, which results in $2^{N(N-1)/2}$ total elements. Therefore, for an already small number of actors the cardinality of $\mathcal{G}(N)$ turns out to be an astronomically large number. For this reason calculating the MLE is either extremely time-consuming or with today's technology not achievable. As a consequence, literature usually makes use of Markov Chain Monte Carlo (MCMC) methods as we will intriduce in the next chapter.\\  
 With the definition of $\mathcal{G}(N)$ we define 
 $$Y: \Omega \to \mathcal{G}(N)~~,~~\omega \mapsto (Y_{ij}(\omega))_{i,j=1,\dots,N}$$
-as a matrix-like random variable. As the probability function from $Y$ to $\mathcal{G}(N_V)$ we define the ERGM as
+as a matrix-like random variable. As the probability function from $Y$ to $\mathcal{G}(N)$ we define the ERGM as
 \begin{equation}
 \mathbb{P}_{\theta}(Y=G)=\dfrac{\exp(\theta^T \cdot \Gamma(G))}{\sum_{G^* \in \mathcal{G}(N)} \exp(\theta^T \cdot \Gamma(G^*))} 
 \label{ERGM}
@@ -455,7 +456,7 @@ A key role when modeling an ERGM is played by the function $\Gamma(\cdot)$. The 
 
 
 \section{Estimation}
-As mentioned above calculating $c(\theta)$ is not achievable for most cases with today's technology. Therefore, the question arises how one can estimate the parameter vector $\theta$?
+\noindent As mentioned above calculating $c(\theta)$ is not achievable for most cases with today's technology. Therefore, the question arises how one can estimate the parameter vector $\theta$?
 A first idea could be the following: One can assume that the \textit{dyads} are independent of each other, which means that the random variables $Y_{ij}$ inside the random matrix $Y$ are independent of each other. 
 In this case, one can show that
 %
@@ -468,7 +469,7 @@ This corresponds with the \textit{logistic regression} approach, where the obser
 \text{lik}(\theta)= \mathbb{P}_{\theta}(Y=G)= \prod_{i,j} \dfrac{ \exp \left(\theta^T \Delta(G))_{ij} \right)}{1+\exp \left(\theta^T \Delta(G))_{ij} \right)}
 \label{NaiveLik}
 \end{equation}
-The problem with this simple estimation procedure is that the assumed hypothesis of the independence of the dyads turns out to be erroneous in many cases (see van Duijn et al. \cite{vanDuijnetal2009}). This is a systematic problem: The presence of network data is inextricably connected with the presence of \textit{relational data}, which by definition should not be assumed to be independent of each other. If this dependency structure is deliberately ignored and equation (\ref{NaiveLik}) is used to estimate $\theta$, it results in a \textit{maximum pseudo-likelihood estimation} (MPLE). This technique tends to underestimate the standard error. However, Desmarais and Cranmer \cite{Desmarais.2012} show that the pseudo-likelihood provides a consistent approximation of the maximum likelihood, meaning that the MPLE converges to the MLE as the size of the network increases.\\[0.3cm]
+The problem with this simple estimation procedure is that the assumed hypothesis of the independence of the dyads turns out to be erroneous in many cases (see van Duijn et al. \cite{vanDuijnetal2009}). This is a systematic problem: The presence of network data is inextricably connected with the presence of \textit{relational data}, which by definition should not be assumed to be independent of each other. If this dependency structure is deliberately ignored and equation (\ref{NaiveLik}) is used to estimate $\theta$, it results in a \textit{maximum pseudo-likelihood estimation} (MPLE). This technique tends to underestimate the standard error. However, Desmarais and Cranmer \cite{Desmarais.2012} argue that the pseudo-likelihood provides a consistent approximation of the maximum likelihood, meaning that the MPLE converges to the MLE as the size of the network increases.\\[0.3cm]
 There are several techniques to circumvent estimators, which underestimate the standard error of $\theta$. In the following, we will introduce a technique based on \textit{Markov Chain Monte Carlo (MCMC)} and maximum-likelihood methods.\\[0.3cm]
 The more rigorous technique is to estimate the parameters directly with the log-likelihood function derived from (\ref{ERGM}), which has the following form:
 %
@@ -536,13 +537,12 @@ s(\theta) \approx -\frac{\partial}{\partial \theta} \log \left( \frac{1}{L} \cdo
 \label{score}
 \end{equation}
 %
-This approximate score function now can be used as usual, i.e., it can be iteratively approximately optimized with the \textit{Newton-Raphson algorithm}. As a result, the approximate maximum-likelihood estimator for the parameters can be computed.\\[0.4cm]
+This approximate score function now can be used as usual, i.e., it can be iteratively approximately optimized with the \textit{Newton-Raphson algorithm} or by \textit{Fisher scoring}. As a result, the approximate maximum-likelihood estimator for the parameters can be computed.\\[0.3cm]
 As pleasant as this may sound, the immediate question arises: How can a sufficient number of suitable drawings $G_1,...,G_L$ be taken from the distribution $\mathbb{P}_{\theta_0}$? \\
 For this purpose, the \textit{Markov Chain Monte Carlo (MCMC)} methods can be used. This approach does not deliberately ignore the dependency structures inside the network. Furthermore, the Markov Chain Monte Carlo Maximum Likelihood Estimator (MCMLE) approaches the MLE as the number of networks simulated to approximate the likelihood goes to infinity.\\[0.3cm]
-
 No matter which kind of MCMC algorithm is used, the basic idea is the following:
-\\One constructs a \textit{Markov chain} $(Y_t)_{t \in \mathbb{N}}$ on the set of all possible networks $\mathcal{A}(N)$ of $N$ nodes, whose \textit{stationary distribution} is in conformity with the distribution $\mathbb{P}_{\theta_0}$. One can show that every single realization (or \textit{trajectory}) 
-of this stochastic process accomplishes the convergence result (\ref{konver}) (for this version of the \textit{Law of big numbers for Markov chains} we reference Meyn and Tweedie \cite{Meyn.2009}). As a result, sub-sequences of $(A_t)_{t \in \mathbb{N}}$ which are sufficiently large enough can be used for approximation (\ref{approx}).\\[0.3cm]
+\\One constructs a \textit{Markov chain} $(G_t)_{t \in \mathbb{N}}$ on the set of all possible networks $\mathcal{G}(N)$ of $N$ nodes, whose \textit{stationary distribution} is in conformity with the distribution $\mathbb{P}_{\theta_0}$. One can show that every single realization (or \textit{trajectory}) 
+of this stochastic process accomplishes the convergence result (\ref{konver}) (for this version of the \textit{Law of big numbers for Markov chains} we reference Meyn and Tweedie \cite{Meyn.2009}). As a result, sub-sequences of $(G_t)_{t \in \mathbb{N}}$ which are sufficiently large enough can be used for approximation (\ref{approx}).\\[0.3cm]
 Snijders \cite{Snijders.2002} provides a Metropolis Hastings algorithm on how to simulate networks:
 Choose a matrix $G^{(0)} \in \mathcal{G}(N)$ to start with (e.g., the observed network). For $k \in \{0,...,L-1\}$ recursively proceed as follows:\\
 \begin{enumerate}
@@ -560,23 +560,31 @@ g_{pq}^{(k)} &\text{if}~ (p,q) \neq (i,j)
 \end{itemize}
 \item Start at step 1 with $G^{(k+1)}$.
 \end{enumerate}
-The depicted algorithm provides a sequence of random networks $G_(0),\dots,G_(L)$. Since the original matrix was chosen randomly and the first simulated networks are very dependent on the chosen matrix (only one edge is changed per iteration), usually
+\vspace{0.3cm}
+\noindent The depicted algorithm provides a sequence of random networks $G_(0),\dots,G_(L)$. Since the original matrix was chosen randomly and the first simulated networks are very dependent on the chosen matrix (only one edge is changed per iteration), usually
 the first $B$ networks, where $N << B << L$, are discarded as the so called Burn-In.
 
 \section{Efficiency of MPLE and MCMLE}
-Even though the MCMLE is in general favored over the MPLE there are also cases where the MPLE comes in handy. Foremost, MPLE is quick and simple, since estimation can be done by basic logistic regression and does not exert elaborate MCMC methods. As mentioned in the previous chapter the MPLE approaches the MLE as the size of the networks increase and as a consequence, is a consistent estimator (see Lindsay \cite{Lindsay1988}, Strauss and Ikeda \cite{StraussIkeda1990}, Hyvarinen \cite{Hyvarinen2006}, Desmarais and Cranmer \cite{Desmarais.2012}). This implies that for an increasing number of nodes the MPLE converges in probability to the MLE, meaning that for large enough networks the MPLE becomes an option to computationally intensive MCMC methods.\\
+\noindent Even though the MCMLE is in general favored over the MPLE there are also cases where the MPLE comes in handy. Foremost, MPLE is quick and simple, since estimation can be done by basic logistic regression and does not exert elaborate MCMC methods. As mentioned in the previous chapter the MPLE approaches the MLE as the size of the networks increase and as a consequence, is a consistent estimator (see Lindsay \cite{Lindsay1988}, Strauss and Ikeda \cite{StraussIkeda1990}, Hyvarinen \cite{Hyvarinen2006}, Desmarais and Cranmer \cite{Desmarais.2012}). This implies that for an increasing number of nodes the MPLE converges in probability to the MLE, meaning that for large enough networks the MPLE becomes an option to computationally intensive MCMC methods.\\[0.3cm]
 At this point we want to mention that we are familiar with the work of Shalizi and Rinaldo \cite{shalizi2013}, arguing that consistency is not given in the ERGM framework. They prove that one cannot run an ERGM on a sub-network in order to make inferences about the full network. 
-The way we use the term \textit{consistency} in this paper is different and aligns with the way consistency is defined by Lindsay \cite{Lindsay1988}, i.e. instead of considering sub-networks that converge to the full size network, we argue that both, the MLE as well as the MPLE, approach the true coefficient values as the size of networks generally increases. \\%This means that the MPLE of a network on $1000$ nodes is closer to the true coefficient as the MPLE of a network on $100$ nodes. \\
-Another major advantage of the MCMLE method is, as shown by van Duijn et al. \cite{vanDuijnetal2009}, that the MCMLE is substantially more efficient than the MPLE, meaning that the variance of the MCMLE is in general lower than the variance of the MPLE. Nevertheless, as shown by Desmarais and Cranmer \cite{Desmarais.2012} the MPLE outperforms the MCMLE if the number of simulated networks used to approximate the likelihood is not chosen large enough. It is even more remarkable that the number of simulated networks needed for the MCMLE, in order to surpass the MPLE increases as the size of the network increases. This means that for very large networks it becomes difficult to determine the number of simulated networks required in order for the MCMLE to outperform the MPLE. In other words, the larger the network of interest is, the larger one has to choose the number of simulated networks in order to justify the time intensive MCMLE approach.\\[0.3cm]
+The way we use the term \textit{consistency} in this paper is different and aligns with the way consistency is defined by Lindsay \cite{Lindsay1988}, i.e. instead of considering sub-networks that converge to the full size network, we argue that both, the MLE as well as the MPLE, approach the true coefficient values as the size of networks generally increases. \\[0.3cm]%This means that the MPLE of a network on $1000$ nodes is closer to the true coefficient as the MPLE of a network on $100$ nodes. \\
+%A major advantage of the MCMLE method is, as shown by van Duijn et al. \cite{vanDuijnetal2009}, that the MCMLE is substantially more efficient than the MPLE, meaning that the variance of the MCMLE is in general lower than the variance of the MPLE. Nevertheless, as shown by 
+Next, we are going to compare the efficiency of the MCMLE compared to the MPLE. Desmarais and Cranmer \cite{Desmarais.2012} show the MPLE outperforms the MCMLE if the number of simulated networks used to approximate the likelihood is not chosen large enough. It is even more remarkable that the number of simulated networks needed for the MCMLE, in order to surpass the MPLE increases as the size of the network increases. This means that for very large networks it becomes difficult to determine the number of simulated networks required in order for the MCMLE to outperform the MPLE. In other words, the larger the network of interest is, the larger one has to choose the number of simulated networks in order to justify the time intensive MCMLE approach.\\[0.3cm]
 \noindent To demonstrate this disadvantage of the MCMLE we conduct a simulation study using Goodreau's Faux Mesa High School data, which represents a simulation of an in-school friendship network among 203 students as well as the Faux Magnolia High School data, representing an in-school friendship network among 1451 students. The data for both networks originates from Resnick et al. \cite{Resnicketal1997}.\\[0.3cm]
-For both networks we first calculate the MCMLE and treat the estimated coefficients as the network's true values $\theta$. Then, we take the same parametrization, using the number of edges, the nodal attribute for gender and the geometrically weighted edgewise shared partners (gwesp) distribution (see Hunter \cite{Hunter.2006}) were we fix the decay parameter $\lambda$ at $0.25$.\\
+For both networks we first calculate the MCMLE and treat the estimated coefficients as the network's true values $\theta$. Then, we take the same parametrization, using the number of edges, the nodal attribute for gender and the geometrically weighted edgewise shared partners (gwesp) distribution (see Hunter \cite{Hunter.2006}) were we fix the decay parameter $\lambda$ at $0.25$.
+The number of edges in these unidrected networks are defined as
+$$\Gamma_{edges}: \mathcal{G}(N) \to \mathbb{R}~~~, ~~~ G \to \sum_{i<j}^N g_{ij}$$
+In order to include nodal covariates into the ERGM, the vector of nodal attributes is expanded into an artificial matrix $C$, which has the same dimensions as $G$. The first row of matrix $C$ consists of the first actor's attribute, repeated $N$ times. The second row of matrix $C$, consists of the second actor's attribute, repeated $N$ times, and so on. Then, the statistics for a nodal covariate is defined as
+$$\Gamma_{nodal}: \mathcal{G}(N) \to \mathbb{R}~~,~~G \mapsto \sum_{i<j}^{N}g_{ij}c_{ij}$$
+A precise description of the gwesp statistic will be given in the chapter VI.\\[0.3cm]
 We simulate $m=500$ new networks using the 'true' coefficients and estimate the MPLE as well as the MCMLE of these simulated networks. For every single simulated network the MCMLE calculation is being repeated several times for $25$ to $10.000$ simulated networks used in the likelihood approximation.
 Based on these results, we compute the root mean square error, which is a measure of the accuracy of an estimator, combining both, the bias and the variance. Mathematically written, the RMSE for an estimator $\hat{\theta}$ is defined as 
 $$RMSE = \sqrt{\sum_{i=1}^{m}(\theta - \hat{\theta}_i)^2}$$
-implying that the smaller the RMSE, the more accurate is the estimator. Since the MCMLE has higher efficiency and converges to the MLE, the RMSE decreases as the number of simulated networks used for the likelihood approximation increases. On the other hand, the RMSE of the MPLE is a constant value since no network simulations are required. In order to compare the RMSE of the two estimation techniques, we take the log of the ratio of the MCMLE to the MPLE. As a result, a negative value indicates a better MCMLE performance, while a positive value indicates a better MPLE performance. Figure \ref{rmse} visualizes the results of the simulation study. The solid line illustrates the results of the log relative RMSE of the Faux Mesa High network, while the dashed line illustrates the corresponding results of the Faux Magnolia High network. 
+implying that the smaller the RMSE, the more accurate is the estimator. Since the MCMLE has higher efficiency and converges to the MLE, the RMSE decreases as the number of simulated networks used for the likelihood approximation increases. On the other hand, the RMSE of the MPLE is a constant value since no network simulations are required. In order to compare the RMSE of the two estimation techniques, we take the log of the ratio of the MCMLE to the MPLE. As a result, a negative value indicates a better MCMLE performance, while a positive value indicates a better MPLE performance.\\[0.3cm] 
+Figure \ref{rmse} visualizes the results of the simulation study. The solid line illustrates the results of the log relative RMSE of the Faux Mesa High network, while the dashed line illustrates the corresponding results of the Faux Magnolia High network. 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=3.5in]{RMSE_10k}
+\includegraphics[width=3.6in]{RMSE_10k}
 \caption{The log of the ratio of the RMSE for the MCMLE to the MPLE for different sample sizes and two different networks, Faux Mesa High and Faux Magnolia High}
 \label{rmse}
 \end{figure}
@@ -585,8 +593,7 @@ implying that the smaller the RMSE, the more accurate is the estimator. Since th
 \section{Bootstrapped MPLE}
 \noindent As discussed in the previous section, the MPLE converges to the MLE as the size of the network increases. Moreover, the MPLE is able to outperform the MCMLE if the sample size is not chosen large enough. The main reason why the MCMLE is still widely preferred is that in contrast to the MPLE, it does not underestimate the standard deviation (van Duijn et al. \cite{vanDuijnetal2009}). By the definition of the ERGM it is obvious that this model is an exponential family distribution where $\theta$ is the natural parameter and $\Gamma (Y)$ is the sufficient statistic. For exponential family distributions it is known that the sampling distribution of the MLE is multivariate normal with mean vector equal to the MLE and a covariance matrix equal to the inverse of the negative Hessian matrix $[-H]^{-1}$ of the likelihood function at the MLE. The problem with the MPLE is that calculating $[-H]^{-1}$ by the pseudolikelihood function will underestimate the variance of the MPLE \cite{vanDuijnetal2009}, resulting in an underestimate of the width of the confidence intervals. van Duijn et al. show that constructing 95\% MPLE confidence intervals can result in intervals that comprise the true value in less than 75\% instead of the demanded 95\%. In this paper, we are going to refer to the MPLE confidence intervals as \textit{logistic regression confidence intervals} simply because the MPLE is calculated using logistic regression methods that also use the inverse of the negative Hessian matrix as an estimate for the covariance matrix. \\[0.3cm]
 \noindent Since the MPLE has the advantage of being approximately exact and computationally inexpensive, but has the disadvantage of underestimating corresponding confidence intervals, we apply a technique referred to as \textit{bootstrapped MPLE}, that was first introduced by Desmarais and Cranmer \cite{Desmarais.2012} and provides a consistent estimate of MPLE confidence intervals. Desmarais and Cranmer argue that this bootstrapped MPLE is a multivariate \textit{M}-estimator (see Huber \cite{Huber1981}), a special class of robust estimators, meaning that this algorithm consistently estimates the confidence intervals of the MPLE. \\[0.3cm]
-\noindent We verify the consistency of the bootstrapped MPLE by conducting a simulation study on the same two networks with the same parametrization as in the previous chapter: The Faux Mesa High friendship network and the Faux Magnolia High friendship network. \\[0.3cm]
-For the simulation study, we determine the MPLE for the model and treat these estimates as the networks' 'true' parameter values. We then use these parameter values to simulate a sample of $1000$ networks from the distribution of $Y$. For each of the $1000$ networks, we calculate 95\% confidence intervals based on the MCMLE and the logistic regression and examine whether the 'true' parameter values lie in these intervals. In addition, we determine the bootstrapped MPLE confidence intervals by sampling $500$ networks for each of the originally sampled $1000$ networks, by using the respective MPLE as parameter values. For every newly sampled network, we again determine the MPLE and then take the $2.5$th and $97.5$th percentile of the $500$ MPLE estimates to obtain a 95\% bootstrap confidence intervals. Similar as for the MCMLE and the logistic regression, we verify whether the 'true' parameter value can be found in the bootstrapped confidence interval. 
+\noindent We verify the consistency of the bootstrapped MPLE by conducting a simulation study on the same two networks with the same parametrization as in the previous chapter: The Faux Mesa High friendship network and the Faux Magnolia High friendship network. For the simulation study, we determine the MPLE for the model and treat these estimates as the networks' 'true' parameter values. We then use these parameter values to simulate a sample of $1000$ networks from the distribution of $Y$. For each of the $1000$ networks, we calculate 95\% confidence intervals based on the MCMLE and the logistic regression and examine whether the 'true' parameter values lie in these intervals. In addition, we determine the bootstrapped MPLE confidence intervals by sampling $500$ networks for each of the originally sampled $1000$ networks, by using the respective MPLE as parameter values. For every newly sampled network, we again determine the MPLE and then take the $2.5$th and $97.5$th percentile of the $500$ MPLE estimates to obtain a 95\% bootstrap confidence intervals. Similar as for the MCMLE and the logistic regression, we verify whether the 'true' parameter value can be found in the bootstrapped confidence interval. 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=3.5in]{Coverage_Mesa_Magnolia_height05}
@@ -596,12 +603,12 @@ For the simulation study, we determine the MPLE for the model and treat these es
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=3.5in]{bias_plots_05}
+\includegraphics[width=3.5in, height=1.75in]{bias_plots_05}
 \caption{The boxplots visualize the bias $(\hat{\theta}-\theta)$ over the 500 iterations for the Faux Mesa High network (left) and the Faux Magnolia High network (right)}
 \label{bias}
 \end{figure}
 \noindent Figure \ref{coverage} visualizes the coverage percentages for each of the three methods for both networks. The dashed line is set at $0.95$ and represents the optimal value. It is evident that the bootstrapped MPLE performed equally well as the MCMLE, achieving results that obtain the true parameter values in approximately 95\% of the cases. Additionally, a difference in the results between the smaller Faux Mesa High network and larger Faux Magnolia High network is not identifiable. Similar to the results of van Duijn et al. \cite{vanDuijnetal2009} our results for the logistic regression differ distinctively from the anticipated 95\%, visualizing that the MPLE underestimates the variance of its estimates.
-Figure \ref{bias} illustrates the bias between the 'true' network coefficients $\theta$ and the MPLE estimates. We can abstract from this figure that the median MPLE estimates concur with the networks 'true' coefficients.\\
+Figure \ref{bias} illustrates the bias between the 'true' network coefficients $\theta$ and the MPLE estimates. We can abstract from this figure that the median MPLE estimates concur with the networks 'true' coefficients. It is especially worthwile to mention that the bias of the larger Faux Magnolia High network is smaller than the bias of the Faux Mesa High network, supporting the fact that the MPLE converges to the MLE as the network size increases.\\
 \noindent This simulation study shows that bootstrapped MPLE is able to overcome the main disadvantage of the MPLE by retaining the validity of confidence intervals. Furthermore, this method also adopts the advantage of the MPLE of being consistent. However, the main advantage of the bootstrapped MPLE is the rapidity of the estimation that provides a computational benefit, especially if the size of the examined network is extremely large.
 
 \section{Cosponsorship Network Data}
@@ -625,31 +632,37 @@ Alternating k-star                              & 0.124                         
 \end{tabular}
 \caption{Estimation results for the Cosponsorship network using MCMLE, logistic regression and bootstrapped MPLE}
 \end{table*}
-To demonstrate the computational advantage of the bootstrapped MPLE to the commonly used MCMLE we apply both approaches to the data on Cosponsorships in the U.S. Senate and U.S. House of Representatives for the 93rd to 108th Congresses developed by Fowler (2006) \cite{Fowler2006a} \cite{Fowler2006b}. The cosponsorship network consists of 2635 nodes (in this case senators) and contains information of over 280,000 pieces of legislation proposed in the U.S. House and Senate for the time period 1973 - 2004. In this network bills are tied together based on the similarity of the sets of legislators who cosponsor them. This means that an edge emerges between senators $i$ and $j$ if senator $i$ cosponsors legislation sponsored by senator $j$. The endogenous statistics we include into this model are the number of edges and the alternating k-star statistic as it was introduced by Snijders et al. \cite{SnijdersTomA.B..2006} and modified by Hunter and Handcock (2006) \cite{Hunter.2006}. The alternating k-star statistic adds one network statistic to the model equal to a weighted alternating sequence of k-star statistics with weight parameter $\lambda$ and is a way to include a networks entire degree distribution as a network statistic. In this model we fix the weight paramter $\lambda=0.4975$. 
-Snijders et al. \cite{SnijdersTomA.B..2006} introduced an approach involving $k$-star statistics $S_1(A), \dots , S_{N-1}(A)$, where $S_k(A)$ denotes the number of $k$-stars in the network, $k \in \{1, \dots , N-1\}$. For simplicity, let us define
-$$S_k(A):=\Gamma_{star(k)}(A) $$
-\textit{define kstar}.
-Note that in every network $S_1(A)=\Gamma_{edges}(A)$, i.e., $S_1(A)$ is equal to the number of edges in the network.
+\noindent To demonstrate the computational advantage of the bootstrapped MPLE to the commonly used MCMLE we apply both approaches to the data on Cosponsorships in the U.S. Senate and U.S. House of Representatives for the 93rd to 108th Congresses developed by Fowler (2006) \cite{Fowler2006a} \cite{Fowler2006b}. The cosponsorship network consists of 2635 nodes (in this case senators) and contains information of over 280,000 pieces of legislation proposed in the U.S. House and Senate for the time period 1973 - 2004. In this undirected network bills are tied together based on the similarity of the sets of legislators who cosponsor them. This means that an edge emerges between senators $i$ and $j$ if senator $i$ cosponsors legislation sponsored by senator $j$. The endogenous statistics we include into this model are the number of edges and the alternating k-star statistic as it was introduced by Snijders et al. \cite{SnijdersTomA.B..2006} and modified by Hunter and Handcock (2006) \cite{Hunter.2006}. The alternating k-star statistic adds one network statistic to the model equal to a weighted alternating sequence of k-star statistics with weight parameter $\lambda$ and is a way to include a networks entire degree distribution as a network statistic. In this model we fix the weight paramter $\lambda=0.4975$. 
+Snijders et al. \cite{SnijdersTomA.B..2006} introduced an approach involving $k$-star statistics $S_1(G), \dots , S_{N-1}(G)$, where $S_k(G)$ denotes the number of $k$-stars in the network, $k \in \{1, \dots , N-1\}$. For simplicity, let us define
+$$S_k(G):=\Gamma_{star(k)}(G) $$
+where
+$$\Gamma_{star(k)}: \mathcal{G}(N) \to \mathbb{R}~~~, ~~~ G \to \sum_{i,j,k}^N g_{ij}g_{ik}$$
+Note that in every network $S_1(G)=\Gamma_{edges}(G)$, i.e., $S_1(G)$ is equal to the number of edges in the network.
 On this basis, Snijders introduces the \textit{alternating k-star statistics}
 \begin{equation*}
 \begin{split}
-\mathfrak{S}(A,\lambda):= & \sum_{k=2}^{N-1}(-\cfrac{1}{\lambda})^{k-2}S_k(A)\\= & ~   S_2(A)-\cfrac{S_3(A)}{\lambda}+ \dots + (-1)^{N-3}\cfrac{S_{N-1}(A)}{\lambda^{N-3}}
+\mathfrak{S}(G,\lambda):= & \sum_{k=2}^{N-1}(-\cfrac{1}{\lambda})^{k-2}S_k(G)\\= & ~   S_2(G)-\cfrac{S_3(G)}{\lambda}+ \dots + (-1)^{N-3}\cfrac{S_{N-1}(G)}{\lambda^{N-3}}
 \end{split}
 \end{equation*} 
 Models with this statistic and a fixed decay parameter turn out to be standard ERGMs and Hunter and Handcock \cite{Hunter.2006} succeeded in proving that one can also rewrite alternating k-stars as a function of a network's degree distribution
 \begin{equation}
-\mathfrak{S}(A,\lambda)= \lambda\Biggr(\lambda\sum_{j=1}^{N-1}\Biggr( 1-\biggr(1-\cfrac{1}{\lambda}\biggl)^j\Biggl)D_j(A) + 2S_1(A)\Biggl)
+\mathfrak{S}(G,\lambda)= \lambda\Biggr(\lambda\sum_{j=1}^{N-1}\Biggr( 1-\biggr(1-\cfrac{1}{\lambda}\biggl)^j\Biggl)D_j(G) + 2S_1(G)\Biggl)
 \label{alto}
 \end{equation}
-where $D_j(A):= \Gamma_{deg(j)}(A)$ is the number of nodes with and degree of $j$. 
-In the next step, we define the \textit{geometrically weighted degree} statistic as the first summand of (\ref{alto})
+where $D_j(G):= \Gamma_{deg(j)}(G)$ is the number of nodes with a degree of $j$. 
+In the next step, we define the \textit{geometrically weighted degree} (gwd) statistic as the first summand of (\ref{alto})
 \begin{equation}
-\Gamma_{gwd}(A,\lambda):= \lambda\sum_{j=1}^{N-1}\Biggr(1- \biggr(1-\cfrac{1}{\lambda}\biggl)^j\Biggl)D_j(A)
+\Gamma_{gwd}(G,\lambda):= \lambda\sum_{j=1}^{N-1}\Biggr(1- \biggr(1-\cfrac{1}{\lambda}\biggl)^j\Biggl)D_j(G)
 \end{equation}
 At this point it also becomes obvious where the \textit{geometrically} comes from. It simply refers to the geometric sequence $(1-\frac{1}{\lambda})^j$ which appears in these statistics.\\[0.3cm]
-
-As nodal attribute we implement the partisanship of the bill sponsor. In order to include nodal covariates into the ERGM, the vector of nodal attributes is expanded into an artificial matrix $C$, which has the same dimensions as $G$. The first row of matrix $C$ consists of the first actor's attribute, repeated $N$ times. The second row of matrix $C$, consists of the second actor's attribute, repeated $N$ times, and so on. Then, the statistics for a nodal covariate is defined as
-$$\Gamma_{nodal}: \mathcal{G}(N) \to \mathbb{R}~~,~~G \mapsto \sum_{i<j}^{N}g_{ij}c_{ij}$$
+In a very similar way we can also define gwesp, as applied in chapter IV, as
+$$\Gamma_{gwesp}(G,\lambda):= \lambda\sum_{j=1}^{N-1}\Biggr(1- \biggr(1-\cfrac{1}{\lambda}\biggl)^j\Biggl)\Gamma_{esp(k)}(G)$$
+where 
+$$
+\Gamma_{esp}: \mathcal{G}(N) \to \mathbb{R}~~,~~G \mapsto \sum_{i<j}^{N}\mathds{1}_k\biggl(\sum_{k=1}^N g_{ij}g_{im}g_{jm}\biggr)
+$$
+This means this statistic counts the number of nodal pairs $(i,j)$, which share exactly $k$ neighbors.\\
+\noindent As nodal attribute we implement the partisanship of the bill sponsor.\\
 We estimate the coefficient of this matrix using both techniques, the MCMLE and the bootstrapped MPLE. The MCMLE requires a sample size of at least $1000$ networks to converge. The bootstrapped MPLE was estimated by using 500 simulated networks. As we described in the chapter {\it Estimation}, only one edge at a time is changed when simulating networks. For better comparison, we chose the same Burn-In ($300.000$ MH-steps) and the same number of iterations ($30.000$ MH-steps) for sampling networks. The results can be found in table \ref{co_results}.\\
 It is interesting to see that the standard error calculated by the logistic regression approach is constantly smaller than the standard error of the MCMLE, which leads to inaccurate confidence intervals as shown in figure \ref{coverage}. Furthermore, we can observe that the coefficients for the number of edges and the nodal attribute are very similar, but the estimates for the alternating k-star statistic do differ \textit{(REASON FOR altkstar?)}. The bootstrapped MPLE bounds, however, include each estimate for both methods.  \\
 
@@ -661,23 +674,21 @@ It is interesting to see that the standard error calculated by the logistic regr
 \end{equation*}     
 Based on this, we define the relative computing time as
 $$\text{relative computing time}= \cfrac{\text{bootstrapped MPLE time}}{\text{MCMLE time}}$$
-This means that a relative computing time greater than 1 indicates that the MCMLE computing time is shorter, while a relative computing time smaller than 1 indicates that the bootstrapped MPLE provides faster results. 
-
+This means that a relative computing time greater than 1 indicates that the MCMLE computing time is shorter, while a relative computing time smaller than 1 indicates that the bootstrapped MPLE provides faster results. \\[0.3cm]
 \begin{figure}[!t]
 \centering
-\includegraphics[width=3in]{rel_time}
+\includegraphics[width=3.5in, height=2.7in]{rel_time}
 \caption{The y-axis gives the ratio of the bootstrapped MPLE time to that of the MCMLE time. Values below 1 indicate that the bootstrapped MPLE requires a shorter computing time.}
 \label{comptime}
 \end{figure}
-
 Figure \ref{comptime} demonstrates that all three networks only require two cores for the bootstrapped MPLE to outperform the computing time of the MCMLE and that the computing time can further be reduced if more computing cores are available. This figure also depicts that larger network in general require a longer computation time and will benefit more if the bootstrapped MPLE is used.\\ 
 Of course the actual computing time for a network always depends on the statistics that are included in the network, but in general larger networks require longer computation times, since a larger MCMC sample size is required and more MC steps are necessary to simulate a new network that does not overly depend on the previous sample. This makes the bootstrapped MPLE a beneficial alternative especially for very large networks. \\[0.3cm]
-One of the major disadvantages of MPLE over MCMLE is that it cannot assess {\it degeneracy}. When fitting an ERGM one usually has to deal with the problem of unreliable approximatively likelihood estimates for the model's parameters. The reason why degeneracy occurs is that the stochastic process generated by the MCMC-algorithm does not necessarily hold through the model's defined distribution of the random variable $Y$ as stationary distribution (see Handcock \cite{Handcock.2003} and Rinaldo et al. \cite{Rinaldo2009}). The bootstrapped MPLE, however, allows assessing degenerate models as well. In order to verify whether a model is degenerate or not, one can take a look at density and trace plots as visualized in figure \ref{diagnostics}. The trace plots on the left side depict the the attained values via MCMC simulated networks for every single statistic included into the model, centered on the statistic values of the observed network. The plots on the right side visualize the empirical density function of the respective statistic, based on the simulated networks (Hunter and Handcock \cite{Hunter.2006}). For a non-degenerated model the empirical density function should be symmetrical around zero for every included centered statistic, since this corresponds with the expected value of a centered statistic (compare equation (\ref{assumption})). 
+One of the major disadvantages of MPLE over MCMLE is that it cannot assess {\it degeneracy}. When fitting an ERGM one usually has to deal with the problem of unreliable approximatively likelihood estimates for the model's parameters. The reason why degeneracy occurs is that the stochastic process generated by the MCMC-algorithm does not necessarily hold through the model's defined distribution of the random variable $Y$ as stationary distribution (see Handcock \cite{Handcock.2003} and Rinaldo et al. \cite{Rinaldo2009}). The bootstrapped MPLE, however, allows assessing degenerate models as well. In order to verify whether a model is degenerate or not, one can take a look at density and trace plots as visualized in figure \ref{diagnostics}. The trace plots on the left side depict the the attained values via MCMC simulated networks for every single statistic included into the model, centered on the statistic values of the observed network. The plots on the right side visualize the empirical density function of the respective statistic, based on the simulated networks (Hunter and Handcock \cite{Hunter.2006}). For a non-degenerated model the empirical density function should be approximately symmetrical around zero for every included centered statistic, since this corresponds with the expected value of a centered statistic (compare equation (\ref{assumption})). 
 Otherwise, the values of the simulated networks systematically differ from the corresponding statistics in the observed network, making it unreasonable to assume that the simulated networks originate from the same distribution as the observed network. Furthermore, the trajectories in the trace plot should not indicate a dependence structure. This would be a signal that the constructed stochastic process violates the Markov properties.
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=3in]{MPLE_histogram_traceplot_cosponsorship}
+\includegraphics[width=3.5in, height=2.7in]{MPLE_histogram_traceplot_cosponsorship}
 \caption{Network statistics of the 500 boootstrap samples for the cosponsorship network. The thick line in both, the traceplots and the histograms, represents the network statistics of the observed network. }
 \label{diagnostics}
 \end{figure}
