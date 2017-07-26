@@ -5,6 +5,11 @@ Albert-L{\'a}szl{\'o} Barab{\'a}si and R{\'e}ka Albert.
 \newblock Emergence of scaling in random networks.
 \newblock {\em science}, 286(5439):509--512, 1999.
 
+\bibitem{chatterjee2013estimating}
+Sourav Chatterjee, Persi Diaconis, et~al.
+\newblock Estimating and understanding exponential random graph models.
+\newblock {\em The Annals of Statistics}, 41(5):2428--2461, 2013.
+
 \bibitem{Desmarais.2012}
 B.~A. Desmarais and S.~J. Cranmer.
 \newblock Statistical mechanics of networks: Estimation and uncertainty.
@@ -21,11 +26,30 @@ James~H. Fowler.
 \newblock Legislative cosponsorship networks in the u.s. house and senate.
 \newblock 28:454--465, 2006.
 
+\bibitem{goodreau2009birds}
+Steven~M Goodreau, James~A Kitts, and Martina Morris.
+\newblock Birds of a feather, or friend of a friend? using exponential random
+  graph models to investigate adolescent social networks.
+\newblock {\em Demography}, 46(1):103--125, 2009.
+
+\bibitem{hackney2006agent}
+Jeremy~Keith Hackney and Kay~W Axhausen.
+\newblock An agent model of social network and travel behavior interdependence.
+\newblock In {\em Conference on Issues in Behavioral Demand Modeling and the
+  Evaluation of Travel Time}, 2006.
+
 \bibitem{Handcock.2003}
 Mark~S. Handcock.
 \newblock {\em Assessing degeneracy in statistical models of social networks:
   https://www.csss.washington.edu/Papers/wp39.pdf}.
 \newblock 2003.
+
+\bibitem{holland1981exponential}
+Paul~W Holland and Samuel Leinhardt.
+\newblock An exponential family of probability distributions for directed
+  graphs.
+\newblock {\em Journal of the american Statistical association},
+  76(373):33--50, 1981.
 
 \bibitem{Huber1981}
 P.J. Huber, J.~Wiley, and W.~InterScience.
@@ -48,6 +72,12 @@ Aapo Hyvärinen.
 Bruce~G. Lindsay.
 \newblock Composite likelihood methods.
 \newblock {\em Contemporary Mathematics}, 80(1), 1988.
+
+\bibitem{lu2010supervised}
+Zhengdong Lu, Berkant Savas, Wei Tang, and Inderjit~S Dhillon.
+\newblock Supervised link prediction using multiple sources.
+\newblock In {\em Data Mining (ICDM), 2010 IEEE 10th International Conference
+  on}, pages 923--928. IEEE, 2010.
 
 \bibitem{Meyn.2009}
 S.~P. Meyn and R.~L. Tweedie.
@@ -93,6 +123,12 @@ Tom A.~B. Snijders, Philippa~E. Pattison, Garry~L. Robins, and Mark~S.
   Handcock.
 \newblock New specifications for exponential random graph models.
 \newblock {\em Sociological Methodology}, 36(1):99--153, 2006.
+
+\bibitem{snijders2002markov}
+Tom~AB Snijders.
+\newblock Markov chain monte carlo estimation of exponential random graph
+  models.
+\newblock {\em Journal of Social Structure}, 3(2):1--40, 2002.
 
 \bibitem{StraussIkeda1990}
 David Strauss and Michael Ikeda.
