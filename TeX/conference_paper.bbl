@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{barabasi1999emergence}
+Albert-L{\'a}szl{\'o} Barab{\'a}si and R{\'e}ka Albert.
+\newblock Emergence of scaling in random networks.
+\newblock {\em science}, 286(5439):509--512, 1999.
+
 \bibitem{Desmarais.2012}
 B.~A. Desmarais and S.~J. Cranmer.
 \newblock Statistical mechanics of networks: Estimation and uncertainty.
@@ -106,5 +111,12 @@ Stanley Wasserman and Philippa Pattison.
 \newblock Logit models and logistic regression for social networks: An
   introduction to markov graphs and p-star.
 \newblock {\em Psychometrica Vol.61}, 1996.
+
+\bibitem{zhang2008community}
+Yan Zhang, Andrew~J Friend, Amanda~L Traud, Mason~A Porter, James~H Fowler, and
+  Peter~J Mucha.
+\newblock Community structure in congressional cosponsorship networks.
+\newblock {\em Physica A: Statistical Mechanics and its Applications},
+  387(7):1705--1712, 2008.
 
 \end{thebibliography}

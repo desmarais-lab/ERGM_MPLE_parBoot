@@ -1,7 +1,9 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: conference_paper.aux
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: conference_paper.aux
 The style file: plain.bst
 Database file #1: bib.bib
-I was expecting an "="---line 91 of file bib.bib
+I was expecting an "="---line 113 of file bib.bib
  : url = "http://dx.doi.org/10.1214/12-AOS1044", add 
  :                                                   to Citavi project by DOI
 I'm skipping whatever remains of this entry
@@ -9,4 +11,45 @@ Warning--empty journal in Fowler2006b
 Warning--empty publisher in Handcock.2003
 Warning--there's a number but no volume in shalizi2013
 Warning--there's a month but no year in shalizi2013
+You've used 20 entries,
+            2118 wiz_defined-function locations,
+            640 strings with 7771 characters,
+and the built_in function-call counts, 6659 in all, are:
+= -- 650
+> -- 334
+< -- 0
++ -- 134
+- -- 112
+* -- 515
+:= -- 1147
+add.period$ -- 61
+call.type$ -- 20
+change.case$ -- 113
+chr.to.int$ -- 0
+cite$ -- 24
+duplicate$ -- 222
+empty$ -- 501
+format.name$ -- 112
+if$ -- 1338
+int.to.chr$ -- 0
+int.to.str$ -- 20
+missing$ -- 24
+newline$ -- 103
+num.names$ -- 40
+pop$ -- 103
+preamble$ -- 1
+purify$ -- 96
+quote$ -- 0
+skip$ -- 140
+stack$ -- 0
+substring$ -- 449
+swap$ -- 19
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 72
+warning$ -- 4
+while$ -- 65
+width$ -- 22
+write$ -- 218
 (There was 1 error message)
