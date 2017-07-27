@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  27 JUL 2017 11:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  27 JUL 2017 11:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -429,41 +429,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 442--444
 ]
 [2]
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 514.
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 518.
 
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 514.
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 518.
 
 
-Underfull \hbox (badness 1748) in paragraph at lines 538--549
+Underfull \hbox (badness 1748) in paragraph at lines 542--553
 \OT1/ptm/m/it/10 Newton-Raphson al-go-rithm \OT1/ptm/m/n/10 or by \OT1/ptm/m/it
 /10 Fisher scor-ing\OT1/ptm/m/n/10 . As a
  []
 
 
-Underfull \hbox (badness 6110) in paragraph at lines 538--549
+Underfull \hbox (badness 6110) in paragraph at lines 542--553
 \OT1/ptm/m/n/10 ig-nore the de-pen-dency struc-tures in-side the net-work.
  []
 
 
-Underfull \hbox (badness 1400) in paragraph at lines 538--549
+Underfull \hbox (badness 1400) in paragraph at lines 542--553
 \OT1/ptm/m/n/10 pos-si-ble net-works $\OMS/cmsy/m/n/10 G\OT1/cmr/m/n/10 (\OML/c
 mm/m/it/10 N\OT1/cmr/m/n/10 )$ \OT1/ptm/m/n/10 of $\OML/cmm/m/it/10 N$ \OT1/ptm
 /m/n/10 nodes, whose \OT1/ptm/m/it/10 sta-tion-ary
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 538--549
+Underfull \hbox (badness 10000) in paragraph at lines 542--553
 
  []
 
 [3] <RMSE_10k.pdf, id=28, 844.15375pt x 597.23125pt>
 File: RMSE_10k.pdf Graphic file (type pdf)
  <use RMSE_10k.pdf>
-Package pdftex.def Info: RMSE_10k.pdf used on input line 587.
+Package pdftex.def Info: RMSE_10k.pdf used on input line 591.
 (pdftex.def)             Requested size: 260.17244pt x 184.07355pt.
 
-Overfull \hbox (8.17244pt too wide) in paragraph at lines 587--588
+Overfull \hbox (8.17244pt too wide) in paragraph at lines 591--592
  [][] 
  []
 
@@ -473,20 +473,20 @@ File: Coverage_Mesa_Magnolia_height05.pdf Graphic file (type pdf)
 
 <use Coverage_Mesa_Magnolia_height05.pdf>
 Package pdftex.def Info: Coverage_Mesa_Magnolia_height05.pdf used on input line
- 599.
+ 603.
 (pdftex.def)             Requested size: 252.94499pt x 126.46997pt.
 
-Overfull \hbox (0.94499pt too wide) in paragraph at lines 599--600
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 603--604
  [][] 
  []
 
 <bias_plots_05.pdf, id=49, 844.15375pt x 397.485pt>
 File: bias_plots_05.pdf Graphic file (type pdf)
  <use bias_plots_05.pdf>
-Package pdftex.def Info: bias_plots_05.pdf used on input line 606.
+Package pdftex.def Info: bias_plots_05.pdf used on input line 610.
 (pdftex.def)             Requested size: 252.93893pt x 126.46997pt.
 
-Overfull \hbox (0.93893pt too wide) in paragraph at lines 606--607
+Overfull \hbox (0.93893pt too wide) in paragraph at lines 610--611
  [][] 
  []
 
@@ -495,51 +495,48 @@ Overfull \hbox (0.93893pt too wide) in paragraph at lines 606--607
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./bias_plots_05.pdf): PDF in
 clusion: multiple pdfs with page group included in a single page
 >]
-LaTeX Font Info:    Try loading font information for U+euf on input line 650.
+LaTeX Font Info:    Try loading font information for U+euf on input line 654.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 667.
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 671.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-)
-Underfull \hbox (badness 2495) in paragraph at lines 668--673
+) [6]
+Underfull \hbox (badness 2495) in paragraph at lines 672--677
 \OT1/ptm/m/n/10 We es-ti-mate the co-ef-fi-cient of this ma-trix us-ing both
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 668--673
+Underfull \hbox (badness 10000) in paragraph at lines 672--677
 
  []
 
-[6] <rel_time.pdf, id=92, 722.7pt x 505.89pt>
+<rel_time.pdf, id=91, 722.7pt x 505.89pt>
 File: rel_time.pdf Graphic file (type pdf)
  <use rel_time.pdf>
-Package pdftex.def Info: rel_time.pdf used on input line 685.
+Package pdftex.def Info: rel_time.pdf used on input line 689.
 (pdftex.def)             Requested size: 252.93776pt x 195.12718pt.
 
-Overfull \hbox (0.93776pt too wide) in paragraph at lines 685--686
+Overfull \hbox (0.93776pt too wide) in paragraph at lines 689--690
  [][] 
  []
 
 
-LaTeX Warning: Citation `Handcock.2003' on page 7 undefined on input line 691.
+LaTeX Warning: Citation `Handcock.2003' on page 7 undefined on input line 695.
 
-
-Underfull \vbox (badness 2261) has occurred while \output is active []
-
- [7 <./rel_time.pdf>]
+[7 <./rel_time.pdf>]
 <MPLE_histogram_traceplot_cosponsorship.pdf, id=113, 578.16pt x 433.62pt>
 File: MPLE_histogram_traceplot_cosponsorship.pdf Graphic file (type pdf)
 
 <use MPLE_histogram_traceplot_cosponsorship.pdf>
 Package pdftex.def Info: MPLE_histogram_traceplot_cosponsorship.pdf used on inp
-ut line 696.
+ut line 700.
 (pdftex.def)             Requested size: 252.94437pt x 195.1272pt.
 
-Overfull \hbox (0.94437pt too wide) in paragraph at lines 696--697
+Overfull \hbox (0.94437pt too wide) in paragraph at lines 700--701
  [][] 
  []
 
@@ -593,7 +590,7 @@ f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fon
 ts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on conference_paper.pdf (9 pages, 391132 bytes).
+Output written on conference_paper.pdf (9 pages, 391797 bytes).
 PDF statistics:
  204 PDF objects out of 1000 (max. 8388607)
  145 compressed objects within 2 object streams

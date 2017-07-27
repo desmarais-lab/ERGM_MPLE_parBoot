@@ -461,8 +461,12 @@ As already mentioned, a specific network $G$ can be considered as a manifestatio
 \mathbb{P}_{\theta}(G) \approx \prod_{ij} \mathbb{P}_{\theta}\left(g_{ij}|G_{-ij}\right), 
 %\label{ILogit}
 \end{equation*}
-where $G_{-ij}$ is the adjacency matrix, excluding element $ij$.
-
+where $G_{-ij}$ is the adjacency matrix, excluding element $ij$. The conditional probability of a tie in ERGM reduces, conveniently, to a logistic regression form given by 
+\begin{equation*}
+\mathbb{P}_{\theta}\left(g_{ij}=1| G_{-ij} \right) = \text{\\} \text{logit}^{-1}\left( \theta^T \cdot \delta(\Gamma(G))  \right), 
+%\label{ILogit}
+\end{equation*}
+where $\delta(\Gamma(G))$ is the ``change statistic'' given by the difference in the network statistics when the $ij$ element is toggled from 0 to 1 (i.e., $\Gamma(G|g_{ij}=1))-\Gamma(G|g_{ij}=0)$), and $\text{logit}^{-1}(x)=1/(1+\exp(-x))$ \cite{goodreau2009birds}.
 
 This corresponds with the \textit{logistic regression} approach, where the observations of the dependent variables are simply edge values of the observed adjacency matrix, and the observations of the covariate values are given as the scores of every single change statistic. Therefore, the estimation of $\theta$ can then be obtained as usual using straight forward maximum-likelihood estimation. The resulting likelihood function is of the following form:
 \begin{equation}
