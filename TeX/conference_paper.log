@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  27 JUL 2017 15:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  27 JUL 2017 15:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -527,7 +527,11 @@ Overfull \hbox (0.94437pt too wide) in paragraph at lines 645--646
  [][] 
  []
 
-[7 <./rel_time.pdf>] (./conference_paper.bbl
+[7 <./rel_time.pdf>]
+Underfull \vbox (badness 3271) has occurred while \output is active []
+
+
+(./conference_paper.bbl
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¤ in font ptmr7t!
  [8 <./MPLE_histogram_traceplot_cosponsorship.pdf>])
@@ -577,7 +581,7 @@ t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2017/texmf
 s/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on conference_paper.pdf (9 pages, 379416 bytes).
+Output written on conference_paper.pdf (9 pages, 379621 bytes).
 PDF statistics:
  196 PDF objects out of 1000 (max. 8388607)
  139 compressed objects within 2 object streams
