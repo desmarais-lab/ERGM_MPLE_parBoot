@@ -441,29 +441,29 @@ network, ERGM, parametric bootstrap, maximum pseudolikelihood
 The ERGM takes the adjacency matrix of an observed network $G^{obs}$, which is a matrix-valued random variable. This means that a network of $N$ nodes can be defined as a adjacency matrix $G=(g_{ij})\in \mathbb{[0,1]}^{N \times N}$, where $g_{ij} \in \{0,1\}$ for all $i,j \in \{1,\dots , N\}$. $g_{ij}=1$ means that there is an edge between actors $i$ and $j$, while $g_{ij}=0$ indicates that these actors are not directly connected. Since the model does not consider loops, one has $g_{ii}=0$ for all $i \in \{1,\dots , N\}$. Furthermore, define
 $$ \mathcal{G}(N) := \left\{ G \in \mathbb{R}^{(N \times N)}: g_{ij} \in \{0,1\},~g_{ii}=0\right\}$$
 as the set of all possible networks on $N$ nodes without loops. Note that the cardinality of set $\mathcal{G}(N)$ is increasing exponentially for every newly included actor, which results in $2^{N(N-1)/2}$ total elements. For even a small number of nodes, the cardinality of $\mathcal{G}(N)$ turns out to be an astronomically large number. For this reason calculating the likelihood function of the ERGM, which requires evaluating a normalizing constant on $\mathcal{G}(N)$  is either extremely time-consuming or with today's technology not achievable. As a consequence, many approximation methods have been provided by the literature, with the most popular method making use of Markov Chain Monte Carlo (MCMC) methods \cite{hunter2012computational}, as we will introduce in the next section.\\  
-With the definition of $\mathcal{G}(N)$ we define 
-$$Y: \Omega \to \mathcal{G}(N)~~,~~\omega \mapsto (Y_{ij}(\omega))_{i,j=1,\dots,N}$$
-as a matrix-like random variable. As the probability function from $Y$ to $\mathcal{G}(N)$ we define the ERGM as
+
+
+The probability function for the ERGM is defined as
 \begin{equation}
-\mathbb{P}_{\theta}(Y=G)=\dfrac{\exp(\theta^T \cdot \Gamma(G))}{\sum_{G^* \in \mathcal{G}(N)} \exp(\theta^T \cdot \Gamma(G^*))} 
+\mathbb{P}_{\theta}(G)=\dfrac{\exp(\theta^T \cdot \Gamma(G))}{\sum_{G^* \in \mathcal{G}(N)} \exp(\theta^T \cdot \Gamma(G^*))} 
 \label{ERGM}
 \end{equation}
 %
 where $\theta \in \mathbb{R}^q$ is a $q-$dimensional vector of parameters, $\Gamma:\mathcal{G}(N) \to \mathbb{R}^q~,~G \mapsto (\Gamma_1(G),\dots,\Gamma_q(G))^T$ is a $q$-dimensional function of different network statistics and $c(\theta):= \sum_{G^* \in \mathcal{G}(N)} \exp(\theta^T \cdot \Gamma(G^*))$ is a normalization constant which ensures that (\ref{ERGM}) defines a probability function on $\mathcal{G}$.
 %
-As already mentioned, a specific network $G$ can be considered as a manifestation of a matrix-like random variable, whose probability of occurrence can be modeled with equation (\ref{ERGM}).
-A key role when modeling an ERGM is played by the function $\Gamma(\cdot)$. The decision about which network statistics are incorporated into the model affects the model significantly (see Handcock \cite{Handcock.2003}).
+As already mentioned, a specific network $G$ can be considered as a manifestation of a matrix-like random variable, whose probability of occurrence can be modeled with equation (\ref{ERGM}) . The generative processes captured by a model (e.g., density, reciprocity, popularity, clustering) are informed by the decision regarding which network statistics (i.e., $\Gamma(\cdot)$) are incorporated (see Snijders et al. (2006) \cite{SnijdersTomA.B..2006} for a detailed discussion). The flexibility of the ERGM in capturing virtually any network generative process has led to it being applied broadly across several fields, including (but not limited to) sociology \cite{smith2016ethnic,srivastava2011culture}, economics \cite{lomi2012networks}, political science \cite{Cranmer.2011,lazer2010coevolution}, ecology \cite{dey2014individual,bouskila2015similarity}, and neuroscience \cite{simpson2011exponential,simpson2012exponential}.
 
 
 \section{Estimation}
-\noindent As mentioned above calculating $c(\theta)$ is not achievable for most cases with today's technology. Therefore, the question arises how one can estimate the parameter vector $\theta$?
-A first idea could be the following: One can assume that the \textit{dyads} are independent of each other, which means that the random variables $Y_{ij}$ inside the random matrix $Y$ are independent of each other. 
-In this case, one can show that
+\noindent As mentioned above calculating $c(\theta)$ is not achievable for most cases with today's technology.  Straightforward application of either maximum likelihood estimation and Bayesian inference are, therefore, not possible. The first method proposed in the literature for estimating ERGM parameters was maximum pseudolikelihood estimation \cite{StraussIkeda1990}. Under maximum pseudolikelihood, the joint distribution is replaced by the product over conditional distributions \cite{besag1986statistical}.  
 %
 \begin{equation*}
-\text{logit}(\mathbb{P}_{\theta}(Y_{ij}=1))= \theta^T \cdot (\Delta G)_{ij}
+\mathbb{P}_{\theta}(G) \approx \prod_{ij} \mathbb{P}_{\theta}\left(g_{ij}|G_{-ij}\right), 
 %\label{ILogit}
 \end{equation*}
+where $G_{-ij}$ is the adjacency matrix, excluding element $ij$.
+
+
 This corresponds with the \textit{logistic regression} approach, where the observations of the dependent variables are simply edge values of the observed adjacency matrix, and the observations of the covariate values are given as the scores of every single change statistic. Therefore, the estimation of $\theta$ can then be obtained as usual using straight forward maximum-likelihood estimation. The resulting likelihood function is of the following form:
 \begin{equation}
 \text{lik}(\theta)= \mathbb{P}_{\theta}(Y=G)= \prod_{i,j} \dfrac{ \exp \left(\theta^T \Delta(G))_{ij} \right)}{1+\exp \left(\theta^T \Delta(G))_{ij} \right)}
@@ -702,7 +702,7 @@ Otherwise, the values of the simulated networks systematically differ from the c
 \noindent In the past years the ERGM grew in popularity in many different fields and with this popularity also the size of the considered networks rose. As the size of the network increases, it becomes unclear how many simulated networks are necessary for the conventional MCMLE method in order to provide reliable results. Furthermore, as an increasing number of simulated networks is necessary for the MCMLE, the computing time rapidly goes sky high. For this reason it is essential to develop different methods that provide faster estimation than the MCMLE, but still lead to reliable results.\\
 In this paper we introduced the bootstrapped MPLE as an alternative estimation method for ERGMs and compared the performance to the commonly applied MCMLE. Based on a simulation study we first pointed out that the larger the size of a network is the larger the MCMC sample size has to be chosen in order for the MCMLE to outperform the fast and simple MPLE. However, the big disadvantage of the MPLE is that even though it is an approximately exact estimator, it underestimates the standard error. For this reason, we propose a parametric bootstrap method to attune the standard error. On the basis of another simulation study on two different networks we demonstrate that the bootstrapped MPLE covers the true coefficients just as well as the MCMLE, while the simple MPLE performs clearly poorer. This means that the bootstrapped MPLE combines the advantages of both methods, the MPLE and the MCMLE, because it is still simple, fast and provides approximately exact results, but also does not underestimate the standard error. We conclude that the bootstrapped MPLE should be regarded as a propitious alternative to the MCMLE. It also has the advantage of being embarrassingly parallel, which leads to a rapid speed-up of the calculation if multiple computing cores are used.
 
-
+\section{Acknowledgements}
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
