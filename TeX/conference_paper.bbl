@@ -16,6 +16,12 @@ B.~A. Desmarais and S.~J. Cranmer.
 \newblock {\em Physica A: Statistical Mechanics and its Applications},
   391(4):1865--1876, 2012.
 
+\bibitem{faraj2008electronic}
+Samer Faraj, M~Wasko, and Steven~L Johnson.
+\newblock Electronic knowledge networks: Processes and structure.
+\newblock {\em Knowledge management: An evolutionary view of the field},
+  (270-291), 2008.
+
 \bibitem{Fowler2006a}
 James~H. Fowler.
 \newblock Connecting the congress: A study of cosponsorship networks.
@@ -129,6 +135,11 @@ Tom~AB Snijders.
 \newblock Markov chain monte carlo estimation of exponential random graph
   models.
 \newblock {\em Journal of Social Structure}, 3(2):1--40, 2002.
+
+\bibitem{snijders2011statistical}
+Tom~AB Snijders.
+\newblock Statistical models for social networks.
+\newblock {\em Annual Review of Sociology}, 37, 2011.
 
 \bibitem{StraussIkeda1990}
 David Strauss and Michael Ikeda.
