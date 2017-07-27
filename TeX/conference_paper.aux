@@ -20,15 +20,15 @@
 \citation{besag1986statistical}
 \citation{goodreau2009birds}
 \citation{vanDuijnetal2009}
-\citation{Desmarais.2012}
+\citation{Hunter.2008}
+\citation{schweinberger2011instability}
+\citation{snijders2002markov}
+\citation{snijders2002markov}
 \newlabel{ERGM}{{1}{2}}
 \@writefile{toc}{\contentsline {section}{\numberline {III}Estimation}{2}}
-\newlabel{NaiveLik}{{2}{2}}
-\newlabel{loglik}{{3}{2}}
-\newlabel{assumption}{{4}{2}}
-\newlabel{vloglik}{{5}{2}}
-\citation{Meyn.2009}
+\newlabel{score}{{2}{2}}
 \citation{Snijders.2002}
+\citation{chib1995understanding}
 \citation{Lindsay1988}
 \citation{StraussIkeda1990}
 \citation{Hyvarinen2006}
@@ -36,42 +36,42 @@
 \citation{shalizi2013}
 \citation{Lindsay1988}
 \citation{Desmarais.2012}
+\citation{HunterDavidR..2008}
 \citation{Resnicketal1997}
 \citation{Hunter.2006}
-\newlabel{konver}{{6}{3}}
-\newlabel{approx}{{7}{3}}
-\newlabel{score}{{8}{3}}
 \@writefile{toc}{\contentsline {section}{\numberline {IV}Efficiency of MPLE and MCMLE}{3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The log of the ratio of the RMSE for the MCMLE to the MPLE for different sample sizes and two different networks, Faux Mesa High and Faux Magnolia High}}{4}}
-\newlabel{rmse}{{1}{4}}
 \citation{vanDuijnetal2009}
 \citation{vanDuijnetal2009}
+\citation{efron1982jackknife}
 \citation{Desmarais.2012}
 \citation{Huber1981}
+\citation{Desmarais.2012}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The log of the ratio of the RMSE for the MCMLE to the MPLE for different sample sizes and two different networks, Faux Mesa High and Faux Magnolia High}}{4}}
+\newlabel{rmse}{{1}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Bootstrapped MPLE}{4}}
 \citation{vanDuijnetal2009}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Bootstrapped MPLE}{5}}
+\citation{Fowler2006a}
+\citation{Fowler2006b}
+\citation{zhang2008community}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The Coverage Probability results of the Faux Mesa High network (left) and of the Faux Magnolia High network (right) for bootstrapped MPLE, MCMLE and logistic regression}}{5}}
 \newlabel{coverage}{{2}{5}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The boxplots visualize the bias $(\mathaccentV {hat}05E{\theta }-\theta )$ over the 500 iterations for the Faux Mesa High network (left) and the Faux Magnolia High network (right)}}{5}}
 \newlabel{bias}{{3}{5}}
-\citation{Fowler2006a}
-\citation{Fowler2006b}
-\citation{zhang2008community}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Cosponsorship Network Data}{5}}
 \citation{barabasi1999emergence}
 \citation{SnijdersTomA.B..2006}
 \citation{Hunter.2006}
 \citation{SnijdersTomA.B..2006}
 \citation{SnijdersTomA.B..2006}
 \citation{Hunter.2006}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Cosponsorship Network Data}{6}}
-\newlabel{alto}{{9}{6}}
-\citation{Handcock.2003}
-\citation{Rinaldo2009}
+\newlabel{co_results}{{VI}{6}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Estimation results for the Cosponsorship network using MCMLE, logistic regression and bootstrapped MPLE}}{6}}
+\newlabel{alto}{{3}{6}}
 \citation{Hunter.2006}
-\newlabel{co_results}{{VI}{7}}
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Estimation results for the Cosponsorship network using MCMLE, logistic regression and bootstrapped MPLE}}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Parallel Computing with MPLE}{7}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The y-axis gives the ratio of the bootstrapped MPLE time to that of the MCMLE time. Values below 1 indicate that the bootstrapped MPLE requires a shorter computing time.}}{7}}
 \newlabel{comptime}{{4}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {VIII}Conclusion}{7}}
 \bibdata{bib}
 \bibcite{barabasi1999emergence}{1}
 \bibcite{besag1986statistical}{2}
@@ -81,11 +81,6 @@
 \bibcite{Desmarais.2012}{6}
 \bibcite{dey2014individual}{7}
 \bibcite{faraj2008electronic}{8}
-\@writefile{toc}{\contentsline {section}{\numberline {VII}Conclusion}{8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Network statistics of the 500 boootstrap samples for the cosponsorship network. The thick line in both, the traceplots and the histograms, represents the network statistics of the observed network. }}{8}}
-\newlabel{diagnostics}{{5}{8}}
-\@writefile{toc}{\contentsline {section}{\numberline {VIII}Acknowledgements}{8}}
-\@writefile{toc}{\contentsline {section}{References}{8}}
 \bibcite{Fowler2006a}{9}
 \bibcite{Fowler2006b}{10}
 \bibcite{goodreau2009birds}{11}
@@ -101,6 +96,10 @@
 \bibcite{lu2010supervised}{21}
 \bibcite{Meyn.2009}{22}
 \bibcite{Resnicketal1997}{23}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Network statistics of the 500 boootstrap samples for the cosponsorship network. The thick line in both, the traceplots and the histograms, represents the network statistics of the observed network. }}{8}}
+\newlabel{diagnostics}{{5}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {IX}Acknowledgements}{8}}
+\@writefile{toc}{\contentsline {section}{References}{8}}
 \bibcite{Rinaldo2009}{24}
 \bibcite{robins.pattison.2007}{25}
 \bibcite{shalizi2013}{26}
