@@ -40,6 +40,13 @@ B.~A. Desmarais and S.~J. Cranmer.
 \newblock {\em Physica A: Statistical Mechanics and its Applications},
   391(4):1865--1876, 2012.
 
+\bibitem{desmarais2010consistent}
+Bruce~A Desmarais and Skyler~J Cranmer.
+\newblock Consistent confidence intervals for maximum pseudolikelihood
+  estimators.
+\newblock In {\em Proceedings of the Neural Information Processing Systems 2010
+  Workshop on Computational Social Science and the Wisdom of Crowds}, 2010.
+
 \bibitem{dey2014individual}
 Cody~J. Dey and James~S. Quinn.
 \newblock Individual attributes and self-organizational processes affect
