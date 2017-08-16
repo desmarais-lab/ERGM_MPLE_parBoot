@@ -1,11 +1,9 @@
 ######## bootstrapped MPLE
 
-# network/ergm package
-library(statnet)
-
-# packages for parallel computing
-library(doParallel)
-library(foreach)
+# packages required
+# library(statnet)
+# library(doParallel)
+# library(foreach)
 
 
 ##### main function
@@ -15,6 +13,11 @@ library(foreach)
 # mcmc.burnin: default=16*1024, Number of proposals before any MCMC sampling is done. It typically is set to a fairly large number
 # number.cores: number of cores used in caluclation
 boot.MPLE<- function(ergm.formula, boot.rep=500, mcmc.interval=1024, mcmc.burnin=16*1024, number.cores=1){
+	
+	require(statnet)
+	require(doParallel)
+	require(foreach)
+	require(ergm)
   
   # check whether multiple cores are necessary
   if(number.cores>1){
@@ -94,11 +97,21 @@ boot.MPLE<- function(ergm.formula, boot.rep=500, mcmc.interval=1024, mcmc.burnin
   results[[4]]<- boot.coef[(number.parameters+1):(2*number.parameters), ] # network statistics of simulated statistics
   results[[5]]<- degeneracy.test # proportions of simulated statistics that are greater than the observed statistics
   
-  names(results)<- c("MPLE results", "sample of bootstrap coefficients", "bootstrapped MPLE results", "simulated network statistics", "degeneracy check")
+  names(results)<- c("MPLE_results", "sample_of_bootstrap_coefficients", "bootstrapped_MPLE_results", "simulated_network_statistics", "degeneracy_check")
   return(results)
 }
 
+## Example
+library(ergm)
 data(faux.mesa.high)
+# set seed to assure replicability
+set.seed(1234)
+testing<- boot.MPLE(ergm.formula=faux.mesa.high~edges+nodematch("Sex"), boot.rep=100, number.cores=2 )\
+# MPLE results
+testing$MPLE_results
 
-testing<- boot.MPLE(ergm.formula=faux.mesa.high~edges+nodematch("Sex"), boot.rep=100, number.cores=1 )
-testing
+# Degeneracy check
+testing$degeneracy_check
+
+
+
