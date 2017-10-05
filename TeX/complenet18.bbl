@@ -1,0 +1,248 @@
+\begin{thebibliography}{10}
+
+\bibitem{barabasi1999emergence}
+Albert-L{\'a}szl{\'o} Barab{\'a}si and R{\'e}ka Albert.
+\newblock Emergence of scaling in random networks.
+\newblock {\em science}, 286(5439):509--512, 1999.
+
+\bibitem{besag1986statistical}
+Julian Besag.
+\newblock On the statistical analysis of dirty pictures.
+\newblock {\em Journal of the Royal Statistical Society. Series B
+  (Methodological)}, pages 259--302, 1986.
+
+\bibitem{bouskila2015similarity}
+Amos Bouskila, Emmanuel Lourie, Shiri Sommer, Han de~Vries, Zef~M Hermans, and
+  Machteld van Dierendonck.
+\newblock Similarity in sex and reproductive state, but not relatedness,
+  influence the strength of association in the social network of feral horses
+  in the blauwe kamer nature reserve.
+\newblock {\em Israel Journal of Ecology \& Evolution}, 61(2):106--113, 2015.
+
+\bibitem{chatterjee2013estimating}
+Sourav Chatterjee, Persi Diaconis, et~al.
+\newblock Estimating and understanding exponential random graph models.
+\newblock {\em The Annals of Statistics}, 41(5):2428--2461, 2013.
+
+\bibitem{chib1995understanding}
+Siddhartha Chib and Edward Greenberg.
+\newblock Understanding the metropolis-hastings algorithm.
+\newblock {\em The american statistician}, 49(4):327--335, 1995.
+
+\bibitem{Cranmer.2011}
+S.~J. Cranmer and B.~A. Desmarais.
+\newblock Inferential network analysis with exponential random graph models.
+\newblock {\em Political Analysis}, 19(1):66--86, 2011.
+
+\bibitem{Desmarais.2012}
+B.~A. Desmarais and S.~J. Cranmer.
+\newblock Statistical mechanics of networks: Estimation and uncertainty.
+\newblock {\em Physica A: Statistical Mechanics and its Applications},
+  391(4):1865--1876, 2012.
+
+\bibitem{desmarais2010consistent}
+Bruce~A Desmarais and Skyler~J Cranmer.
+\newblock Consistent confidence intervals for maximum pseudolikelihood
+  estimators.
+\newblock In {\em Proceedings of the Neural Information Processing Systems 2010
+  Workshop on Computational Social Science and the Wisdom of Crowds}, 2010.
+
+\bibitem{dey2014individual}
+Cody~J. Dey and James~S. Quinn.
+\newblock Individual attributes and self-organizational processes affect
+  dominance network structure in pukeko.
+\newblock {\em Behavioral Ecology}, 25(6):1402--1408, 2014.
+
+\bibitem{efron1982jackknife}
+Bradley Efron.
+\newblock The jackknife, the bootstrap and other resampling plans.
+\newblock In {\em CBMS-NSF Regional conference series in applied mathematics.
+  25 cm. 92 p.} Society for industrial and applied mathematics, Philadelphia.
+  US, 1982.
+
+\bibitem{faraj2008electronic}
+Samer Faraj, M~Wasko, and Steven~L Johnson.
+\newblock Electronic knowledge networks: Processes and structure.
+\newblock {\em Knowledge management: An evolutionary view of the field},
+  (270-291), 2008.
+
+\bibitem{Fowler2006a}
+James~H. Fowler.
+\newblock Connecting the congress: A study of cosponsorship networks.
+\newblock {\em Political Analysis}, 14(04):456--487, 2006.
+
+\bibitem{Fowler2006b}
+James~H. Fowler.
+\newblock Legislative cosponsorship networks in the u.s. house and senate.
+\newblock 28:454--465, 2006.
+
+\bibitem{goodreau2009birds}
+Steven~M Goodreau, James~A Kitts, and Martina Morris.
+\newblock Birds of a feather, or friend of a friend? using exponential random
+  graph models to investigate adolescent social networks.
+\newblock {\em Demography}, 46(1):103--125, 2009.
+
+\bibitem{hackney2006agent}
+Jeremy~Keith Hackney and Kay~W. Axhausen.
+\newblock An agent model of social network and travel behavior interdependence.
+\newblock In {\em Conference on Issues in Behavioral Demand Modeling and the
+  Evaluation of Travel Time}, 2006.
+
+\bibitem{holland1981exponential}
+Paul~W. Holland and Samuel Leinhardt.
+\newblock An exponential family of probability distributions for directed
+  graphs.
+\newblock {\em Journal of the american Statistical association},
+  76(373):33--50, 1981.
+
+\bibitem{Huber1981}
+P.~J. Huber.
+\newblock {\em {Robust statistics}}.
+\newblock Wiley New York, 1981.
+
+\bibitem{Hunter.2008}
+David~R. Hunter, Steven~M. Goodreau, and Mark~S. Handcock.
+\newblock Goodness of fit of social network models.
+\newblock {\em Journal of the American Statistical Association},
+  103(481):248--258, 2008.
+
+\bibitem{Hunter.2006}
+David~R. Hunter and Mark~S. Handcock.
+\newblock Inference in curved exponential family models for networks.
+\newblock {\em Journal of Computational and Graphical Statistics},
+  15(3):565--583, 2006.
+
+\bibitem{HunterDavidR..2008}
+{Hunter , David R.}, {Handcock , Mark S.}, {Butts , Carter T.}, {Goodreau ,
+  Steven M.}, and Martina Morris.
+\newblock ergm: A package to fit, simulate and diagnose exponential-family
+  models for networks.
+\newblock {\em Journal of Statistical Software}, 2008.
+
+\bibitem{hunter2012computational}
+David~R. Hunter, Pavel~N. Krivitsky, and Michael Schweinberger.
+\newblock Computational statistical methods for social network models.
+\newblock {\em Journal of Computational and Graphical Statistics},
+  21(4):856--882, 2012.
+
+\bibitem{Hyvarinen2006}
+Aapo Hyvärinen.
+\newblock Consistency of pseudolikelihood estimation of fully visible boltzmann
+  machines.
+\newblock {\em Neural Computation}, 18:2283--2292, 2006.
+
+\bibitem{lazer2010coevolution}
+David Lazer, Brian Rubineau, Carol Chetkovich, Nancy Katz, and Michael Neblo.
+\newblock The coevolution of networks and political attitudes.
+\newblock {\em Political Communication}, 27(3):248--274, 2010.
+
+\bibitem{Lindsay1988}
+Bruce~G. Lindsay.
+\newblock Composite likelihood methods.
+\newblock {\em Contemporary Mathematics}, 80(1), 1988.
+
+\bibitem{lomi2012networks}
+Alessandro Lomi and Fabio Fonti.
+\newblock Networks in markets and the propensity of companies to collaborate:
+  An empirical test of three mechanisms.
+\newblock {\em Economics Letters}, 114(2):216--220, 2012.
+
+\bibitem{lu2010supervised}
+Zhengdong Lu, Berkant Savas, Wei Tang, and Inderjit~S. Dhillon.
+\newblock Supervised link prediction using multiple sources.
+\newblock In {\em Data Mining (ICDM), 2010 IEEE 10th International Conference
+  on}, pages 923--928. IEEE, 2010.
+
+\bibitem{Resnicketal1997}
+{Michael D.} Resnick, {Peter S.} Bearman, {Robert Wm} Blum, {Karl E.} Bauman,
+  {Kathleen M.} Harris, Jo~Jones, Joyce Tabor, Trish Beuhring, {Renee E.}
+  Sieving, Marcia Shew, Marjorie Ireland, {Linda H.} Bearinger, and {J.
+  Richard} Udry.
+\newblock Protecting adolescent's from harm: Findings from the national
+  longitudinal study on adolescent health.
+\newblock {\em JAMA - Journal of the American Medical Association},
+  278(10):823--832, 9 1997.
+
+\bibitem{robins.pattison.2007}
+Garry Robins, Pip Pattison, Yuval Kalish, and Dean Lusher.
+\newblock An introduction to exponential random graph (p*) models for social
+  networks.
+\newblock {\em Social Networks}, 29(2):173--191, May 2007.
+
+\bibitem{schweinberger2011instability}
+Michael Schweinberger.
+\newblock Instability, sensitivity, and degeneracy of discrete exponential
+  families.
+\newblock {\em Journal of the American Statistical Association},
+  106(496):1361--1370, 2011.
+
+\bibitem{shalizi2013}
+Cosma~Rohilla Shalizi and Alessandro Rinaldo.
+\newblock Consistency under sampling of exponential random graph models.
+\newblock {\em Ann. Statist.}, (2):508--535, 04.
+
+\bibitem{simpson2011exponential}
+Sean~L. Simpson, Satoru Hayasaka, and Paul~J. Laurienti.
+\newblock Exponential random graph modeling for complex brain networks.
+\newblock {\em PloS one}, 6(5):e20039, 2011.
+
+\bibitem{simpson2012exponential}
+Sean~L. Simpson, Malaak~N. Moussa, and Paul~J. Laurienti.
+\newblock An exponential random graph modeling approach to creating group-based
+  representative whole-brain connectivity networks.
+\newblock {\em Neuroimage}, 60(2):1117--1126, 2012.
+
+\bibitem{smith2016ethnic}
+Sanne Smith, Frank Van~Tubergen, Ineke Maas, and Daniel~A. McFarland.
+\newblock Ethnic composition and friendship segregation: Differential effects
+  for adolescent natives and immigrants.
+\newblock {\em American Journal of Sociology}, 121(4):1223--1272, 2016.
+
+\bibitem{SnijdersTomA.B..2006}
+Tom A.~B. Snijders, Philippa~E. Pattison, Garry~L. Robins, and Mark~S.
+  Handcock.
+\newblock New specifications for exponential random graph models.
+\newblock {\em Sociological Methodology}, 36(1):99--153, 2006.
+
+\bibitem{snijders2002markov}
+Tom~A.B. Snijders.
+\newblock Markov chain monte carlo estimation of exponential random graph
+  models.
+\newblock {\em Journal of Social Structure}, 3(2):1--40, 2002.
+
+\bibitem{snijders2011statistical}
+Tom~A.B. Snijders.
+\newblock Statistical models for social networks.
+\newblock {\em Annual Review of Sociology}, 37, 2011.
+
+\bibitem{srivastava2011culture}
+Sameer~B. Srivastava and Mahzarin~R. Banaji.
+\newblock Culture, cognition, and collaborative networks in organizations.
+\newblock {\em American Sociological Review}, 76(2):207--233, 2011.
+
+\bibitem{StraussIkeda1990}
+David Strauss and Michael Ikeda.
+\newblock Pseudolikelihood estimation for social networks.
+\newblock {\em Journal of the American Statistical Association}, 85:204--212,
+  1990.
+
+\bibitem{vanDuijnetal2009}
+{Marijtje A. J.} {van Duijn}, {Krista J.} Gile, and {Mark S.} Handcock.
+\newblock A framework for the comparison of maximum pseudo-likelihood and
+  maximum likelihood estimation of exponential family random graph models.
+\newblock {\em Social Networks}, 31(1):52--62, 1 2009.
+
+\bibitem{Wasserman.1996}
+Stanley Wasserman and Philippa Pattison.
+\newblock Logit models and logistic regression for social networks: An
+  introduction to markov graphs and p-star.
+\newblock {\em Psychometrica Vol.61}, 1996.
+
+\bibitem{zhang2008community}
+Yan Zhang, Andrew~J. Friend, Amanda~L. Traud, Mason~A. Porter, James~H. Fowler,
+  and Peter~J. Mucha.
+\newblock Community structure in congressional cosponsorship networks.
+\newblock {\em Physica A: Statistical Mechanics and its Applications},
+  387(7):1705--1712, 2008.
+
+\end{thebibliography}
