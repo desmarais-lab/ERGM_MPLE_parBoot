@@ -1,25 +1,19 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.24)  5 OCT 2017 11:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  5 OCT 2017 15:57
 entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
 **complenet18.tex
-("C:\Users\Geiler Typ\Desktop\llncs2e\complenet18.tex"
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-("C:\Users\Geiler Typ\Desktop\llncs2e\llncs.cls"
-Document Class: llncs 2017/09/04 v2.19 
+(./complenet18.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+(./llncs.cls
+Document Class: llncs 2004/08/17 v2.14 
  LaTeX document class for Lecture Notes in Computer Science
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
-Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
-File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -33,8 +27,8 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\multicol.sty"
-Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \c@tracingmulticols=\count87
 \mult@box=\box26
 \multicol@leftmargin=\dimen103
@@ -51,6 +45,7 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \multicolbaselineskip=\skip44
 \partial@page=\box27
 \last@line=\box28
+\maxbalancingoverflow=\dimen108
 \mult@rightbox=\box29
 \mult@grightbox=\box30
 \mult@gfirstbox=\box31
@@ -74,45 +69,41 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \@tempa=\box49
 \c@columnbadness=\count93
 \c@finalcolumnbadness=\count94
-\last@try=\dimen108
-\multicolovershoot=\dimen109
-\multicolundershoot=\dimen110
+\last@try=\dimen109
+\multicolovershoot=\dimen110
+\multicolundershoot=\dimen111
 \mult@nat@firstbox=\box50
 \colbreak@box=\box51
-\multicol@sort@counter=\count95
+\mc@col@check@num=\count95
 )
-("C:\Users\Geiler Typ\Desktop\llncs2e\aliascnt.sty"
-Package: aliascnt 2009/09/08 v1.3 Alias counter (HO)
-
-("C:\Users\Geiler Typ\Desktop\llncs2e\remreset.sty"))
 \c@chapter=\count96
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 362.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 363.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 364.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 365.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 366.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 367.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 368.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 369.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 370.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 371.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 372.
-\tocchpnum=\dimen111
-\tocsecnum=\dimen112
-\tocsectotal=\dimen113
-\tocsubsecnum=\dimen114
-\tocsubsectotal=\dimen115
-\tocsubsubsecnum=\dimen116
-\tocsubsubsectotal=\dimen117
-\tocparanum=\dimen118
-\tocparatotal=\dimen119
-\tocsubparanum=\dimen120
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 360.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 361.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 362.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 363.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 364.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 365.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 366.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 367.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 368.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 369.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 370.
+\tocchpnum=\dimen112
+\tocsecnum=\dimen113
+\tocsectotal=\dimen114
+\tocsubsecnum=\dimen115
+\tocsubsectotal=\dimen116
+\tocsubsubsecnum=\dimen117
+\tocsubsubsectotal=\dimen118
+\tocparanum=\dimen119
+\tocparatotal=\dimen120
+\tocsubparanum=\dimen121
 \@tempcntc=\count97
-\fnindent=\dimen121
+\fnindent=\dimen122
 \c@@inst=\count98
 \c@@auth=\count99
 \c@auco=\count100
-\instindent=\dimen122
+\instindent=\dimen123
 \authrun=\box52
 \authorrunning=\toks14
 \tocauthor=\toks15
@@ -134,347 +125,690 @@ LaTeX Font Info:    Redeclaring math symbol \Omega on input line 372.
 \c@question=\count113
 \c@solution=\count114
 \c@remark=\count115
-\headlineindent=\dimen123
+\headlineindent=\dimen124
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\cite\cite.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks18
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
-Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count116
 ))
-\Gin@req@height=\dimen124
-\Gin@req@width=\dimen125
+\Gin@req@height=\dimen125
+\Gin@req@width=\dimen126
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
-Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip45
+(/usr/local/texlive/2017/texmf-dist/tex/latex/floatrow/floatrow.sty
+Package: floatrow 2008/08/02 v0.3b floatrow: float package extension
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen127
+\captionmargin@=\dimen128
+\captionwidth=\dimen129
+\caption@tempdima=\dimen130
+\caption@indent=\dimen131
+\caption@parindent=\dimen132
+\caption@hangindent=\dimen133
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+\c@float@type=\count117
+\float@exts=\toks19
+\float@box=\box54
+\@floatcapt=\box55
+Package floatrow Info: Modified float package code loaded on input line 455.
+Package floatrow Info: Modified rotfloat package code loaded on input line 473.
+
+\FR@everyfloat=\toks20
+\flrow@foot=\insert199
+\FB@wd=\dimen134
+\FBo@wd=\dimen135
+\FBc@wd=\dimen136
+\FBo@ht=\skip45
+\FBc@ht=\skip46
+\FBf@ht=\skip47
+\FBo@max=\skip48
+\FBc@max=\skip49
+\FBf@max=\skip50
+\c@FBl@b=\count118
+\floatbox@depth=\count119
+\c@FRobj=\count120
+\c@FRsobj=\count121
+\Xhsize=\skip51
+\sXhsize=\skip52
+\Zhsize=\skip53
+\sZhsize=\skip54
+\flrow@rowbox=\box56
+\FR@Zunitlength=\dimen137
+\c@FBcnt=\count122
+\FPOScnt=\count123
+\LTleft=\skip55
+\LTright=\skip56
+\LTleft=\skip57
+\LTright=\skip58
+\flrow@types=\toks21
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/11/05 v2.16a AMS math features
+\@mathmargin=\skip59
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
-Package: amstext 2000/06/29 v2.01
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
-File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks19
-\ex@=\dimen126
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks22
+\ex@=\dimen138
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
-Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen127
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen139
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
-Package: amsopn 1999/12/14 v2.01 operator names
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count117
-LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count118
-\leftroot@=\count119
-LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count120
-\DOTSCASE@=\count121
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
-\Mathstrutbox@=\box54
-\strutbox@=\box55
-\big@size=\dimen128
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\inf@bad=\count124
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count125
+\leftroot@=\count126
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count127
+\DOTSCASE@=\count128
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box57
+\strutbox@=\box58
+\big@size=\dimen140
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 
 
 Package amsmath Warning: Unable to redefine math accent \vec.
 
-\macc@depth=\count122
-\c@MaxMatrixCols=\count123
+\macc@depth=\count129
+\c@MaxMatrixCols=\count130
 \dotsspace@=\muskip10
-\c@parentequation=\count124
-\dspbrk@lvl=\count125
-\tag@help=\toks20
-\row@=\count126
-\column@=\count127
-\maxfields@=\count128
-\andhelp@=\toks21
-\eqnshift@=\dimen129
-\alignsep@=\dimen130
-\tagshift@=\dimen131
-\tagwidth@=\dimen132
-\totwidth@=\dimen133
-\lineht@=\dimen134
-\@envbody=\toks22
-\multlinegap=\skip46
-\multlinetaggap=\skip47
-\mathdisplay@stack=\toks23
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+\c@parentequation=\count131
+\dspbrk@lvl=\count132
+\tag@help=\toks23
+\row@=\count133
+\column@=\count134
+\maxfields@=\count135
+\andhelp@=\toks24
+\eqnshift@=\dimen141
+\alignsep@=\dimen142
+\tagshift@=\dimen143
+\tagwidth@=\dimen144
+\totwidth@=\dimen145
+\lineht@=\dimen146
+\@envbody=\toks25
+\multlinegap=\skip60
+\multlinetaggap=\skip61
+\mathdisplay@stack=\toks26
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\dstroke\dsfont.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/doublestroke/dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
-Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen135
-\extrarowheight=\dimen136
-\NC@list=\toks24
-\extratabsurround=\skip48
-\backup@length=\skip49
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/array.sty
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen147
+\extrarowheight=\dimen148
+\NC@list=\toks27
+\extratabsurround=\skip62
+\backup@length=\skip63
 )
-("C:\Users\Geiler Typ\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithm2e\algorith
-m2e.sty"
-Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count129
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
-)
-\algocf@hangindent=\skip50
+(/usr/local/texlive/2017/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2013/01/06 v5.00 algorithms environments
+\c@AlgoLine=\count136
 
-("C:\Users\Geiler Typ\AppData\Roaming\MiKTeX\2.9\tex\latex\ifoddpage\ifoddpage.
-sty"
-Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count130
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\xspace.sty"
-Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
-Package: relsize 2003/07/04 ver 3.1
+\algocf@hangindent=\skip64
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\skiptotal=\skip51
-\skiplinenumber=\skip52
-\skiprule=\skip53
-\skiphlne=\skip54
-\skiptext=\skip55
-\skiplength=\skip56
-\algomargin=\skip57
-\skipalgocfslide=\skip58
-\algowidth=\dimen137
-\inoutsize=\dimen138
-\inoutindent=\dimen139
-\interspacetitleruled=\dimen140
-\interspacealgoruled=\dimen141
-\interspacetitleboxruled=\dimen142
-\algocf@ruledwidth=\skip59
-\algocf@inoutbox=\box56
-\algocf@inputbox=\box57
-\AlCapSkip=\skip60
-\AlCapHSkip=\skip61
-\algoskipindent=\skip62
-\algocf@nlbox=\box58
-\algocf@hangingbox=\box59
-\algocf@untilbox=\box60
-\algocf@skipuntil=\skip63
-\algocf@capbox=\box61
-\algocf@lcaptionbox=\skip64
-\algoheightruledefault=\skip65
-\algoheightrule=\skip66
-\algotitleheightruledefault=\skip67
-\algotitleheightrule=\skip68
-\c@algocfline=\count131
-\c@algocfproc=\count132
-\c@algocf=\count133
-\algocf@algoframe=\box62
-\algocf@algobox=\box63
+(/usr/local/texlive/2017/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+********************************************************
+Package `algorithm2e' Release 5.1 -- october 19 2015 --
+- algorithm2e-announce@lirmm.fr mailing list for announcement about releases
+- algorithm2e-discussion@lirmm.fr mailing list for discussion about package
+subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
+- Author: Christophe Fiorio (christophe.fiorio@umontpellier.fr)
+********************************************************
+\skiptotal=\skip65
+\skiplinenumber=\skip66
+\skiprule=\skip67
+\skiphlne=\skip68
+\skiptext=\skip69
+\skiplength=\skip70
+\algomargin=\skip71
+\skipalgocfslide=\skip72
+\algowidth=\dimen149
+\inoutsize=\dimen150
+\inoutindent=\dimen151
+\interspacetitleruled=\dimen152
+\interspacealgoruled=\dimen153
+\interspacetitleboxruled=\dimen154
+\algocf@ruledwidth=\skip73
+\algocf@inoutbox=\box59
+\algocf@inputbox=\box60
+\AlCapSkip=\skip74
+\AlCapHSkip=\skip75
+\algoskipindent=\skip76
+\algocf@nlbox=\box61
+\algocf@hangingbox=\box62
+\algocf@untilbox=\box63
+\algocf@skipuntil=\skip77
+\algocf@capbox=\box64
+\algoheightruledefault=\skip78
+\algoheightrule=\skip79
+\algotitleheightruledefault=\skip80
+\algotitleheightrule=\skip81
+\c@algocfline=\count137
+\c@algocfproc=\count138
+\c@algocf=\count139
+\algocf@algoframe=\box65
+\algocf@algobox=\box66
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
-Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
-\everycr=\toks25
-\minrowclearance=\skip69
+\everycr=\toks28
+\minrowclearance=\skip82
 )
-\rownum=\count134
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
-Package xcolor Info: Model `RGB' extended on input line 1353.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+\rownum=\count140
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
-\bigstrutjot=\dimen143
+(/usr/local/texlive/2017/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip83
+\multirow@cntb=\count141
+\multirow@dima=\skip84
+\bigstrutjot=\dimen155
 )
-("C:\Users\Geiler Typ\Desktop\llncs2e\complenet18.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+(./complenet18.aux)
+\openout1 = `complenet18.aux'.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+
+(/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count135
-\scratchdimen=\dimen144
-\scratchbox=\box64
-\nofMPsegments=\count136
-\nofMParguments=\count137
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count138
-\MPscratchDim=\dimen145
-\MPnumerator=\count139
-\makeMPintoPDFobject=\count140
-\everyMPtoPDFconversion=\toks27
+\scratchcounter=\count142
+\scratchdimen=\dimen156
+\scratchbox=\box67
+\nofMPsegments=\count143
+\nofMParguments=\count144
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count145
+\MPscratchDim=\dimen157
+\MPnumerator=\count146
+\makeMPintoPDFobject=\count147
+\everyMPtoPDFconversion=\toks30
+) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 41.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 42.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 41.
+LaTeX Font Info:    Try loading font information for U+msb on input line 42.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/Geiler Typ/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-Overfull \hbox (2.96048pt too wide) in paragraph at lines 84--88
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Overfull \hbox (2.96048pt too wide) in paragraph at lines 85--89
 []\OT1/cmr/m/n/10 Despite the com-pu-ta-tional ef-fi-ciency un-der-ly-ing the i
 m-ple-men-ta-tion of MPLE,
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
-<RMSE_10k.pdf, id=23, 844.15375pt x 597.23125pt>
+[4]
+Underfull \hbox (badness 2478) in paragraph at lines 174--174
+\OT1/cmr/m/n/10 the RMSE for
+ []
+
+
+Underfull \hbox (badness 2368) in paragraph at lines 174--174
+\OT1/cmr/m/n/10 the MPLE for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+\OT1/cmr/m/n/10 dif-fer-ent sam-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+\OT1/cmr/m/n/10 ple sizes and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+\OT1/cmr/m/n/10 two dif-fer-ent
+ []
+
+
+Underfull \hbox (badness 2384) in paragraph at lines 174--174
+\OT1/cmr/m/n/10 net-works, Faux
+ []
+
+
+Underfull \hbox (badness 4634) in paragraph at lines 174--174
+\OT1/cmr/m/n/10 Faux Mag-no-lia
+ []
+
+<RMSE_10k.pdf, id=29, 844.15375pt x 597.23125pt>
 File: RMSE_10k.pdf Graphic file (type pdf)
  <use RMSE_10k.pdf>
-Package pdftex.def Info: RMSE_10k.pdf used on input line 170.
-(pdftex.def)             Requested size: 252.94499pt x 178.95204pt.
- [4]
-[5 <C:/Users/Geiler Typ/Desktop/llncs2e/RMSE_10k.pdf>] [6]
-<Coverage_Mesa_Magnolia_height05.pdf, id=51, 794.97pt x 397.485pt>
+Package pdftex.def Info: RMSE_10k.pdf used on input line 174.
+(pdftex.def)             Requested size: 270.30118pt x 191.23636pt.
+
+Underfull \hbox (badness 2478) in paragraph at lines 174--174
+\OT1/cmr/m/n/10 the RMSE for
+ []
+
+
+Underfull \hbox (badness 2368) in paragraph at lines 174--174
+\OT1/cmr/m/n/10 the MPLE for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+\OT1/cmr/m/n/10 dif-fer-ent sam-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+\OT1/cmr/m/n/10 ple sizes and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+\OT1/cmr/m/n/10 two dif-fer-ent
+ []
+
+
+Underfull \hbox (badness 2384) in paragraph at lines 174--174
+\OT1/cmr/m/n/10 net-works, Faux
+ []
+
+
+Underfull \hbox (badness 4634) in paragraph at lines 174--174
+\OT1/cmr/m/n/10 Faux Mag-no-lia
+ []
+
+File: RMSE_10k.pdf Graphic file (type pdf)
+<use RMSE_10k.pdf>
+Package pdftex.def Info: RMSE_10k.pdf used on input line 174.
+(pdftex.def)             Requested size: 270.30118pt x 191.23636pt.
+
+Underfull \hbox (badness 2478) in paragraph at lines 174--174
+\OT1/cmr/m/n/10 the RMSE for
+ []
+
+
+Underfull \hbox (badness 2368) in paragraph at lines 174--174
+\OT1/cmr/m/n/10 the MPLE for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+\OT1/cmr/m/n/10 dif-fer-ent sam-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+\OT1/cmr/m/n/10 ple sizes and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+\OT1/cmr/m/n/10 two dif-fer-ent
+ []
+
+
+Underfull \hbox (badness 2384) in paragraph at lines 174--174
+\OT1/cmr/m/n/10 net-works, Faux
+ []
+
+
+Underfull \hbox (badness 4634) in paragraph at lines 174--174
+\OT1/cmr/m/n/10 Faux Mag-no-lia
+ []
+
+File: RMSE_10k.pdf Graphic file (type pdf)
+<use RMSE_10k.pdf>
+Package pdftex.def Info: RMSE_10k.pdf used on input line 174.
+(pdftex.def)             Requested size: 270.30118pt x 191.23636pt.
+
+Overfull \hbox (7.39284pt too wide) detected at line 174
+ [] 
+ []
+
+[5 <./RMSE_10k.pdf>] [6]
+Underfull \hbox (badness 3281) in paragraph at lines 199--199
+[]\OT1/cmr/bx/n/10 Fig.2. \OT1/cmr/m/n/10 The Cov-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
+\OT1/cmr/m/n/10 er-age Prob-a-bil-ity
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
+\OT1/cmr/m/n/10 Mesa High net-
+ []
+
+
+Underfull \hbox (badness 2875) in paragraph at lines 199--199
+\OT1/cmr/m/n/10 the Faux Mag-no-
+ []
+
+
+Underfull \hbox (badness 5331) in paragraph at lines 199--199
+\OT1/cmr/m/n/10 lia High net-work
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
+\OT1/cmr/m/n/10 (right) for boot-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
+\OT1/cmr/m/n/10 strapped MPLE,
+ []
+
+<Coverage_Mesa_Magnolia_height05.pdf, id=52, 794.97pt x 397.485pt>
 File: Coverage_Mesa_Magnolia_height05.pdf Graphic file (type pdf)
 
 <use Coverage_Mesa_Magnolia_height05.pdf>
 Package pdftex.def Info: Coverage_Mesa_Magnolia_height05.pdf used on input line
- 192.
-(pdftex.def)             Requested size: 252.94499pt x 126.46997pt.
+ 199.
+(pdftex.def)             Requested size: 241.84842pt x 120.92645pt.
 
-<bias_plots_05.pdf, id=52, 844.15375pt x 397.485pt>
+Underfull \hbox (badness 3281) in paragraph at lines 199--199
+[]\OT1/cmr/bx/n/10 Fig.2. \OT1/cmr/m/n/10 The Cov-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
+\OT1/cmr/m/n/10 er-age Prob-a-bil-ity
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
+\OT1/cmr/m/n/10 Mesa High net-
+ []
+
+
+Underfull \hbox (badness 2875) in paragraph at lines 199--199
+\OT1/cmr/m/n/10 the Faux Mag-no-
+ []
+
+
+Underfull \hbox (badness 5331) in paragraph at lines 199--199
+\OT1/cmr/m/n/10 lia High net-work
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
+\OT1/cmr/m/n/10 (right) for boot-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
+\OT1/cmr/m/n/10 strapped MPLE,
+ []
+
+File: Coverage_Mesa_Magnolia_height05.pdf Graphic file (type pdf)
+<use Coverage_Mesa_Magnolia_height05.pdf>
+Package pdftex.def Info: Coverage_Mesa_Magnolia_height05.pdf used on input line
+ 199.
+(pdftex.def)             Requested size: 241.84842pt x 120.92645pt.
+
+Underfull \hbox (badness 3281) in paragraph at lines 199--199
+[]\OT1/cmr/bx/n/10 Fig.2. \OT1/cmr/m/n/10 The Cov-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
+\OT1/cmr/m/n/10 er-age Prob-a-bil-ity
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
+\OT1/cmr/m/n/10 Mesa High net-
+ []
+
+
+Underfull \hbox (badness 2875) in paragraph at lines 199--199
+\OT1/cmr/m/n/10 the Faux Mag-no-
+ []
+
+
+Underfull \hbox (badness 5331) in paragraph at lines 199--199
+\OT1/cmr/m/n/10 lia High net-work
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
+\OT1/cmr/m/n/10 (right) for boot-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
+\OT1/cmr/m/n/10 strapped MPLE,
+ []
+
+File: Coverage_Mesa_Magnolia_height05.pdf Graphic file (type pdf)
+<use Coverage_Mesa_Magnolia_height05.pdf>
+Package pdftex.def Info: Coverage_Mesa_Magnolia_height05.pdf used on input line
+ 199.
+(pdftex.def)             Requested size: 241.84842pt x 120.92645pt.
+
+<bias_plots_05.pdf, id=53, 844.15375pt x 397.485pt>
 File: bias_plots_05.pdf Graphic file (type pdf)
  <use bias_plots_05.pdf>
-Package pdftex.def Info: bias_plots_05.pdf used on input line 199.
+Package pdftex.def Info: bias_plots_05.pdf used on input line 205.
 (pdftex.def)             Requested size: 252.93893pt x 126.46997pt.
 
 Underfull \vbox (badness 5105) has occurred while \output is active []
 
  [7]
-Overfull \hbox (4.24062pt too wide) in paragraph at lines 217--226
+Overfull \hbox (4.24062pt too wide) in paragraph at lines 223--232
  [][] 
  []
 
-[8 <C:/Users/Geiler Typ/Desktop/llncs2e/Coverage_Mesa_Magnolia_height05.pdf> <C
-:/Users/Geiler Typ/Desktop/llncs2e/bias_plots_05.pdf
 
-pdfTeX warning: pdflatex (file C:/Users/Geiler Typ/Desktop/llncs2e/bias_plots_0
-5.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [9] [10] <rel_time.pdf, id=99, 722.7pt x 505.89pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8 <./Coverage_Mesa_Magnolia_height05.pdf> <./bias_plots_05.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./bias_plots_05.pdf): PDF in
+clusion: multiple pdfs with page group included in a single page
+>] [9] [10] <rel_time.pdf, id=98, 722.7pt x 505.89pt>
 File: rel_time.pdf Graphic file (type pdf)
  <use rel_time.pdf>
-Package pdftex.def Info: rel_time.pdf used on input line 271.
+Package pdftex.def Info: rel_time.pdf used on input line 277.
 (pdftex.def)             Requested size: 252.93776pt x 180.67676pt.
 
-<MPLE_histogram_traceplot_cosponsorship.pdf, id=100, 578.16pt x 433.62pt>
+<MPLE_histogram_traceplot_cosponsorship.pdf, id=99, 578.16pt x 433.62pt>
 File: MPLE_histogram_traceplot_cosponsorship.pdf Graphic file (type pdf)
 
 <use MPLE_histogram_traceplot_cosponsorship.pdf>
 Package pdftex.def Info: MPLE_histogram_traceplot_cosponsorship.pdf used on inp
-ut line 281.
+ut line 287.
 (pdftex.def)             Requested size: 252.94437pt x 195.1272pt.
- [11 <C:/Users/Geiler Typ/Desktop/llncs2e/rel_time.pdf>]
+ [11 <./rel_time.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12 <C:/Users/Geiler Typ/Desktop/llncs2e/MPLE_histogram_traceplot_cosponsorshi
-p.pdf>]
-("C:\Users\Geiler Typ\Desktop\llncs2e\complenet18.bbl" [13]
+ [12 <./MPLE_histogram_traceplot_cosponsorship.pdf>] (./complenet18.bbl [13]
 Missing character: There is no Ã in font cmr9!
 Missing character: There is no ¤ in font cmr9!
- [14]) [15]
-("C:\Users\Geiler Typ\Desktop\llncs2e\complenet18.aux") ) 
+ [14])
+[15] (./complenet18.aux) )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 1061 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 4223 strings out of 493921
- 56283 string characters out of 3144861
- 139372 words of memory out of 3000000
- 7456 multiletter control sequences out of 15000+200000
- 10958 words of font info for 42 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 41i,23n,35p,1587b,379s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/sym
-bols/msbm10.pfb>
-Output written on complenet18.pdf (15 pages, 419664 bytes).
+ 5739 strings out of 492995
+ 81709 string characters out of 6132704
+ 175871 words of memory out of 5000000
+ 9200 multiletter control sequences out of 15000+600000
+ 10958 words of font info for 42 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,23n,38p,1587b,2696s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbx9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
+fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on complenet18.pdf (15 pages, 381021 bytes).
 PDF statistics:
- 203 PDF objects out of 1000 (max. 8388607)
+ 198 PDF objects out of 1000 (max. 8388607)
+ 139 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
