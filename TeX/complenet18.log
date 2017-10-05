@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.24)  4 OCT 2017 20:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.24)  5 OCT 2017 11:17
 entering extended mode
 **complenet18.tex
 ("C:\Users\Geiler Typ\Desktop\llncs2e\complenet18.tex"
@@ -255,6 +255,61 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \extratabsurround=\skip48
 \backup@length=\skip49
 )
+("C:\Users\Geiler Typ\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithm2e\algorith
+m2e.sty"
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count129
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\algocf@hangindent=\skip50
+
+("C:\Users\Geiler Typ\AppData\Roaming\MiKTeX\2.9\tex\latex\ifoddpage\ifoddpage.
+sty"
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count130
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\xspace.sty"
+Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
+Package: relsize 2003/07/04 ver 3.1
+)
+\skiptotal=\skip51
+\skiplinenumber=\skip52
+\skiprule=\skip53
+\skiphlne=\skip54
+\skiptext=\skip55
+\skiplength=\skip56
+\algomargin=\skip57
+\skipalgocfslide=\skip58
+\algowidth=\dimen137
+\inoutsize=\dimen138
+\inoutindent=\dimen139
+\interspacetitleruled=\dimen140
+\interspacealgoruled=\dimen141
+\interspacetitleboxruled=\dimen142
+\algocf@ruledwidth=\skip59
+\algocf@inoutbox=\box56
+\algocf@inputbox=\box57
+\AlCapSkip=\skip60
+\AlCapHSkip=\skip61
+\algoskipindent=\skip62
+\algocf@nlbox=\box58
+\algocf@hangingbox=\box59
+\algocf@untilbox=\box60
+\algocf@skipuntil=\skip63
+\algocf@capbox=\box61
+\algocf@lcaptionbox=\skip64
+\algoheightruledefault=\skip65
+\algoheightrule=\skip66
+\algotitleheightruledefault=\skip67
+\algotitleheightrule=\skip68
+\c@algocfline=\count131
+\c@algocfproc=\count132
+\c@algocf=\count133
+\algocf@algoframe=\box62
+\algocf@algobox=\box63
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -270,9 +325,9 @@ Package xcolor Info: Driver file: pdftex.def on input line 225.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 \everycr=\toks25
-\minrowclearance=\skip50
+\minrowclearance=\skip69
 )
-\rownum=\count129
+\rownum=\count134
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
 Package xcolor Info: Model `RGB' extended on input line 1353.
@@ -284,132 +339,122 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
-\bigstrutjot=\dimen137
+\bigstrutjot=\dimen143
 )
 ("C:\Users\Geiler Typ\Desktop\llncs2e\complenet18.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count130
-\scratchdimen=\dimen138
-\scratchbox=\box56
-\nofMPsegments=\count131
-\nofMParguments=\count132
+\scratchcounter=\count135
+\scratchdimen=\dimen144
+\scratchbox=\box64
+\nofMPsegments=\count136
+\nofMParguments=\count137
 \everyMPshowfont=\toks26
-\MPscratchCnt=\count133
-\MPscratchDim=\dimen139
-\MPnumerator=\count134
-\makeMPintoPDFobject=\count135
+\MPscratchCnt=\count138
+\MPscratchDim=\dimen145
+\MPnumerator=\count139
+\makeMPintoPDFobject=\count140
 \everyMPtoPDFconversion=\toks27
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 35.
+LaTeX Font Info:    Try loading font information for U+msa on input line 41.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 35.
+LaTeX Font Info:    Try loading font information for U+msb on input line 41.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/Users/Geiler Typ/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-Overfull \hbox (2.96048pt too wide) in paragraph at lines 75--76
+Overfull \hbox (2.96048pt too wide) in paragraph at lines 83--87
 []\OT1/cmr/m/n/10 Despite the com-pu-ta-tional ef-fi-ciency un-der-ly-ing the i
 m-ple-men-ta-tion of MPLE,
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 95--97
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
-[4] [5]
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 130.
-
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\dstroke\udsrom.fd"
-File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-)
-[6] <RMSE_10k.pdf, id=36, 844.15375pt x 597.23125pt>
+[4] <RMSE_10k.pdf, id=27, 844.15375pt x 597.23125pt>
 File: RMSE_10k.pdf Graphic file (type pdf)
  <use RMSE_10k.pdf>
-Package pdftex.def Info: RMSE_10k.pdf used on input line 140.
-(pdftex.def)             Requested size: 260.17244pt x 184.07355pt.
+Package pdftex.def Info: RMSE_10k.pdf used on input line 175.
+(pdftex.def)             Requested size: 252.94499pt x 178.95204pt.
 
-Underfull \vbox (badness 1642) has occurred while \output is active []
+[5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7 <C:/Users/Geiler Typ/Desktop/llncs2e/RMSE_10k.pdf>] [8]
-<Coverage_Mesa_Magnolia_height05.pdf, id=60, 794.97pt x 397.485pt>
+ [6 <C:/Users/Geiler Typ/Desktop/llncs2e/RMSE_10k.pdf>] [7]
+<Coverage_Mesa_Magnolia_height05.pdf, id=55, 794.97pt x 397.485pt>
 File: Coverage_Mesa_Magnolia_height05.pdf Graphic file (type pdf)
 
 <use Coverage_Mesa_Magnolia_height05.pdf>
 Package pdftex.def Info: Coverage_Mesa_Magnolia_height05.pdf used on input line
- 156.
+ 191.
 (pdftex.def)             Requested size: 252.94499pt x 126.46997pt.
 
-<bias_plots_05.pdf, id=61, 844.15375pt x 397.485pt>
+<bias_plots_05.pdf, id=56, 844.15375pt x 397.485pt>
 File: bias_plots_05.pdf Graphic file (type pdf)
  <use bias_plots_05.pdf>
-Package pdftex.def Info: bias_plots_05.pdf used on input line 163.
+Package pdftex.def Info: bias_plots_05.pdf used on input line 198.
 (pdftex.def)             Requested size: 252.93893pt x 126.46997pt.
 
-[9 <C:/Users/Geiler Typ/Desktop/llncs2e/Coverage_Mesa_Magnolia_height05.pdf> <C
+[8 <C:/Users/Geiler Typ/Desktop/llncs2e/Coverage_Mesa_Magnolia_height05.pdf> <C
 :/Users/Geiler Typ/Desktop/llncs2e/bias_plots_05.pdf
 
 pdfTeX warning: pdflatex (file C:/Users/Geiler Typ/Desktop/llncs2e/bias_plots_0
 5.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-Overfull \hbox (4.24062pt too wide) in paragraph at lines 181--190
+Overfull \hbox (4.24062pt too wide) in paragraph at lines 216--225
  [][] 
  []
 
-[10]
-LaTeX Font Info:    Try loading font information for U+euf on input line 207.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [11]
-[12] <rel_time.pdf, id=108, 722.7pt x 505.89pt>
+[9] [10] <rel_time.pdf, id=99, 722.7pt x 505.89pt>
 File: rel_time.pdf Graphic file (type pdf)
  <use rel_time.pdf>
-Package pdftex.def Info: rel_time.pdf used on input line 235.
-(pdftex.def)             Requested size: 252.93776pt x 195.12718pt.
+Package pdftex.def Info: rel_time.pdf used on input line 270.
+(pdftex.def)             Requested size: 252.93776pt x 180.67676pt.
 
-<MPLE_histogram_traceplot_cosponsorship.pdf, id=109, 578.16pt x 433.62pt>
+<MPLE_histogram_traceplot_cosponsorship.pdf, id=100, 578.16pt x 433.62pt>
 File: MPLE_histogram_traceplot_cosponsorship.pdf Graphic file (type pdf)
 
 <use MPLE_histogram_traceplot_cosponsorship.pdf>
 Package pdftex.def Info: MPLE_histogram_traceplot_cosponsorship.pdf used on inp
-ut line 245.
+ut line 280.
 (pdftex.def)             Requested size: 252.94437pt x 195.1272pt.
- [13] [14 <C:/Users/Geiler Typ/Desktop/llncs2e/rel_time.pdf>]
+ [11]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15 <C:/Users/Geiler Typ/Desktop/llncs2e/MPLE_histogram_traceplot_cosponsorshi
-p.pdf>]
-("C:\Users\Geiler Typ\Desktop\llncs2e\complenet18.bbl" [16]
+ [12 <C:/Users/Geiler Typ/Desktop/llncs2e/rel_time.pdf>] [13 <C:/Users/Geiler T
+yp/Desktop/llncs2e/MPLE_histogram_traceplot_cosponsorship.pdf>]
+("C:\Users\Geiler Typ\Desktop\llncs2e\complenet18.bbl" [14]
 Missing character: There is no Ã in font cmr9!
 Missing character: There is no ¤ in font cmr9!
- [17]) [18]
+ [15]) [16]
 ("C:\Users\Geiler Typ\Desktop\llncs2e\complenet18.aux") ) 
 Here is how much of TeX's memory you used:
- 3272 strings out of 493921
- 40931 string characters out of 3144861
- 110953 words of memory out of 3000000
- 6510 multiletter control sequences out of 15000+200000
- 12146 words of font info for 50 fonts, out of 3000000 for 9000
+ 4223 strings out of 493921
+ 56283 string characters out of 3144861
+ 136372 words of memory out of 3000000
+ 7456 multiletter control sequences out of 15000+200000
+ 10958 words of font info for 42 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 41i,19n,35p,1587b,262s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,23n,35p,1587b,379s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/Mi
@@ -419,21 +464,18 @@ X 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX
 9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mti9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/dstroke/dsrom10.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufm10
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msb
-m10.pfb>
-Output written on complenet18.pdf (18 pages, 443240 bytes).
+ype1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/sym
+bols/msbm10.pfb>
+Output written on complenet18.pdf (16 pages, 421888 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
+ 206 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
