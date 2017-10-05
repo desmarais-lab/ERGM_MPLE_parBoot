@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.24)  5 OCT 2017 11:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.24)  5 OCT 2017 11:41
 entering extended mode
 **complenet18.tex
 ("C:\Users\Geiler Typ\Desktop\llncs2e\complenet18.tex"
@@ -380,54 +380,53 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/Users/Geiler Typ/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-Overfull \hbox (2.96048pt too wide) in paragraph at lines 83--87
+Overfull \hbox (2.96048pt too wide) in paragraph at lines 84--88
 []\OT1/cmr/m/n/10 Despite the com-pu-ta-tional ef-fi-ciency un-der-ly-ing the i
 m-ple-men-ta-tion of MPLE,
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
-[4] <RMSE_10k.pdf, id=27, 844.15375pt x 597.23125pt>
+<RMSE_10k.pdf, id=23, 844.15375pt x 597.23125pt>
 File: RMSE_10k.pdf Graphic file (type pdf)
  <use RMSE_10k.pdf>
-Package pdftex.def Info: RMSE_10k.pdf used on input line 175.
+Package pdftex.def Info: RMSE_10k.pdf used on input line 170.
 (pdftex.def)             Requested size: 252.94499pt x 178.95204pt.
-
-[5]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6 <C:/Users/Geiler Typ/Desktop/llncs2e/RMSE_10k.pdf>] [7]
-<Coverage_Mesa_Magnolia_height05.pdf, id=55, 794.97pt x 397.485pt>
+ [4]
+[5 <C:/Users/Geiler Typ/Desktop/llncs2e/RMSE_10k.pdf>] [6]
+<Coverage_Mesa_Magnolia_height05.pdf, id=51, 794.97pt x 397.485pt>
 File: Coverage_Mesa_Magnolia_height05.pdf Graphic file (type pdf)
 
 <use Coverage_Mesa_Magnolia_height05.pdf>
 Package pdftex.def Info: Coverage_Mesa_Magnolia_height05.pdf used on input line
- 191.
+ 192.
 (pdftex.def)             Requested size: 252.94499pt x 126.46997pt.
 
-<bias_plots_05.pdf, id=56, 844.15375pt x 397.485pt>
+<bias_plots_05.pdf, id=52, 844.15375pt x 397.485pt>
 File: bias_plots_05.pdf Graphic file (type pdf)
  <use bias_plots_05.pdf>
-Package pdftex.def Info: bias_plots_05.pdf used on input line 198.
+Package pdftex.def Info: bias_plots_05.pdf used on input line 199.
 (pdftex.def)             Requested size: 252.93893pt x 126.46997pt.
+
+Underfull \vbox (badness 5105) has occurred while \output is active []
+
+ [7]
+Overfull \hbox (4.24062pt too wide) in paragraph at lines 217--226
+ [][] 
+ []
 
 [8 <C:/Users/Geiler Typ/Desktop/llncs2e/Coverage_Mesa_Magnolia_height05.pdf> <C
 :/Users/Geiler Typ/Desktop/llncs2e/bias_plots_05.pdf
 
 pdfTeX warning: pdflatex (file C:/Users/Geiler Typ/Desktop/llncs2e/bias_plots_0
 5.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-Overfull \hbox (4.24062pt too wide) in paragraph at lines 216--225
- [][] 
- []
-
-[9] [10] <rel_time.pdf, id=99, 722.7pt x 505.89pt>
+>] [9] [10] <rel_time.pdf, id=99, 722.7pt x 505.89pt>
 File: rel_time.pdf Graphic file (type pdf)
  <use rel_time.pdf>
-Package pdftex.def Info: rel_time.pdf used on input line 270.
+Package pdftex.def Info: rel_time.pdf used on input line 271.
 (pdftex.def)             Requested size: 252.93776pt x 180.67676pt.
 
 <MPLE_histogram_traceplot_cosponsorship.pdf, id=100, 578.16pt x 433.62pt>
@@ -435,22 +434,22 @@ File: MPLE_histogram_traceplot_cosponsorship.pdf Graphic file (type pdf)
 
 <use MPLE_histogram_traceplot_cosponsorship.pdf>
 Package pdftex.def Info: MPLE_histogram_traceplot_cosponsorship.pdf used on inp
-ut line 280.
+ut line 281.
 (pdftex.def)             Requested size: 252.94437pt x 195.1272pt.
- [11]
+ [11 <C:/Users/Geiler Typ/Desktop/llncs2e/rel_time.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12 <C:/Users/Geiler Typ/Desktop/llncs2e/rel_time.pdf>] [13 <C:/Users/Geiler T
-yp/Desktop/llncs2e/MPLE_histogram_traceplot_cosponsorship.pdf>]
-("C:\Users\Geiler Typ\Desktop\llncs2e\complenet18.bbl" [14]
+ [12 <C:/Users/Geiler Typ/Desktop/llncs2e/MPLE_histogram_traceplot_cosponsorshi
+p.pdf>]
+("C:\Users\Geiler Typ\Desktop\llncs2e\complenet18.bbl" [13]
 Missing character: There is no Ã in font cmr9!
 Missing character: There is no ¤ in font cmr9!
- [15]) [16]
+ [14]) [15]
 ("C:\Users\Geiler Typ\Desktop\llncs2e\complenet18.aux") ) 
 Here is how much of TeX's memory you used:
  4223 strings out of 493921
  56283 string characters out of 3144861
- 136372 words of memory out of 3000000
+ 139372 words of memory out of 3000000
  7456 multiletter control sequences out of 15000+200000
  10958 words of font info for 42 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -473,9 +472,9 @@ onts/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/sym
 bols/msbm10.pfb>
-Output written on complenet18.pdf (16 pages, 421888 bytes).
+Output written on complenet18.pdf (15 pages, 419664 bytes).
 PDF statistics:
- 206 PDF objects out of 1000 (max. 8388607)
+ 203 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
