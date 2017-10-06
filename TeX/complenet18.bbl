@@ -11,16 +11,6 @@ Julian Besag.
 \newblock {\em Journal of the Royal Statistical Society. Series B
   (Methodological)}, pages 259--302, 1986.
 
-\bibitem{chatterjee2013estimating}
-Sourav Chatterjee, Persi Diaconis, et~al.
-\newblock Estimating and understanding exponential random graph models.
-\newblock {\em The Annals of Statistics}, 41(5):2428--2461, 2013.
-
-\bibitem{chib1995understanding}
-Siddhartha Chib and Edward Greenberg.
-\newblock Understanding the metropolis-hastings algorithm.
-\newblock {\em The american statistician}, 49(4):327--335, 1995.
-
 \bibitem{Cranmer.2011}
 S.~J. Cranmer and B.~A. Desmarais.
 \newblock Inferential network analysis with exponential random graph models.
@@ -52,21 +42,10 @@ Bradley Efron.
   25 cm. 92 p.} Society for industrial and applied mathematics, Philadelphia.
   US, 1982.
 
-\bibitem{faraj2008electronic}
-Samer Faraj, M~Wasko, and Steven~L Johnson.
-\newblock Electronic knowledge networks: Processes and structure.
-\newblock {\em Knowledge management: An evolutionary view of the field},
-  (270-291), 2008.
-
 \bibitem{Fowler2006a}
 James~H. Fowler.
 \newblock Connecting the congress: A study of cosponsorship networks.
 \newblock {\em Political Analysis}, 14(04):456--487, 2006.
-
-\bibitem{Fowler2006b}
-James~H. Fowler.
-\newblock Legislative cosponsorship networks in the u.s. house and senate.
-\newblock 28:454--465, 2006.
 
 \bibitem{goodreau2009birds}
 Steven~M Goodreau, James~A Kitts, and Martina Morris.
@@ -86,11 +65,6 @@ Paul~W. Holland and Samuel Leinhardt.
   graphs.
 \newblock {\em Journal of the american Statistical association},
   76(373):33--50, 1981.
-
-\bibitem{Huber1981}
-P.~J. Huber.
-\newblock {\em {Robust statistics}}.
-\newblock Wiley New York, 1981.
 
 \bibitem{Hunter.2008}
 David~R. Hunter, Steven~M. Goodreau, and Mark~S. Handcock.
@@ -162,11 +136,6 @@ Michael Schweinberger.
   families.
 \newblock {\em Journal of the American Statistical Association},
   106(496):1361--1370, 2011.
-
-\bibitem{shalizi2013}
-Cosma~Rohilla Shalizi and Alessandro Rinaldo.
-\newblock Consistency under sampling of exponential random graph models.
-\newblock {\em Ann. Statist.}, (2):508--535, 04.
 
 \bibitem{simpson2011exponential}
 Sean~L. Simpson, Satoru Hayasaka, and Paul~J. Laurienti.

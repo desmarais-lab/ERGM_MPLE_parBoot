@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  5 OCT 2017 15:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  6 OCT 2017 05:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -481,315 +481,608 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Overfull \hbox (2.96048pt too wide) in paragraph at lines 85--89
+Overfull \hbox (2.96048pt too wide) in paragraph at lines 78--81
 []\OT1/cmr/m/n/10 Despite the com-pu-ta-tional ef-fi-ciency un-der-ly-ing the i
 m-ple-men-ta-tion of MPLE,
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 109--110
-
- []
-
-[4]
-Underfull \hbox (badness 2478) in paragraph at lines 174--174
+Underfull \hbox (badness 2478) in paragraph at lines 121--121
 \OT1/cmr/m/n/10 the RMSE for
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 174--174
+Underfull \hbox (badness 2368) in paragraph at lines 121--121
 \OT1/cmr/m/n/10 the MPLE for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--174
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
 \OT1/cmr/m/n/10 dif-fer-ent sam-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--174
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
 \OT1/cmr/m/n/10 ple sizes and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--174
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
 \OT1/cmr/m/n/10 two dif-fer-ent
  []
 
 
-Underfull \hbox (badness 2384) in paragraph at lines 174--174
+Underfull \hbox (badness 2384) in paragraph at lines 121--121
 \OT1/cmr/m/n/10 net-works, Faux
  []
 
 
-Underfull \hbox (badness 4634) in paragraph at lines 174--174
+Underfull \hbox (badness 4634) in paragraph at lines 121--121
 \OT1/cmr/m/n/10 Faux Mag-no-lia
  []
 
-<RMSE_10k.pdf, id=29, 844.15375pt x 597.23125pt>
+<RMSE_10k.pdf, id=24, 844.15375pt x 597.23125pt>
 File: RMSE_10k.pdf Graphic file (type pdf)
  <use RMSE_10k.pdf>
-Package pdftex.def Info: RMSE_10k.pdf used on input line 174.
+Package pdftex.def Info: RMSE_10k.pdf used on input line 121.
 (pdftex.def)             Requested size: 270.30118pt x 191.23636pt.
 
-Underfull \hbox (badness 2478) in paragraph at lines 174--174
+Underfull \hbox (badness 2478) in paragraph at lines 121--121
 \OT1/cmr/m/n/10 the RMSE for
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 174--174
+Underfull \hbox (badness 2368) in paragraph at lines 121--121
 \OT1/cmr/m/n/10 the MPLE for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--174
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
 \OT1/cmr/m/n/10 dif-fer-ent sam-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--174
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
 \OT1/cmr/m/n/10 ple sizes and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--174
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
 \OT1/cmr/m/n/10 two dif-fer-ent
  []
 
 
-Underfull \hbox (badness 2384) in paragraph at lines 174--174
+Underfull \hbox (badness 2384) in paragraph at lines 121--121
 \OT1/cmr/m/n/10 net-works, Faux
  []
 
 
-Underfull \hbox (badness 4634) in paragraph at lines 174--174
+Underfull \hbox (badness 4634) in paragraph at lines 121--121
 \OT1/cmr/m/n/10 Faux Mag-no-lia
  []
 
 File: RMSE_10k.pdf Graphic file (type pdf)
 <use RMSE_10k.pdf>
-Package pdftex.def Info: RMSE_10k.pdf used on input line 174.
+Package pdftex.def Info: RMSE_10k.pdf used on input line 121.
 (pdftex.def)             Requested size: 270.30118pt x 191.23636pt.
 
-Underfull \hbox (badness 2478) in paragraph at lines 174--174
+Underfull \hbox (badness 2478) in paragraph at lines 121--121
 \OT1/cmr/m/n/10 the RMSE for
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 174--174
+Underfull \hbox (badness 2368) in paragraph at lines 121--121
 \OT1/cmr/m/n/10 the MPLE for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--174
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
 \OT1/cmr/m/n/10 dif-fer-ent sam-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--174
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
 \OT1/cmr/m/n/10 ple sizes and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--174
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
 \OT1/cmr/m/n/10 two dif-fer-ent
  []
 
 
-Underfull \hbox (badness 2384) in paragraph at lines 174--174
+Underfull \hbox (badness 2384) in paragraph at lines 121--121
 \OT1/cmr/m/n/10 net-works, Faux
  []
 
 
-Underfull \hbox (badness 4634) in paragraph at lines 174--174
+Underfull \hbox (badness 4634) in paragraph at lines 121--121
 \OT1/cmr/m/n/10 Faux Mag-no-lia
  []
 
 File: RMSE_10k.pdf Graphic file (type pdf)
 <use RMSE_10k.pdf>
-Package pdftex.def Info: RMSE_10k.pdf used on input line 174.
+Package pdftex.def Info: RMSE_10k.pdf used on input line 121.
 (pdftex.def)             Requested size: 270.30118pt x 191.23636pt.
 
-Overfull \hbox (7.39284pt too wide) detected at line 174
+Overfull \hbox (7.39284pt too wide) detected at line 121
  [] 
  []
 
-[5 <./RMSE_10k.pdf>] [6]
-Underfull \hbox (badness 3281) in paragraph at lines 199--199
+[4 <./RMSE_10k.pdf>] [5]
+Underfull \hbox (badness 3281) in paragraph at lines 140--140
 []\OT1/cmr/bx/n/10 Fig.2. \OT1/cmr/m/n/10 The Cov-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
 \OT1/cmr/m/n/10 er-age Prob-a-bil-ity
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
 \OT1/cmr/m/n/10 Mesa High net-
  []
 
 
-Underfull \hbox (badness 2875) in paragraph at lines 199--199
+Underfull \hbox (badness 2875) in paragraph at lines 140--140
 \OT1/cmr/m/n/10 the Faux Mag-no-
  []
 
 
-Underfull \hbox (badness 5331) in paragraph at lines 199--199
+Underfull \hbox (badness 5331) in paragraph at lines 140--140
 \OT1/cmr/m/n/10 lia High net-work
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
 \OT1/cmr/m/n/10 (right) for boot-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
 \OT1/cmr/m/n/10 strapped MPLE,
  []
 
-<Coverage_Mesa_Magnolia_height05.pdf, id=52, 794.97pt x 397.485pt>
+<Coverage_Mesa_Magnolia_height05.pdf, id=49, 794.97pt x 397.485pt>
 File: Coverage_Mesa_Magnolia_height05.pdf Graphic file (type pdf)
 
 <use Coverage_Mesa_Magnolia_height05.pdf>
 Package pdftex.def Info: Coverage_Mesa_Magnolia_height05.pdf used on input line
- 199.
+ 140.
 (pdftex.def)             Requested size: 241.84842pt x 120.92645pt.
 
-Underfull \hbox (badness 3281) in paragraph at lines 199--199
+Underfull \hbox (badness 3281) in paragraph at lines 140--140
 []\OT1/cmr/bx/n/10 Fig.2. \OT1/cmr/m/n/10 The Cov-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
 \OT1/cmr/m/n/10 er-age Prob-a-bil-ity
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
 \OT1/cmr/m/n/10 Mesa High net-
  []
 
 
-Underfull \hbox (badness 2875) in paragraph at lines 199--199
+Underfull \hbox (badness 2875) in paragraph at lines 140--140
 \OT1/cmr/m/n/10 the Faux Mag-no-
  []
 
 
-Underfull \hbox (badness 5331) in paragraph at lines 199--199
+Underfull \hbox (badness 5331) in paragraph at lines 140--140
 \OT1/cmr/m/n/10 lia High net-work
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
 \OT1/cmr/m/n/10 (right) for boot-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
-\OT1/cmr/m/n/10 strapped MPLE,
- []
-
-File: Coverage_Mesa_Magnolia_height05.pdf Graphic file (type pdf)
-<use Coverage_Mesa_Magnolia_height05.pdf>
-Package pdftex.def Info: Coverage_Mesa_Magnolia_height05.pdf used on input line
- 199.
-(pdftex.def)             Requested size: 241.84842pt x 120.92645pt.
-
-Underfull \hbox (badness 3281) in paragraph at lines 199--199
-[]\OT1/cmr/bx/n/10 Fig.2. \OT1/cmr/m/n/10 The Cov-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
-\OT1/cmr/m/n/10 er-age Prob-a-bil-ity
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
-\OT1/cmr/m/n/10 Mesa High net-
- []
-
-
-Underfull \hbox (badness 2875) in paragraph at lines 199--199
-\OT1/cmr/m/n/10 the Faux Mag-no-
- []
-
-
-Underfull \hbox (badness 5331) in paragraph at lines 199--199
-\OT1/cmr/m/n/10 lia High net-work
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
-\OT1/cmr/m/n/10 (right) for boot-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
 \OT1/cmr/m/n/10 strapped MPLE,
  []
 
 File: Coverage_Mesa_Magnolia_height05.pdf Graphic file (type pdf)
 <use Coverage_Mesa_Magnolia_height05.pdf>
 Package pdftex.def Info: Coverage_Mesa_Magnolia_height05.pdf used on input line
- 199.
+ 140.
 (pdftex.def)             Requested size: 241.84842pt x 120.92645pt.
 
-<bias_plots_05.pdf, id=53, 844.15375pt x 397.485pt>
+Underfull \hbox (badness 3281) in paragraph at lines 140--140
+[]\OT1/cmr/bx/n/10 Fig.2. \OT1/cmr/m/n/10 The Cov-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
+\OT1/cmr/m/n/10 er-age Prob-a-bil-ity
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
+\OT1/cmr/m/n/10 Mesa High net-
+ []
+
+
+Underfull \hbox (badness 2875) in paragraph at lines 140--140
+\OT1/cmr/m/n/10 the Faux Mag-no-
+ []
+
+
+Underfull \hbox (badness 5331) in paragraph at lines 140--140
+\OT1/cmr/m/n/10 lia High net-work
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
+\OT1/cmr/m/n/10 (right) for boot-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
+\OT1/cmr/m/n/10 strapped MPLE,
+ []
+
+File: Coverage_Mesa_Magnolia_height05.pdf Graphic file (type pdf)
+<use Coverage_Mesa_Magnolia_height05.pdf>
+Package pdftex.def Info: Coverage_Mesa_Magnolia_height05.pdf used on input line
+ 140.
+(pdftex.def)             Requested size: 241.84842pt x 120.92645pt.
+
+Underfull \hbox (badness 4739) in paragraph at lines 147--147
+[]\OT1/cmr/bx/n/10 Fig.3. \OT1/cmr/m/n/10 The box-
+ []
+
+
+Underfull \hbox (badness 1394) in paragraph at lines 147--147
+\OT1/cmr/m/n/10 bias $([] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^^R\OT1/cmr/m/n
+/10 )$ over
+ []
+
+
+Underfull \hbox (badness 1715) in paragraph at lines 147--147
+\OT1/cmr/m/n/10 the 500 it-er-a-tions
+ []
+
+<bias_plots_05.pdf, id=50, 844.15375pt x 397.485pt>
 File: bias_plots_05.pdf Graphic file (type pdf)
  <use bias_plots_05.pdf>
-Package pdftex.def Info: bias_plots_05.pdf used on input line 205.
-(pdftex.def)             Requested size: 252.93893pt x 126.46997pt.
+Package pdftex.def Info: bias_plots_05.pdf used on input line 147.
+(pdftex.def)             Requested size: 241.84842pt x 113.87878pt.
 
-Underfull \vbox (badness 5105) has occurred while \output is active []
+Underfull \hbox (badness 4739) in paragraph at lines 147--147
+[]\OT1/cmr/bx/n/10 Fig.3. \OT1/cmr/m/n/10 The box-
+ []
 
- [7]
-Overfull \hbox (4.24062pt too wide) in paragraph at lines 223--232
+
+Underfull \hbox (badness 1394) in paragraph at lines 147--147
+\OT1/cmr/m/n/10 bias $([] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^^R\OT1/cmr/m/n
+/10 )$ over
+ []
+
+
+Underfull \hbox (badness 1715) in paragraph at lines 147--147
+\OT1/cmr/m/n/10 the 500 it-er-a-tions
+ []
+
+File: bias_plots_05.pdf Graphic file (type pdf)
+<use bias_plots_05.pdf>
+Package pdftex.def Info: bias_plots_05.pdf used on input line 147.
+(pdftex.def)             Requested size: 241.84842pt x 113.87878pt.
+
+Underfull \hbox (badness 4739) in paragraph at lines 147--147
+[]\OT1/cmr/bx/n/10 Fig.3. \OT1/cmr/m/n/10 The box-
+ []
+
+
+Underfull \hbox (badness 1394) in paragraph at lines 147--147
+\OT1/cmr/m/n/10 bias $([] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^^R\OT1/cmr/m/n
+/10 )$ over
+ []
+
+
+Underfull \hbox (badness 1715) in paragraph at lines 147--147
+\OT1/cmr/m/n/10 the 500 it-er-a-tions
+ []
+
+File: bias_plots_05.pdf Graphic file (type pdf)
+<use bias_plots_05.pdf>
+Package pdftex.def Info: bias_plots_05.pdf used on input line 147.
+(pdftex.def)             Requested size: 241.84842pt x 113.87878pt.
+ [6 <./Coverage_Mesa_Magnolia_height05.pdf>]
+Overfull \hbox (4.24062pt too wide) in paragraph at lines 163--172
  [][] 
  []
 
+[7 <./bias_plots_05.pdf>] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 215--215
+[]\OT1/cmr/bx/n/10 Fig.4. \OT1/cmr/m/n/10 The y-axis
+ []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8 <./Coverage_Mesa_Magnolia_height05.pdf> <./bias_plots_05.pdf
+Underfull \hbox (badness 10000) in paragraph at lines 215--215
+\OT1/cmr/m/n/10 boot-strapped MPLE
+ []
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./bias_plots_05.pdf): PDF in
-clusion: multiple pdfs with page group included in a single page
->] [9] [10] <rel_time.pdf, id=98, 722.7pt x 505.89pt>
+
+Underfull \hbox (badness 1845) in paragraph at lines 215--215
+\OT1/cmr/m/n/10 time to that of the
+ []
+
+
+Underfull \hbox (badness 7907) in paragraph at lines 215--215
+\OT1/cmr/m/n/10 MCMLE time. Val-
+ []
+
+
+Underfull \hbox (badness 1122) in paragraph at lines 215--215
+\OT1/cmr/m/n/10 ues be-low 1 in-di-cate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--215
+\OT1/cmr/m/n/10 MPLE re-quires a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--215
+\OT1/cmr/m/n/10 shorter com-put-ing
+ []
+
+<rel_time.pdf, id=93, 722.7pt x 505.89pt>
 File: rel_time.pdf Graphic file (type pdf)
  <use rel_time.pdf>
-Package pdftex.def Info: rel_time.pdf used on input line 277.
-(pdftex.def)             Requested size: 252.93776pt x 180.67676pt.
+Package pdftex.def Info: rel_time.pdf used on input line 215.
+(pdftex.def)             Requested size: 227.62204pt x 159.33302pt.
 
-<MPLE_histogram_traceplot_cosponsorship.pdf, id=99, 578.16pt x 433.62pt>
+Underfull \hbox (badness 10000) in paragraph at lines 215--215
+[]\OT1/cmr/bx/n/10 Fig.4. \OT1/cmr/m/n/10 The y-axis
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--215
+\OT1/cmr/m/n/10 boot-strapped MPLE
+ []
+
+
+Underfull \hbox (badness 1845) in paragraph at lines 215--215
+\OT1/cmr/m/n/10 time to that of the
+ []
+
+
+Underfull \hbox (badness 7907) in paragraph at lines 215--215
+\OT1/cmr/m/n/10 MCMLE time. Val-
+ []
+
+
+Underfull \hbox (badness 1122) in paragraph at lines 215--215
+\OT1/cmr/m/n/10 ues be-low 1 in-di-cate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--215
+\OT1/cmr/m/n/10 MPLE re-quires a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--215
+\OT1/cmr/m/n/10 shorter com-put-ing
+ []
+
+File: rel_time.pdf Graphic file (type pdf)
+<use rel_time.pdf>
+Package pdftex.def Info: rel_time.pdf used on input line 215.
+(pdftex.def)             Requested size: 227.62204pt x 159.33302pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--215
+[]\OT1/cmr/bx/n/10 Fig.4. \OT1/cmr/m/n/10 The y-axis
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--215
+\OT1/cmr/m/n/10 boot-strapped MPLE
+ []
+
+
+Underfull \hbox (badness 1845) in paragraph at lines 215--215
+\OT1/cmr/m/n/10 time to that of the
+ []
+
+
+Underfull \hbox (badness 7907) in paragraph at lines 215--215
+\OT1/cmr/m/n/10 MCMLE time. Val-
+ []
+
+
+Underfull \hbox (badness 1122) in paragraph at lines 215--215
+\OT1/cmr/m/n/10 ues be-low 1 in-di-cate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--215
+\OT1/cmr/m/n/10 MPLE re-quires a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--215
+\OT1/cmr/m/n/10 shorter com-put-ing
+ []
+
+File: rel_time.pdf Graphic file (type pdf)
+<use rel_time.pdf>
+Package pdftex.def Info: rel_time.pdf used on input line 215.
+(pdftex.def)             Requested size: 227.62204pt x 159.33302pt.
+ [9 <./rel_time.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+[]\OT1/cmr/bx/n/10 Fig.5. \OT1/cmr/m/n/10 Net-work
+ []
+
+
+Underfull \hbox (badness 3724) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 statis-tics of the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 500 booot-strap
+ []
+
+
+Underfull \hbox (badness 4341) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 sam-ples for the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 cospon-sor-ship
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 net-work. The
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 the his-tograms,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 rep-re-sents the
+ []
+
+
+Underfull \hbox (badness 4391) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 of the ob-served
+ []
+
+<MPLE_histogram_traceplot_cosponsorship.pdf, id=113, 578.16pt x 433.62pt>
 File: MPLE_histogram_traceplot_cosponsorship.pdf Graphic file (type pdf)
 
 <use MPLE_histogram_traceplot_cosponsorship.pdf>
 Package pdftex.def Info: MPLE_histogram_traceplot_cosponsorship.pdf used on inp
-ut line 287.
-(pdftex.def)             Requested size: 252.94437pt x 195.1272pt.
- [11 <./rel_time.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ut line 225.
+(pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
 
- [12 <./MPLE_histogram_traceplot_cosponsorship.pdf>] (./complenet18.bbl [13]
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+[]\OT1/cmr/bx/n/10 Fig.5. \OT1/cmr/m/n/10 Net-work
+ []
+
+
+Underfull \hbox (badness 3724) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 statis-tics of the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 500 booot-strap
+ []
+
+
+Underfull \hbox (badness 4341) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 sam-ples for the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 cospon-sor-ship
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 net-work. The
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 the his-tograms,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 rep-re-sents the
+ []
+
+
+Underfull \hbox (badness 4391) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 of the ob-served
+ []
+
+File: MPLE_histogram_traceplot_cosponsorship.pdf Graphic file (type pdf)
+<use MPLE_histogram_traceplot_cosponsorship.pdf>
+Package pdftex.def Info: MPLE_histogram_traceplot_cosponsorship.pdf used on inp
+ut line 225.
+(pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+[]\OT1/cmr/bx/n/10 Fig.5. \OT1/cmr/m/n/10 Net-work
+ []
+
+
+Underfull \hbox (badness 3724) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 statis-tics of the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 500 booot-strap
+ []
+
+
+Underfull \hbox (badness 4341) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 sam-ples for the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 cospon-sor-ship
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 net-work. The
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 the his-tograms,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 rep-re-sents the
+ []
+
+
+Underfull \hbox (badness 4391) in paragraph at lines 225--225
+\OT1/cmr/m/n/10 of the ob-served
+ []
+
+File: MPLE_histogram_traceplot_cosponsorship.pdf Graphic file (type pdf)
+<use MPLE_histogram_traceplot_cosponsorship.pdf>
+Package pdftex.def Info: MPLE_histogram_traceplot_cosponsorship.pdf used on inp
+ut line 225.
+(pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
+ [10 <./MPLE_histogram_traceplot_cosponsorship.pdf>] (./complenet18.bbl [11]
 Missing character: There is no Ã in font cmr9!
 Missing character: There is no ¤ in font cmr9!
- [14])
-[15] (./complenet18.aux) )
+) [12] (./complenet18.aux) )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5739 strings out of 492995
- 81709 string characters out of 6132704
- 175871 words of memory out of 5000000
- 9200 multiletter control sequences out of 15000+600000
+ 5732 strings out of 492995
+ 81596 string characters out of 6132704
+ 175846 words of memory out of 5000000
+ 9193 multiletter control sequences out of 15000+600000
  10958 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,23n,38p,1587b,2696s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,19n,38p,1604b,2704s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
@@ -805,10 +1098,10 @@ sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr
 /local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/
 local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/lo
 cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on complenet18.pdf (15 pages, 381021 bytes).
+Output written on complenet18.pdf (12 pages, 368139 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
- 139 compressed objects within 2 object streams
+ 189 PDF objects out of 1000 (max. 8388607)
+ 133 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
