@@ -1,8 +1,51 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: IEEE_BigData.aux
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: IEEE_BigData.aux
 The style file: plain.bst
 Database file #1: bib.bib
-I was expecting an "="---line 210 of file bib.bib
+I was expecting an "="---line 230 of file bib.bib
  : url = "http://dx.doi.org/10.1214/12-AOS1044", Add 
  :                                                   to Citavi project by DOI Add to Citavi project by DOI
 I'm skipping whatever remains of this entry
+You've used 31 entries,
+            2118 wiz_defined-function locations,
+            713 strings with 10332 characters,
+and the built_in function-call counts, 10687 in all, are:
+= -- 1062
+> -- 521
+< -- 2
++ -- 210
+- -- 174
+* -- 805
+:= -- 1805
+add.period$ -- 96
+call.type$ -- 31
+change.case$ -- 180
+chr.to.int$ -- 0
+cite$ -- 31
+duplicate$ -- 370
+empty$ -- 817
+format.name$ -- 174
+if$ -- 2181
+int.to.chr$ -- 0
+int.to.str$ -- 31
+missing$ -- 31
+newline$ -- 158
+num.names$ -- 62
+pop$ -- 152
+preamble$ -- 1
+purify$ -- 149
+quote$ -- 0
+skip$ -- 250
+stack$ -- 0
+substring$ -- 734
+swap$ -- 54
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 124
+warning$ -- 0
+while$ -- 107
+width$ -- 33
+write$ -- 340
 (There was 1 error message)
